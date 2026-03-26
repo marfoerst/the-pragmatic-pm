@@ -5,7 +5,9 @@ description: >
   willingness-to-pay research, competitive positioning, and pricing model design.
   Use when someone says "pricing strategy", "how should we price this", "packaging",
   "willingness to pay", "Van Westendorp", "price sensitivity", "monetization",
-  "competitive pricing", "premium tier", "pricing page", or "value metric".
+  "competitive pricing", "premium tier", "pricing page", "value metric",
+  "Gabor-Granger", "behavioral pricing", "feature shock", "pricing failure",
+  "WTP segmentation", "monetization failure", or "pricing integrity".
 ---
 
 # SaaS Pricing Analysis
@@ -22,6 +24,10 @@ Activate this skill when the user:
 - Is designing tier structures or add-on pricing
 - Asks about pricing a new module or compliance feature
 - Mentions "price sensitivity", "ARPU optimization", or "expansion revenue"
+- Wants to diagnose a monetization failure pattern (feature shock, minivation, hidden gem, undead)
+- Needs Gabor-Granger price point testing (beyond Van Westendorp)
+- Asks about behavioral pricing, pricing psychology, or decision architecture
+- Wants to segment customers by willingness-to-pay rather than demographics
 
 ## Process
 
@@ -42,6 +48,23 @@ Before generating anything, ask these questions. Do not skip this phase.
 - What is the competitive set? (Refer to `domain-context.md` for known competitors)
 
 Wait for answers before proceeding.
+
+### Phase 1B — Monetization Risk Diagnostic
+
+Before analyzing competitors or designing tiers, diagnose which monetization failure pattern threatens this initiative. Based on Ramanujam & Tacke's "Monetizing Innovation" framework — 72% of innovations fail to meet revenue targets because pricing is an afterthought.
+
+**Ask:** Based on what you know about this product/feature and its market reception, which pattern feels closest?
+
+| Failure Type | Symptoms | Diagnostic Questions | If This Is the Risk |
+|-------------|----------|---------------------|-------------------|
+| **Feature Shock** | Product has too many features. Customers overwhelmed. Price feels too high for what they need. Win rate dropping despite "more features." | "Are customers using <30% of features? Do they say 'too complex'? Are you losing to simpler competitors?" | Strip features. Segment into focused packages. Reduce base tier price. Less is more. |
+| **Minivation** | Innovation too incremental to generate meaningful WTP. Customers shrug at demos. Upgrade rates flat. | "Is the improvement incremental? Do customers say 'nice but not worth switching'? Would they pay >10% more?" | Bundle with other value to create a meaningful package. Or kill it — don't launch at a premium. |
+| **Hidden Gem** | Product delivers massive value but is underpriced or buried in a bundle. Power users love it. Competitors charge 3-5x for similar. | "Do power users say 'I can't believe this is included'? Are competitors charging significantly more? Is attach rate >80%?" | Unbundle and price separately. Raise price. Reposition as a standalone product. You're leaving money on the table. |
+| **Undead** | Nobody wants this. Built without WTP validation. Adoption <5% after 6 months. | "Did you validate WTP before building? Is adoption near zero? Do customers actively avoid this?" | Kill it. Reallocate resources to something customers will pay for. Don't throw marketing at a product problem. |
+
+**Output:** Flag the dominant risk in the Executive Summary. This diagnosis shapes the entire pricing strategy — a Hidden Gem needs price increases, not packaging optimization.
+
+**Core principle from Ramanujam & Tacke:** Have the willingness-to-pay conversation BEFORE you build, not after. If you're pricing post-build, at minimum diagnose which failure pattern you've landed in.
 
 ### Phase 2 — Competitive Landscape Analysis
 
@@ -135,6 +158,44 @@ Refer to `domain-context.md` for industry-specific pricing anchors, compliance r
 - Multi-entity pricing should be tested per-entity AND per-bundle
 ```
 
+### Phase 4B — Gabor-Granger Price Point Testing
+
+When you have specific price points to test (vs. Van Westendorp's open-ended range exploration), use Gabor-Granger.
+
+#### When to Use Which Method
+| Method | Best For | Sample Size | Output |
+|--------|---------|-------------|--------|
+| **Van Westendorp** | Exploring the acceptable price range when you have no anchor | 30-100 per segment | Price range (PMC-PME) + optimal price point |
+| **Gabor-Granger** | Testing purchase probability at specific price points you're considering | 50-200 per segment | Demand curve + revenue-maximizing price |
+| **Both** | Triangulation: Van Westendorp first to find range, then Gabor-Granger to optimize within range | — | High-confidence pricing recommendation |
+
+#### Gabor-Granger Survey Design
+1. Show the product/feature with value proposition clearly stated
+2. Present a starting price (randomize high-start vs. low-start across respondents to avoid anchoring bias)
+3. Ask: "How likely would you be to purchase [product] at [€ price]?" — 5-point scale: Definitely would / Probably would / Might or might not / Probably would not / Definitely would not
+4. If "Definitely" or "Probably" → increase price by one step, ask again
+5. If "Probably not" or "Definitely not" → decrease price by one step, ask again
+6. Continue until 4-6 price points tested per respondent
+
+#### Price Points to Test
+- Test 5-7 price points spanning your hypothesized range
+- Include at least one point below your floor and one above your ceiling
+- Space points in psychologically meaningful increments (e.g., €29, €49, €79, €99, €129, €179 — not €30, €60, €90)
+
+#### How to Analyze
+1. Plot % "Definitely + Probably would buy" at each price point = **demand curve**
+2. Multiply demand % × price at each point = **revenue curve**
+3. The peak of the revenue curve = **revenue-maximizing price**
+4. Compare to Van Westendorp IDP/OPP range for triangulation
+5. Segment results by company size, current solution, and buyer persona — different segments may have different optimal prices
+
+#### Domain-Specific Guidance
+Refer to `domain-context.md` for context:
+- For compliance modules: test WTP separately from core product — compliance has inelastic demand. Customers who MUST have it will pay more.
+- For add-ons: test WTP for the add-on alone AND for the bundle with core product
+- For multi-entity pricing: test per-entity AND per-bundle (some customers strongly prefer predictable flat fees)
+- Segment Gabor-Granger results by persona — the Geschaeftsfuehrer and the Buchhalter have very different price sensitivity
+
 ### Phase 5 — Packaging & Tier Design
 
 ```
@@ -163,6 +224,50 @@ Refer to `domain-context.md` for industry-specific pricing anchors, compliance r
 - **Add-on attach rate targets:** [Expected % of customers buying add-ons]
 - **Net revenue retention target:** [e.g., 110-120% NRR]
 ```
+
+### Phase 5B — Behavioral Pricing Principles
+
+When designing tier presentation and pricing pages, apply these behavioral science principles from Ramanujam & Tacke (Rule 8: "Understand your customer's irrational side"). Pick 1-2 that fit your context — do not apply all simultaneously.
+
+| Principle | How It Works | Application | When to Use |
+|-----------|-------------|-------------|------------|
+| **Anchoring** | The first number a buyer sees becomes the reference point. Everything after is judged relative to it. | Show the most expensive tier first on the pricing page. In sales calls, quote Enterprise pricing first, then reveal the tier that fits — it feels like a deal. | Always. This is the most reliable behavioral principle. |
+| **Compromise Effect** | When given 3 options, buyers disproportionately choose the middle one — it feels "safe" and "reasonable." | Design your 3-tier structure so the middle tier is your target. Put the most margin there. Make it the obvious choice by comparison. | When you have 3 tiers and want to steer toward the middle. |
+| **Decoy Pricing** | An inferior option makes the target option look better by comparison. | If Starter is €29 and Professional is €79, consider a "Basic Plus" at €59 with significantly fewer features than Professional — Professional becomes the obvious choice. | When upgrade rates from Starter to Professional are low. |
+| **Pennies-a-Day** | Framing the cost as a small daily/per-unit amount reduces perceived expense. | "That's €2.60 per day" or "€0.15 per transaction processed" instead of "€79/month." Use in sales talk tracks, ROI calculators, and pricing page subtext. | When the monthly price creates sticker shock. |
+| **Bundling vs. Unbundling** | Bundle when selling gains (multiple features = more perceived value). Unbundle when reducing perceived losses (pay only for what you use). | **Acquisition:** Bundle to maximize perceived value at entry ("Everything you need for €X"). **Expansion:** Unbundle for add-ons (small incremental decisions feel easier than big upgrades). | Bundle for new customers. Unbundle for expansion revenue. |
+| **Price Ending** | Prices ending in 9 (€79, €149) are perceived as significantly cheaper than round numbers (€80, €150). | Use .99 or 9-ending for self-serve pricing pages. Use round numbers for enterprise (signals confidence). | Self-serve: use 9-endings. Enterprise: round numbers. |
+
+**Anti-pattern:** Over-engineering behavioral pricing creates confusion and erodes trust. If the buyer feels manipulated, you lose. These principles work best when they simplify the decision, not when they obscure it.
+
+### Phase 5C — Segmentation by Willingness-to-Pay
+
+Do not segment customers by demographics alone. Segment by willingness-to-pay. This is Ramanujam & Tacke's Rule 2: "Don't force-fit one product for all."
+
+#### WTP Segmentation Process
+1. Run Van Westendorp or Gabor-Granger across your full respondent pool (minimum 100 respondents)
+2. **Cluster respondents by their WTP range** — NOT by company size, industry, or role
+3. THEN profile each WTP cluster: What characteristics do high-WTP and low-WTP groups share?
+4. Map your tier structure to the WTP clusters
+
+#### WTP Segmentation Matrix
+
+```markdown
+| Segment | WTP Range | Shared Characteristics | Package Strategy | Pricing Strategy |
+|---------|-----------|----------------------|-----------------|-----------------|
+| **High WTP** | € [X]-[Y]/mo | [e.g., regulated industry, >50 employees, switching from manual processes, high pain severity] | Full platform + premium add-ons + dedicated support | Value-based. Price at 70-80% of measured value delivered. Don't discount. |
+| **Medium WTP** | € [X]-[Y]/mo | [e.g., established business, some existing tooling, moderate pain] | Core platform, select add-ons, standard support | Competitive. Price at market rate. Win on product, not price. |
+| **Low WTP** | € [X]-[Y]/mo | [e.g., early-stage, price-sensitive, exploring options] | Starter tier, self-serve onboarding, community support | Penetration. Win on volume, expand later. Design clear upgrade triggers. |
+```
+
+#### Validation Checklist
+- [ ] Does each pricing tier map to a distinct WTP segment with identifiable characteristics?
+- [ ] Is there a clear "why upgrade" trigger between segments?
+- [ ] Are you capturing >80% of the high-WTP segment's willingness to pay?
+- [ ] Is the low-WTP tier profitable (or at least break-even with a clear path to expansion)?
+- [ ] Do the characteristics match what your sales team sees in the field?
+
+**Key insight:** Tiers designed without WTP data are arbitrary. The Good-Better-Best structure from Phase 5 should MAP to WTP segments discovered here — not the other way around. If your WTP data shows two clusters, don't force three tiers. If it shows four clusters, consider a fourth package or an add-on strategy.
 
 ### Phase 6 — Pricing Metrics (Leading + Lagging)
 
@@ -202,12 +307,14 @@ Deliver the analysis as a structured document with these sections:
 1. Executive Summary (3-5 bullet points)
 2. Competitive Landscape
 3. Value Metric Analysis
-4. Pricing Model Recommendation
-5. Tier/Packaging Design
-6. Van Westendorp Guidance (if applicable)
-7. Metrics & Measurement Plan
-8. Risks & Mitigations
-9. Next Steps / Validation Plan
+4. Monetization Risk Diagnostic
+5. WTP Segmentation Analysis
+6. Pricing Model Recommendation
+7. Tier/Packaging Design
+8. Van Westendorp Guidance (if applicable)
+9. Metrics & Measurement Plan
+10. Risks & Mitigations
+11. Next Steps / Validation Plan
 
 ## Tone & Style
 

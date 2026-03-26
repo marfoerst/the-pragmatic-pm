@@ -34,7 +34,7 @@ Before generating anything, ask these questions. Do not skip this phase.
 
 **Mandatory questions (ask all 4):**
 
-1. **Which competitor?** One battlecard per competitor. Name the specific company.
+1. **What is the prospect using today?** Not just named competitors. This could be: a named competitor product, a manual process (spreadsheets, email chains), an outsourced provider (consultant, service bureau, tax advisor doing it manually), a cobbled-together stack (multiple tools duct-taped together), or simply doing nothing. Each requires a different battlecard approach. If it's a named competitor, specify the company. If it's a non-product alternative, describe the current workflow. (Per Dunford's "Obviously Awesome": competitive alternatives are the starting point for all positioning.)
 2. **What deal context?** Target segment (SMB / mid-market / enterprise), typical company size, and deal stage where this competitor shows up.
 3. **Do you have win/loss data against this competitor?** Win reasons, loss reasons, switching stories — anything from CRM, CS, or sales debriefs.
 4. **Any existing competitive analysis to reference?** Prior battlecards, `pm-workflow-competitive-intel` output, analyst reports, or feature comparison matrices.
@@ -63,6 +63,24 @@ _Last Updated: [today] | Segment: [target segment] | Confidence: [High/Medium/Lo
 **Who they are:** [One sentence — company, HQ, target market, founding year if relevant]
 **Where they're strong:** [One sentence — their genuine advantage, don't sugarcoat]
 **Where we beat them:** [One sentence — our genuine advantage, with proof]
+
+---
+
+## 1B. Alternative Type
+
+_Different competitive alternatives require fundamentally different selling strategies. Identify the type before building the rest of the battlecard._
+
+| Alternative Type | Selling Strategy | Key Risk | Win Message |
+|-----------------|-----------------|----------|------------|
+| **Named Competitor** | Feature differentiation + proof points + landmine questions | Feature-by-feature comparison trap (fight on value, not features) | "We do X that they can't, which means you get [outcome]" |
+| **Manual Process / Spreadsheets** | Quantify the hidden cost of manual work: time, errors, risk. Sell the transformation, not features. | "Good enough" objection — they've lived with it this long | "Your team spends [X hours/month] on this. We make it [Y minutes]" |
+| **Outsourced Provider / Consultant** | Sell control, speed, and cost reduction. They're paying a person to do what your product automates. | Relationship loyalty to the provider; switching = disrupting a trusted relationship | "You get the same outcome in real-time, without waiting for someone else's schedule" |
+| **Multiple Tools Duct-Taped Together** | Sell integration, single source of truth, reduced maintenance. They're paying hidden costs in context-switching and data sync failures. | Switching cost fear — they've invested time building this stack | "One system instead of [N] — no more reconciliation between tools" |
+| **Doing Nothing / Status Quo** | Sell the cost of inaction: regulatory risk, competitive disadvantage, hidden costs of delay. | Inertia is the hardest competitor to beat. There is no "event" forcing a decision. | "Every month you wait costs [quantified risk/loss]" |
+
+**This battlecard is against:** [Alternative type from above]
+
+_The sections below adapt based on the alternative type. For named competitors, all 10 sections apply. For non-product alternatives, some sections (like Feature Comparison and Pricing Comparison) may be replaced with value-vs-status-quo analysis._
 
 ---
 
@@ -132,6 +150,15 @@ _Questions to plant early in the sales cycle that expose competitor weaknesses. 
 3. **"Ask how they handle [edge case]..."** — [Where their architecture or approach falls short]
 4. **"Request a reference from [specific segment/use case]..."** — [Where they lack customer proof]
 5. **"Ask about [compliance/integration/scale requirement]..."** — [Where their roadmap is behind]
+
+### Status Quo / Manual Process Landmine Questions
+_Use these when the prospect is using spreadsheets, manual processes, or outsourced providers — not a named competitor._
+
+1. **"How many hours per month does your team spend on [manual task]?"** — Forces them to quantify the hidden cost. The number is always higher than they expect.
+2. **"What happens when [key person who manages this process] is sick or leaves?"** — Exposes the single-point-of-failure risk in manual processes. This creates urgency.
+3. **"When was the last time a manual error caused [specific consequence — audit finding, late filing, wrong report, compliance issue]?"** — Makes the risk concrete and recent. Works especially well with compliance-sensitive buyers.
+4. **"How would you handle a 2x increase in [transaction volume / entities / users] with your current process?"** — Exposes scalability limits that the buyer may not have considered yet.
+5. **"Have you calculated the fully loaded cost of [outsourced provider] including your team's back-and-forth time?"** — The provider invoice is typically 30-50% of the true cost. The rest is hidden in coordination, review, and rework.
 
 **Timing:** Plant these in the first or second call. By the time the buyer sees the competitor, they're evaluating on our criteria.
 

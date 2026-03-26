@@ -201,13 +201,33 @@ _This story should be grounded in the canvas data, not aspirational fiction._
 
 ---
 
+---
+
+### Positioning Bridge — From Canvas to Positioning
+
+The Value Proposition Canvas answers: **"Do we have product-market fit for this segment?"**
+Dunford's Positioning Canvas (in `/pm-messaging-framework`) answers: **"How do we position this fit so the right customers understand it instantly?"**
+
+If the Fit Analysis reveals strong fit, use this bridge to translate VPC findings into positioning inputs:
+
+| VPC Finding | Maps to Dunford Component | How to Use |
+|------------|--------------------------|-----------|
+| **"Current Solution"** / Customer Profile alternatives | → **Competitive Alternatives** (Dunford Step 1) | These are what customers use today — the starting point for positioning |
+| **Strong Fit items** / Gain Creators with high effectiveness | → **Unique Attributes** (Dunford Step 2) | The capabilities where your product uniquely delivers — not just well, but differently |
+| **High-scoring Gain Creators and Pain Relievers** | → **Value** (Dunford Step 3) | The measurable value those unique capabilities enable — time saved, risk reduced, revenue gained |
+| **Customer characteristics where fit is strongest** | → **Target Customer Characteristics** (Dunford Step 4) | The profile of customers who care most about your unique value |
+| **Market/segment context from fit analysis** | → **Market Category** (Dunford Step 5) | The category frame that makes this value obvious to this target |
+
+**Recommended next step:** Run `/pm-messaging-framework` and use the Dunford 5-component positioning process. Pre-populate Steps 1-4 from this VPC output — the strategic positioning work is already 80% done.
+
 ### Phase 3: Iterate
 
 After presenting the draft, ask:
 1. Does the customer profile ring true? Any jobs or pains I missed?
 2. Are we honest about fit strength, or are we being generous?
 3. Should we run this canvas for a second segment to compare?
-4. Where should I deliver the final version? (Chat / file / Notion)
+4. **Should we translate this canvas into positioning?** If the fit is strong, I can feed this into `/pm-messaging-framework` to build a full positioning strategy and messaging framework using Dunford's 5-component process.
+5. Where should I deliver the final version? (Chat / file / Notion)
 
 ## Tone
 

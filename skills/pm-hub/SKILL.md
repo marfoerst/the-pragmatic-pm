@@ -18,7 +18,8 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 |-------|---------|-------------|
 | `/pm-prd` | "write a PRD", "product requirements", "spec", "feature spec", "requirements doc" | Standalone PRD generation (4 modes: Full, Lightweight, V2, Migration) |
 | `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards |
-| `/pm-pricing` | "pricing", "plans", "tiers", "monetization" | SaaS pricing analysis and optimization |
+| `/pm-pricing` | "pricing", "plans", "tiers", "monetization", "Van Westendorp", "Gabor-Granger" | SaaS pricing analysis and optimization |
+| `/pm-ai-pricing` | "AI pricing", "AI add-on", "AI credits", "per-agent pricing", "copilot pricing", "inference costs" | AI feature pricing, packaging, and monetization strategy |
 | `/pm-north-star` | "north star", "key metric", "what should we measure?" | Define and validate the North Star metric |
 | `/pm-metric-framework` | "metrics", "KPIs", "measurement plan" | Full metric hierarchy with leading + lagging indicators |
 | `/pm-onboarding-flow` | "onboarding", "activation", "first-run experience" | Design SaaS onboarding flows |

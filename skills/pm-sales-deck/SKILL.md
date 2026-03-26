@@ -53,6 +53,26 @@ Every sales deck follows: **Pain -> Cost of Inaction -> Vision -> Solution -> Pr
 
 This is not a feature tour. It is a story that starts with the buyer's world, makes them feel the urgency of their problem, and then — and only then — introduces the product as the way out.
 
+### Positioning Foundation Check
+
+Before writing any slides, confirm the positioning foundation. A sales deck without clear positioning is a feature tour.
+
+**If a `/pm-messaging-framework` output exists with Dunford's 5-component positioning, use it directly.**
+
+If not, establish these three inputs now:
+
+1. **Competitive Alternative:** What is THIS buyer using today? (Named competitor, manual process, consultant, nothing?) The Pain and Cost of Inaction slides must be written against THIS specific alternative — not generic pain.
+2. **Unique Value:** What do we enable that the alternative cannot? (From Dunford Step 2→3 mapping.) This drives the Solution Intro and How It Works slides.
+3. **Market Category:** What frame makes our value obvious? (Head-to-Head, Big Fish Small Pond, or New Category?) This determines how we introduce the product on Slide 5.
+
+| Input | Answer | Source |
+|-------|--------|--------|
+| Competitive Alternative | [What this buyer uses today] | [pm-messaging-framework Step 1 / buyer research / sales intel] |
+| Unique Value | [What we enable that the alternative cannot] | [pm-messaging-framework Step 3 / product capabilities] |
+| Market Category | [Frame that makes value obvious] | [pm-messaging-framework Step 5 / strategic positioning] |
+
+_If these are unclear, ask the user before proceeding. Every slide downstream depends on these three answers._
+
 ### Phase 3 — Generate Deck Content
 
 Generate a 10-12 slide deck with the following structure. For each slide, provide all five components.
@@ -134,6 +154,8 @@ experience after 90 days.' Bridge to the solution.]"
 - [One sentence: what the product is and who it's for.]
 - [Connect directly back to the pain from Slide 2: "We built [product] specifically to solve [problem]."]
 - [Position in the category — not "we're a platform for X" but "we help [persona] achieve [outcome]."]
+- **Position in the market category:** [If Head-to-Head: name the established category directly — "We're a [category] that...". If Big Fish/Small Pond: name the niche — "We're the [category] built specifically for [niche]". If New Category: define it in one sentence the buyer can repeat — "We created [new category] because [existing categories] couldn't [value]".]
+- **Bridge from competitive alternative:** "Unlike [what they use today — from Positioning Foundation], [product] [unique value that the alternative cannot deliver]."
 
 **Talk track:**
 "[Introduce the product as the natural answer to the problem you just described.
@@ -167,6 +189,19 @@ Keep it conversational. Offer to go deeper on any point.]"
 **Title:** [Why us, not them.]
 **Key message:** [On the 2-3 dimensions that matter to THIS buyer, we win.]
 **Content:**
+
+_Ground differentiation in the buyer's actual competitive alternative, not an abstract feature matrix._
+
+**Their current alternative:** [From Positioning Foundation — competitor, manual process, consultant, or status quo]
+
+If the alternative is a **named competitor**: Differentiate on unique attributes (Dunford Step 2) that enable unique value (Step 3). Don't fight feature-by-feature on their turf — redirect to criteria where you win.
+
+If the alternative is a **manual process or status quo**: Differentiation IS automation vs. manual. Show the transformation: [X hours/month manual] → [Y minutes automated]. Feature comparison is irrelevant here — value comparison is everything.
+
+| Dimension | Their Alternative | Us | Why It Matters to This Buyer |
+|-----------|-----------------|-----|----------------------------|
+| [Dimension that matters to THIS buyer] | [How their alternative handles it] | [How we handle it — unique attribute] | [Value — from Dunford Step 3] |
+
 | Dimension | Us | [Competitor A] | [Competitor B] |
 |-----------|-----|----------------|----------------|
 | [Dimension 1 — chosen because this buyer cares] | [Our advantage] | [Their gap] | [Their gap] |

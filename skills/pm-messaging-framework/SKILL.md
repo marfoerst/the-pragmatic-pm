@@ -34,6 +34,7 @@ Before generating anything, ask these questions. Do not skip this phase.
 2. **Who is the target buyer?** (Reference `domain-context.md` personas + buyer personas from Sales & GTM Context) — the person who signs the contract, not just the end user.
 3. **What are the top 3 competitors?** (Reference `domain-context.md` competitive context) — who does the buyer compare you to, or who do they use today?
 4. **What existing positioning work exists?** Value prop canvas, competitive analysis, win/loss data, prior messaging docs? (If a `pm-value-prop-canvas` output exists, I can pre-populate from it.)
+5. **What do customers use today if they don't use you?** Not just named competitors — include spreadsheets, manual processes, outsourced consultants, cobbled-together tool stacks, or "doing nothing." This is the starting point for positioning per Dunford's "Obviously Awesome" methodology. The answer to this question shapes everything downstream.
 
 **Contextual questions (ask if relevant based on answers):**
 
@@ -55,23 +56,78 @@ _Competitive Set: [competitors]_
 
 ---
 
-### 1. Positioning Statement
+### 1. Strategic Positioning (Dunford's 5-Component Framework)
 
-```markdown
-## Positioning Statement
+Positioning is NOT a fill-in-the-blank statement — it is the strategic thinking that makes the statement self-evident. Work through these 5 components IN ORDER. Each builds on the previous. Skip none.
 
-For **[target customer]** who **[need/problem they face]**,
-**[product name]** is the **[category]** that **[key differentiator]**.
+#### Step 1: Competitive Alternatives
+_What would customers do if your product didn't exist? NOT just named competitors. Include spreadsheets, manual processes, hiring someone, outsourcing to a consultant, cobbling together multiple tools, or doing nothing._
 
-Unlike **[primary alternative/competitor]**,
-**[product name]** **[key advantage — specific, provable, not generic]**.
+| Alternative | Type | % of Prospects Using This Today | Why They Use It | What's Wrong With It |
+|------------|------|-------------------------------|----------------|---------------------|
+| [Alternative 1] | [Competitor / Manual process / Spreadsheet / Consultant / Status quo / Nothing] | [Estimate %] | [Reason] | [Pain or limitation] |
+| [Alternative 2] | | | | |
+| [Alternative 3] | | | | |
 
-### Why This Positioning Works
-- **Target:** Specific enough to focus sales conversations
-- **Category:** Puts us in a frame the buyer already understands
-- **Differentiator:** Provable, not aspirational
-- **Alternative:** Names the real competitor, not a straw man
-```
+_This is the foundation. Everything else flows from here. If you get this wrong, every downstream component will be off._
+
+#### Step 2: Unique Attributes
+_What do you have that the alternatives from Step 1 DON'T? Only list what is genuinely unique — features, capabilities, architecture, approach, or expertise that alternatives cannot match._
+
+| Unique Attribute | Which Alternatives Lack This | How You'd Prove It |
+|-----------------|----------------------------|-------------------|
+| [Attribute 1] | [Which alternatives from Step 1] | [Demo, benchmark, customer quote, certification] |
+| [Attribute 2] | | |
+| [Attribute 3] | | |
+
+_If every competitor has it, it's table-stakes, not a unique attribute. Be ruthless._
+
+#### Step 3: Value (Mapped to Attributes)
+_What value do those SPECIFIC unique attributes enable? Not generic benefits — YOUR unique features enable YOUR unique value. Map each attribute to the value it creates._
+
+| Unique Attribute (from Step 2) | Value It Enables | For Whom | How You'd Measure |
+|-------------------------------|-----------------|----------|------------------|
+| [Attribute 1] | [Specific value — time saved, risk reduced, revenue enabled] | [Role/persona] | [Metric] |
+| [Attribute 2] | | | |
+| [Attribute 3] | | | |
+
+_If you can't draw a line from attribute to measurable value, the attribute doesn't matter for positioning._
+
+#### Step 4: Target Customer Characteristics
+_Who cares A LOT about the value from Step 3? Not "SMBs" or "enterprises" — the specific characteristics that make a customer light up when they see your value._
+
+| Characteristic | Why It Makes Them Care About Step 3 Value | Evidence |
+|---------------|------------------------------------------|---------|
+| [e.g., "Companies with >50 employees in regulated industries"] | [Why this characteristic = high value perception] | [Win rate data, customer concentration, deal velocity] |
+| [Characteristic 2] | | |
+| [Characteristic 3] | | |
+
+_Tight targeting beats broad targeting. If your positioning could describe 5 different products, it's too loose._
+
+#### Step 5: Market Category
+_What market frame makes your value from Step 3 immediately obvious to the target from Step 4? Choose ONE strategy:_
+
+| Strategy | Description | When It Works | Risk |
+|----------|-----------|--------------|------|
+| **Head to Head** | Compete directly in an existing, well-understood category | You can credibly claim leadership or top-3 position | Must match category expectations on table-stakes features |
+| **Big Fish, Small Pond** | Dominate a subsegment of an existing category | Strong niche fit; can own the segment; segment is large enough | May limit perceived market size; harder to expand later |
+| **Create New Category** | Define an entirely new market category | No existing category contains your value; you can educate the market | Expensive to educate; long sales cycles; risk of being misunderstood |
+
+**Recommended Strategy:** [Head to Head / Big Fish, Small Pond / Create New Category]
+**Category Name:** [The specific category or subcategory]
+**Why:** [How this frame makes Step 3 value immediately obvious to Step 4 target]
+
+---
+
+#### Positioning Statement (flows from the 5 components above)
+
+For **[target customer characteristics — Step 4]** who **[need/pain implied by the value in Step 3]**,
+**[product name]** is the **[market category — Step 5]** that **[unique value — Step 3]**.
+
+Unlike **[competitive alternatives — Step 1]**,
+**[product name]** **[unique attributes — Step 2 that enable that value]**.
+
+_This statement should feel obvious after completing Steps 1-5. If it doesn't, revisit the steps._
 
 ### 2. Value Pillars
 
@@ -267,3 +323,5 @@ Scannable. Every claim has a proof point. No filler. No corporate fluff. If a se
 - **Inside-out language:** Writing from the product's perspective instead of the buyer's perspective.
 - **One-size-fits-all:** The CFO and the end user need different messages. If every persona gets the same line, the framework fails.
 - **Competitor bashing:** Factual differentiation builds trust. Trash talk destroys it.
+- **Positioning by default:** Most companies position by accident — based on how the product was originally conceived rather than where they actually win today. Revisit positioning when: the competitive landscape changes, you've built features that enable new value, win rates shift, or you're entering a new market.
+- **Broad positioning over tight positioning:** "Tight" positioning for a smaller segment beats "loose" positioning for a bigger market. If a competitor could swap their name into your positioning statement and it would still work, your positioning is too generic.
