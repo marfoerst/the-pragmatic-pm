@@ -1,7 +1,7 @@
 {
   "name": "pm-toolkit",
-  "version": "1.0.0",
-  "description": "PM leadership toolkit: 35 skills + 4 agents for product teams. Enforces problem clarity, leading+lagging metrics, and scope discipline. Domain-agnostic — customize via domain-context.md for your company, industry, and compliance requirements.",
+  "version": "1.1.0",
+  "description": "PM leadership toolkit: 42 skills + 5 agents for product teams. Enforces problem clarity, leading+lagging metrics, and scope discipline. Domain-agnostic — customize via domain-context.md for your company, industry, and compliance requirements.",
   "keywords": [
     "product-management",
     "b2b-saas",
@@ -10,7 +10,11 @@
     "prd",
     "okr",
     "discovery",
-    "metrics"
+    "metrics",
+    "sales-enablement",
+    "go-to-market",
+    "battlecard",
+    "gtm"
   ],
   "author": {
     "name": "Martin Foerster",

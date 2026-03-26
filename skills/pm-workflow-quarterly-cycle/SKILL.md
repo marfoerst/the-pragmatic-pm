@@ -174,61 +174,24 @@ Present Artifact 2. Ask:
 
 ## Stage 3: OKR Definition
 
+**Skill used**: pm-okr (Mode A: Define)
+
 ### Process
 
-Define OKRs for the coming quarter, informed by Stages 1-2:
+Using Artifacts 1-2, invoke **pm-okr** in Mode A (Define) to generate the quarter's OKRs. Pass the prior artifacts as input context:
 
-```markdown
-## Artifact 3: Q[N] OKRs
+- **Artifact 1 (Strategic Review)** → Informs which problems and opportunities to target. Key lessons from the past quarter shape what to prioritize.
+- **Artifact 2 (North Star Assessment)** → Provides the metric direction. OKRs must connect to the North Star and its input metrics.
 
-### Company-Level Objective (Context)
-[The company objective this quarter — set by exec team]
+The pm-okr skill will:
+1. Gather any additional strategic context needed (company-level objectives, team capacity)
+2. Brainstorm 3-5 candidate objectives — qualitative, inspirational, outcome-focused
+3. Define 2-5 measurable key results per objective with baselines, targets, confidence levels, and owners
+4. Include leading indicators to watch weekly for each objective
+5. Run the OKR Quality Check: outcome (not output), measurable, ambitious but achievable (60-70% confidence), within team influence, connected to company objective, max 3 KRs per objective
+6. Flag common anti-patterns: output-focused OKRs, sandbagged targets, unmeasurable KRs
 
-### Product OKRs
-
-#### Objective 1: [Outcome-focused objective]
-_Why this matters: [Connected to strategic review findings and north star]_
-
-| Key Result | Metric | Baseline | Target | Confidence | Owner |
-|-----------|--------|----------|--------|------------|-------|
-| KR1: [specific, measurable result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-| KR2: [specific, measurable result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-| KR3: [specific, measurable result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-
-**Leading indicators we'll watch weekly:**
-- [indicator 1]
-- [indicator 2]
-
----
-
-#### Objective 2: [Outcome-focused objective]
-_Why this matters: [rationale]_
-
-| Key Result | Metric | Baseline | Target | Confidence | Owner |
-|-----------|--------|----------|--------|------------|-------|
-| KR1: [result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-| KR2: [result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-| KR3: [result] | [metric] | [current] | [target] | [H/M/L] | [PM] |
-
----
-
-#### Objective 3: [Outcome-focused objective]
-_Why this matters: [rationale]_
-
-[Same structure]
-
----
-
-### OKR Quality Check
-| Criterion | O1 | O2 | O3 |
-|-----------|----|----|-----|
-| Outcome, not output? | Y/N | Y/N | Y/N |
-| Measurable with existing data? | Y/N | Y/N | Y/N |
-| Ambitious but achievable (60-70% confidence)? | Y/N | Y/N | Y/N |
-| Team can influence the result? | Y/N | Y/N | Y/N |
-| Connected to company objective? | Y/N | Y/N | Y/N |
-| No more than 3 KRs per objective? | Y/N | Y/N | Y/N |
-```
+The skill generates **Artifact 3: Q[N] OKRs** — a complete, validated OKR set ready for stakeholder alignment.
 
 ### Checkpoint 3
 Present Artifact 3. Ask:

@@ -16,6 +16,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 ### Foundation
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
+| `/pm-prd` | "write a PRD", "product requirements", "spec", "feature spec", "requirements doc" | Standalone PRD generation (4 modes: Full, Lightweight, V2, Migration) |
 | `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards |
 | `/pm-pricing` | "pricing", "plans", "tiers", "monetization" | SaaS pricing analysis and optimization |
 | `/pm-north-star` | "north star", "key metric", "what should we measure?" | Define and validate the North Star metric |
@@ -36,6 +37,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 ### Strategy
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
+| `/pm-okr` | "OKR", "objectives and key results", "quarterly goals", "define OKRs", "score OKRs" | Define, refine, check-in, score, and align OKRs |
 | `/pm-quarterly-planning` | "quarterly planning", "Q3 planning", "next quarter" | Full quarter planning with capacity and bets |
 | `/pm-strategic-review` | "strategic review", "quarter review", "what did we learn?" | End-of-quarter strategic review document |
 | `/pm-swot` | "SWOT", "strengths weaknesses" | SWOT analysis with structured implications |
@@ -56,6 +58,16 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-board-deck` | "board deck", "investor deck", "board meeting" | Board/investor deck content |
 | `/pm-meeting-notes` | "meeting notes", "action items", "decisions" | Structured PM meeting notes |
 
+### Go-to-Market
+| Skill | Trigger | What It Does |
+|-------|---------|-------------|
+| `/pm-messaging-framework` | "messaging", "positioning", "how do we talk about this", "elevator pitch" | Consistent messaging across all touchpoints |
+| `/pm-battlecard` | "battlecard", "compete against X", "sales cheat sheet" | Per-competitor sales battlecards |
+| `/pm-objection-handler` | "objections", "how to handle pushback", "objection handling" | Response playbook for common sales objections |
+| `/pm-sales-deck` | "sales deck", "pitch deck", "sales presentation" | Slide content and talk track for sales |
+| `/pm-gtm-launch` | "launch plan", "GTM", "go to market", "feature launch" | Go-to-market launch playbook |
+| `/pm-win-loss` | "win/loss", "why did we lose", "deal analysis" | Win/loss analysis and patterns |
+
 ### Operations
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
@@ -65,14 +77,14 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-customer-success` | "customer success", "onboarding playbook", "churn" | CS playbooks for lifecycle stages |
 | `/pm-dashboard-designer` | "dashboard", "analytics view", "what to show" | Analytics dashboard design |
 | `/pm-journey-map` | "journey map", "customer journey", "touchpoints" | Customer journey mapping |
-| `/pm-api-docs` | "API docs", "endpoint documentation" | API documentation generation |
 
 ### Workflows (Multi-Skill Chains)
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
-| `/pm-workflow-problem-to-prd` | "turn this problem into a spec" | JTBD -> Persona -> Opportunity Tree -> PRD |
+| `/pm-workflow-problem-to-prd` | "turn this problem into a spec", "full discovery to PRD" | JTBD -> Persona -> Opportunity Tree -> PRD -> Review |
 | `/pm-workflow-competitive-intel` | "competitive analysis pack" | SWOT -> Market Sizing -> Competitive Profile -> Positioning |
 | `/pm-workflow-quarterly-cycle` | "run the quarterly cycle" | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
+| `/pm-workflow-sales-enablement` | "sales enablement pack", "enable the sales team" | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
 
 ## Routing Logic
 
@@ -82,6 +94,19 @@ When a user comes to you with a PM request:
 2. **Match to a skill** from the table above — use trigger phrases as hints
 3. **Recommend the skill** with a one-line explanation of why it fits
 4. **Offer alternatives** if the match is ambiguous ("Did you mean X or Y?")
+
+### Key Routing Disambiguations
+
+| User Says | Route To | Why |
+|-----------|---------|-----|
+| "Write a PRD" (has discovery/context) | `/pm-prd` | Standalone PRD generation — they already know the problem |
+| "Write a PRD from scratch" (no context) | `/pm-workflow-problem-to-prd` | Full workflow — starts with JTBD discovery |
+| "Write a product brief" | `/pm-product-brief` | Working-backwards narrative — different from a PRD |
+| "Write a one-pager" | `/pm-one-pager` | Executive proposal — different from a PRD |
+| "Set OKRs" (standalone) | `/pm-okr` | Standalone OKR coaching |
+| "Quarterly planning" | `/pm-workflow-quarterly-cycle` | Full quarterly cycle including OKRs |
+| "Battlecard" or "sales materials" | `/pm-battlecard` or `/pm-gtm-launch` | Go-to-Market skills — for sales team consumption |
+| "Full sales enablement" | `/pm-workflow-sales-enablement` | Complete enablement workflow |
 
 If the request doesn't match any skill, handle it directly as a general PM question.
 

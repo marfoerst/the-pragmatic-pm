@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 35 PM skills + 4 agents + 3 workflows designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 42 PM skills + 5 agents + 4 workflows designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -21,6 +21,7 @@ claude plugin install --path ./pm-toolkit
    - Industry calendar (seasonal events affecting planning)
    - Domain-specific metrics and benchmarks
    - Ecosystem & integrations
+   - Sales & GTM context (optional — for go-to-market skills)
 3. Start using any skill — they all read your context automatically
 
 ## Quick Start
@@ -34,6 +35,7 @@ claude plugin install --path ./pm-toolkit
 | Skill | What It Does |
 |-------|-------------|
 | `pm-hub` | Master router — lists skills, routes by intent |
+| `pm-prd` | Standalone PRD generation (Full, Lightweight, V2, Migration modes) |
 | `pm-review` | Quality gate — checks problem clarity, metrics, scope |
 | `pm-pricing` | SaaS pricing analysis and optimization |
 | `pm-north-star` | Define North Star metric + input metric tree |
@@ -54,6 +56,7 @@ claude plugin install --path ./pm-toolkit
 ### Strategy
 | Skill | What It Does |
 |-------|-------------|
+| `pm-okr` | Define, refine, check-in, score, and align OKRs |
 | `pm-quarterly-planning` | Full quarter planning with capacity and bets |
 | `pm-strategic-review` | End-of-quarter strategic review |
 | `pm-swot` | SWOT analysis with strategic implications |
@@ -74,6 +77,16 @@ claude plugin install --path ./pm-toolkit
 | `pm-board-deck` | Board/investor deck content |
 | `pm-meeting-notes` | Structured PM meeting notes |
 
+### Go-to-Market
+| Skill | What It Does |
+|-------|-------------|
+| `pm-messaging-framework` | Consistent messaging across all touchpoints |
+| `pm-battlecard` | Per-competitor sales battlecards |
+| `pm-objection-handler` | Sales objection response playbooks |
+| `pm-sales-deck` | Sales/pitch deck content with talk track |
+| `pm-gtm-launch` | Go-to-market launch playbooks |
+| `pm-win-loss` | Win/loss analysis and interview templates |
+
 ### Operations
 | Skill | What It Does |
 |-------|-------------|
@@ -83,14 +96,14 @@ claude plugin install --path ./pm-toolkit
 | `pm-customer-success` | CS playbooks for lifecycle stages |
 | `pm-dashboard-designer` | Analytics dashboard design |
 | `pm-journey-map` | Customer journey mapping |
-| `pm-api-docs` | API documentation generation |
 
 ### Workflows (Multi-Skill Chains)
 | Workflow | What It Does |
 |----------|-------------|
-| `pm-workflow-problem-to-prd` | Problem -> JTBD -> Persona -> Opportunity Tree -> PRD |
+| `pm-workflow-problem-to-prd` | Problem -> JTBD -> Persona -> Opportunity Tree -> PRD -> Review |
 | `pm-workflow-competitive-intel` | SWOT -> Market Sizing -> Competitive Profile -> One-Pager |
 | `pm-workflow-quarterly-cycle` | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
+| `pm-workflow-sales-enablement` | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
 
 ## Agents
 
@@ -100,6 +113,7 @@ claude plugin install --path ./pm-toolkit
 | `pm-data-analyst` | Orchestrates data analysis |
 | `pm-ops-facilitator` | Orchestrates PM operations |
 | `pm-comms-writer` | Orchestrates PM communication |
+| `pm-gtm-strategist` | Orchestrates go-to-market and sales enablement |
 
 ## Design Principles
 
@@ -120,6 +134,7 @@ All domain-specific knowledge lives in `domain-context.md`. This includes:
 - **Calendar** — Seasonal events that affect planning and releases
 - **Metrics** — Domain-specific benchmarks and KPIs
 - **Ecosystem** — Key integrations and partners
+- **Sales & GTM** — Sales team structure, deal stages, ICP, buyer personas, win/loss patterns
 - **Examples** — JTBD examples, funnel stages, onboarding milestones
 
 The plugin ships with a B2B SaaS ERP example context. Replace it with your own.

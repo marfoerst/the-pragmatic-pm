@@ -168,6 +168,59 @@ Cloud-native ERP platform for German small and medium businesses. Core modules i
 | Channel dynamics | Steuerberater recommendations strongly influence SMB purchasing decisions |
 | Legacy factor | Many prospects are migrating from on-premise or desktop accounting software |
 
+## Sales & GTM Context
+
+> **Optional section.** Fill this in to enable go-to-market skills (pm-battlecard, pm-sales-deck, pm-gtm-launch, etc.).
+> Leave blank if you don't use the GTM workflow.
+
+### Sales Team Structure
+
+- **Sales motion**: [Self-serve / Inside sales / Field sales / Channel-led / Hybrid]
+- **Team size**: [N] AEs, [N] SDRs, [N] SEs
+- **Average deal size**: EUR [X]
+- **Average sales cycle**: [N] days/weeks
+- **Primary CRM**: [CRM name]
+- **Key channels**: [Direct, partner/Steuerberater, marketplace]
+
+### Deal Stages
+
+| Stage | Description | Typical Duration | Key Activities |
+|-------|-------------|-----------------|----------------|
+| Qualification | [description] | [duration] | [activities] |
+| Discovery | [description] | [duration] | [activities] |
+| Demo | [description] | [duration] | [activities] |
+| Proposal | [description] | [duration] | [activities] |
+| Negotiation | [description] | [duration] | [activities] |
+| Closed | [description] | [duration] | [activities] |
+
+### ICP (Ideal Customer Profile)
+
+| Dimension | Criteria |
+|-----------|---------|
+| Company size | [employee count or revenue range] |
+| Revenue range | EUR [range] |
+| Industry | [sectors / verticals] |
+| Geography | [regions] |
+| Tech maturity | [description] |
+| Buying trigger | [what causes them to evaluate a solution now] |
+| Disqualifiers | [what makes a prospect NOT a fit] |
+
+### Buyer Personas (distinct from product user personas above)
+
+| Persona | Role | Cares About | Common Objections |
+|---------|------|-------------|-------------------|
+| Economic Buyer | [role, e.g., Geschaeftsfuehrer/CFO] | [priorities] | [typical pushback] |
+| Champion | [role, e.g., Buchhalter/Controller] | [priorities] | [typical pushback] |
+| Blocker | [role, e.g., IT Lead / incumbent vendor advocate] | [priorities] | [typical pushback] |
+
+### Win/Loss Patterns
+
+- **Top 3 reasons we win**: [reasons with evidence]
+- **Top 3 reasons we lose**: [reasons with evidence]
+- **Most common competitor in deals**: [competitor name]
+- **Average win rate**: [X]%
+- **Win rate vs top competitor**: [X]%
+
 ## Language
 
 - **Default output language**: English

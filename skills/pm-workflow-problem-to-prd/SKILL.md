@@ -199,105 +199,19 @@ Present Artifact 3. Ask:
 
 ## Stage 4: PRD Generation
 
+**Skill used**: pm-prd (Mode A: Full PRD)
+
 ### Process
 
-Using Artifacts 1-3, generate a complete PRD:
+Using Artifacts 1-3, invoke **pm-prd** in Mode A (Full PRD) to generate the complete requirements document. Pass the prior artifacts as input context:
 
-```markdown
-## Artifact 4: Product Requirements Document
+- **Artifact 1 (Job Statements)** → Pre-populates the Problem Statement and Customer Story sections
+- **Artifact 2 (Target Persona)** → Pre-populates the Target Persona section
+- **Artifact 3 (Opportunity Tree)** → Pre-populates the Solution section with the recommended opportunity and solution
 
-# PRD: [Feature Name]
+The pm-prd skill will generate **Artifact 4: Product Requirements Document** with all required sections: header metadata, problem statement, customer story, target persona, goals/non-goals, solution with user flows, functional requirements with acceptance criteria, non-functional requirements, success metrics (leading + lagging), dependencies, risks, timeline, and open questions.
 
-## Overview
-| Field | Value |
-|-------|-------|
-| Author | [PM Name] |
-| Date | [Date] |
-| Status | Draft |
-| Target Release | [Quarter/Date] |
-| Stakeholders | [Names and roles] |
-
-## Problem Statement
-[From Stage 1 — the main job and desired outcomes, rewritten as a narrative]
-
-### Customer Story
-[Working-backwards narrative: Start with the customer experience after the feature ships. What's different? How does their life improve?]
-
-"[Persona name from Stage 2] opens [your product] on Monday morning. Instead of [old painful workflow], they now [new delightful workflow]. The result: [measurable improvement]."
-
-## Target Persona
-[Summary from Artifact 2]
-
-## Goals and Non-Goals
-
-### Goals
-1. [Specific, measurable goal connected to desired outcomes]
-2. [Goal]
-3. [Goal]
-
-### Non-Goals (Explicitly Out of Scope)
-1. [Non-goal — be specific about what you're NOT doing]
-2. [Non-goal]
-
-## Solution
-[From Artifact 3 — the recommended solution, described in detail]
-
-### User Flows
-1. **Happy path**: [Step-by-step flow]
-2. **Edge cases**: [Known edge cases and how they're handled]
-3. **Error states**: [What happens when things go wrong]
-
-### Requirements
-
-#### Functional Requirements
-| # | Requirement | Priority | Acceptance Criteria |
-|---|------------|----------|-------------------|
-| FR-1 | [requirement] | Must / Should / Could | [specific, testable criteria] |
-| FR-2 | [requirement] | Must / Should / Could | [specific, testable criteria] |
-
-#### Non-Functional Requirements
-| # | Requirement | Target |
-|---|------------|--------|
-| NFR-1 | Performance: [requirement] | [measurable target] |
-| NFR-2 | Security: [requirement] | [standard] |
-| NFR-3 | Accessibility: [requirement] | [WCAG level] |
-| NFR-4 | Compliance: [per domain-context.md if applicable] | [requirement] |
-
-### Design Notes
-[Wireframe descriptions, interaction patterns, key UI decisions]
-
-## Success Metrics
-
-| Metric | Type | Target | Measurement Method | Timeline |
-|--------|------|--------|--------------------|----------|
-| [metric] | Leading | [target] | [how measured] | [when] |
-| [metric] | Lagging | [target] | [how measured] | [when] |
-
-## Dependencies
-| Dependency | Team | Status | Risk |
-|-----------|------|--------|------|
-| [dep] | [team] | [status] | [risk] |
-
-## Risks and Mitigations
-| Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|-----------|
-| [risk] | H/M/L | H/M/L | [mitigation] |
-
-## Timeline
-| Milestone | Date | Owner |
-|-----------|------|-------|
-| PRD review | [date] | PM |
-| Design complete | [date] | Design |
-| Engineering kickoff | [date] | Eng Lead |
-| Alpha/Internal | [date] | Eng |
-| Beta/Limited | [date] | PM + CS |
-| GA | [date] | PM |
-
-## Open Questions
-| # | Question | Owner | Deadline |
-|---|---------|-------|----------|
-| 1 | [question] | [who] | [when] |
-```
+The skill's built-in quality checks will run automatically before presenting the draft — validating problem clarity, metric quality, scope discipline, and compliance awareness.
 
 ### Checkpoint 4
 Present Artifact 4. Ask:
