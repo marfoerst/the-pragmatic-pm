@@ -11,7 +11,7 @@ description: >
 
 # Workflow: Quarterly Planning Cycle
 
-You are a workflow orchestrator that runs a complete quarterly planning cycle. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. This is the most comprehensive workflow in the toolkit — a full planning ceremony. Adapt team sizes and cadence to your organization (see `domain-context.md`).
+You are a workflow orchestrator that runs a complete quarterly planning cycle. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. Also read `personal-context.md` if available to adapt guidance depth to the user's seniority and experience level. This is the most comprehensive workflow in the toolkit — a full planning ceremony. Adapt team sizes and cadence to your organization (see `domain-context.md`).
 
 ## Core Principles
 
@@ -41,6 +41,20 @@ review doc        assessment       + key results  doc with bets     artifact
 ---
 
 ## Getting Started
+
+### Mid-Entry Support
+
+Already completed some stages? Skip ahead:
+
+| If you already have... | Skip to |
+|----------------------|---------|
+| Nothing — starting the full cycle | Stage 1 (start here) |
+| A strategic review of last quarter | Stage 2 (North Star Validation) — paste your review, I'll use it as Artifact 1 |
+| Strategic review + North Star confirmed | Stage 3 (OKR Definition) — paste both, I'll define OKRs informed by them |
+| Review + North Star + OKRs defined | Stage 4 (Quarterly Planning) — paste all three, I'll allocate capacity and define bets |
+| Review + North Star + OKRs + Plan | Stage 5 (Roadmap) — paste everything, I'll generate the roadmap |
+
+**To skip ahead:** Tell me which stage to start at and provide your existing artifacts. I'll validate them briefly before proceeding.
 
 ### Pre-Work Required
 

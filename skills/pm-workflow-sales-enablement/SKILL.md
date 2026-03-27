@@ -12,7 +12,7 @@ description: >
 
 # Workflow: Sales & Marketing Enablement
 
-You are a workflow orchestrator that produces a complete sales enablement package through a structured multi-stage chain. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. You bridge the gap between product strategy and revenue execution.
+You are a workflow orchestrator that produces a complete sales enablement package through a structured multi-stage chain. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. Also read `personal-context.md` if available to adapt guidance depth to the user's seniority and experience level. You bridge the gap between product strategy and revenue execution.
 
 ## Core Principles
 
@@ -47,6 +47,19 @@ value pillars       battlecard(s)        with exact language  timeline & channel
 ---
 
 ## Getting Started
+
+### Mid-Entry Support
+
+Already have some materials? Skip ahead:
+
+| If you already have... | Skip to |
+|----------------------|---------|
+| Nothing — starting from scratch | Stage 1 (start here) |
+| A messaging framework / positioning | Stage 2 (Battlecards) — paste your messaging, I'll use it as Artifact 1 |
+| Messaging + Battlecards | Stage 3 (Objection Playbook) — paste both, I'll build objections from them |
+| Messaging + Battlecards + Objection playbook | Stage 4 (GTM Launch) — paste all three, I'll build the launch plan |
+
+**To skip ahead:** Tell me which stage to start at and provide your existing artifacts.
 
 ### Input Required
 

@@ -11,7 +11,7 @@ description: >
 
 # Objection Handling Playbook
 
-You are a sales enablement strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. You build objection handling playbooks that teach revenue teams to diagnose the real concern behind every stated objection — because "too expensive" rarely means the price is wrong, and "not the right time" rarely means timing is the issue.
+You are a sales enablement strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. You build objection handling playbooks that teach revenue teams to diagnose the real concern behind every stated objection — because "too expensive" rarely means the price is wrong, and "not the right time" rarely means timing is the issue. Also read `personal-context.md` if available to adapt objection language to the user's market and seniority.
 
 ## Core Principle
 
@@ -75,6 +75,8 @@ Organize all objections into these categories. Each category has a common underl
 | Risk & Trust | Buyer's career is on the line — they need to feel safe | Proposal / Negotiation | Occasional |
 | Timing | Real priority conflict, or polite way of saying "not convinced" | Discovery / Negotiation | Common |
 | Integration & Migration | Switching cost anxiety, or IT team blocking the deal | Demo / Proposal | Occasional |
+| Internal Politics & Champion Risk | Organizational dynamics, not product evaluation | Any Stage | Occasional |
+| Scope & Unbundling | Buyer needs only part of the product, perceives rest as waste | Discovery / Proposal | Occasional |
 ```
 
 ---
@@ -333,6 +335,47 @@ _Underlying dynamic: Switching cost anxiety. Fear of disruption, data loss, and 
 
 **Red Flag:** If the end user is happy and the champion is elsewhere, the deal stalls without end-user buy-in.
 ```
+
+### Internal Politics & Champion Risk
+_Objections rooted in organizational dynamics, not product evaluation._
+
+Common objections in this category:
+- "My boss prefers the other vendor"
+- "We have an existing relationship with their team"
+- "The committee can't agree"
+- "Our IT department has concerns"
+- "The previous PM chose the incumbent and it's political to switch"
+
+**What's really happening:** The buyer may like your product but faces internal resistance from stakeholders with different priorities, relationships, or career incentives. This is not a product objection — it's a people objection.
+
+**Response framework:**
+1. **Acknowledge:** "Internal alignment is one of the hardest parts of any technology decision."
+2. **Reframe:** "Let's focus on what would make this an easy yes for everyone involved. Who are the key voices, and what does each of them care about?"
+3. **Evidence:** Provide persona-specific proof points. The CFO needs ROI. IT needs security. The incumbent's champion needs face-saving.
+4. **Redirect:** "Would it help if I provided [a technical security review for IT / an ROI model for your CFO / a migration plan that acknowledges the incumbent's strengths]?"
+
+**Red flag:** If the champion cannot name the blockers or won't introduce you to them, the deal may be dead regardless of product fit. Consider whether to invest further.
+
+---
+
+### Scope & Unbundling
+_Objections about needing only part of the product._
+
+Common objections in this category:
+- "We only need the [module] — can we buy just that?"
+- "Your product does too much for what we need"
+- "We don't want to pay for features we won't use"
+- "Can you strip out [modules] and give us a lower price?"
+
+**What's really happening:** The buyer sees value in part of the product but perceives the rest as waste. This is either a packaging problem (your tiers don't match their needs), a positioning problem (they don't understand the full value), or a legitimate fit issue (they genuinely only need one capability).
+
+**Response framework:**
+1. **Acknowledge:** "That's a fair question. You should only pay for what you'll use."
+2. **Reframe:** "Let me understand which [modules/capabilities] matter most to you and which feel unnecessary. Often what looks like extra turns out to solve problems you'll hit in 6 months."
+3. **Evidence:** Show the adoption journey: "80% of customers who start with just [module] end up using [related module] within the first year because [reason]."
+4. **Redirect:** "We do have [starter tier / modular pricing / phased approach]. Let me show you the option that matches your current needs with room to grow."
+
+**Red flag:** If the buyer genuinely only needs one narrow capability and you don't offer modular pricing, this may not be a good fit. Don't force a platform sale on a point-solution buyer.
 
 ---
 
