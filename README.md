@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 43 PM skills + 5 agents + 4 workflows designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 43 PM skills + 5 agents + 4 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -139,6 +139,19 @@ All domain-specific knowledge lives in `domain-context.md`. This includes:
 - **Examples** — JTBD examples, funnel stages, onboarding milestones
 
 The plugin ships with a B2B SaaS ERP example context. Replace it with your own.
+
+## Hooks
+
+The plugin includes 4 hooks that run automatically:
+
+| Hook | Event | What It Does |
+|------|-------|-------------|
+| **Context Reinjection** | `SessionStart` (after compaction) | Re-injects `domain-context.md` into context when long conversations compress, so personas, metrics, and compliance context are never lost |
+| **Quality Gate** | `Stop` | Validates PM deliverables follow the 3 design principles (problem clarity, leading+lagging metrics, scope discipline) before Claude finishes responding |
+| **Usage Logger** | `PostToolUse` / `PostToolUseFailure` | Logs every PM skill execution to `.pm-toolkit-audit.jsonl` for usage analytics |
+| **Workflow Tracker** | `PostToolUse` | Tracks multi-step workflow progress to `.pm-toolkit-workflow-state.json` so workflows can resume across sessions |
+
+Hook scripts live in `hooks/` and are configured via `hooks/hooks.json`.
 
 ## Author
 

@@ -1,0 +1,51 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/context-reinject.sh\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/quality-gate.sh\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/usage-logger.sh\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/workflow-tracker.sh\""
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/usage-logger.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
