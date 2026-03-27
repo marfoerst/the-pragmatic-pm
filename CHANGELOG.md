@@ -4,6 +4,65 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.3.0] — 2026-03-27
+
+### Quality & Personalization Update
+
+Comprehensive quality pass driven by 4-persona testing (Junior PM, Senior PM, Head of Product, VP Product). Added personal context, fixed all critical gaps, refreshed older skills, and prepared for public distribution.
+
+### Added
+
+- **`personal-context.md`** — Personal profile template for role, seniority, communication preferences, skill self-assessment (1-5), and "what to avoid" instructions. Skills adapt depth and tone to the user's experience level. Ships as `personal-context.example.md` (template in repo); `personal-context.md` is gitignored for privacy.
+
+- **Mid-entry support** in all 3 workflows — PMs with partial work can now skip stages:
+  - `pm-workflow-problem-to-prd`: Enter at any of 5 stages with existing artifacts
+  - `pm-workflow-sales-enablement`: Enter at any of 4 stages
+  - `pm-workflow-quarterly-cycle`: Enter at any of 5 stages
+
+- **Revenue impact modeling** (Phase 7) in `pm-pricing` — 3-scenario revenue sensitivity model, break-even analysis, and sensitivity checks. Answers "what does this mean in euros?"
+
+- **Price migration strategy** (Phase 8) in `pm-pricing` — Grandfather/sunset/immediate/hybrid options, customer communication plan, at-risk account playbook
+
+- **2 new objection categories** in `pm-objection-handler`:
+  - Internal Politics & Champion Risk (organizational dynamics, not product evaluation)
+  - Scope & Unbundling (buyer needs only part of the product)
+
+- **Mid-quarter review template** in `pm-workflow-quarterly-cycle` — OKR progress check, bet status, capacity reality check, and course-correction decisions
+
+- **Deal-stage artifact map** in `pm-gtm-strategist` agent — Maps which GTM skill and artifact the sales team needs at each deal stage (Prospecting through Closed Lost)
+
+- **Verdict roll-up rules** in `pm-review` — Explicit Red/Yellow/Green to verdict mapping + "After the Review" guidance for fixing issues and re-reviewing
+
+- **Getting Started** beginner path in README — 5-step guided journey for new users
+
+- **Frameworks & Abbreviations** glossary in README — 30+ terms explained (WTP, JTBD, SCQA, OKR, NRR, ARPU, MoSCoW, etc.) with "Used In" references
+
+- **Skill Disambiguation** table in README — Clarifies PRD vs brief vs one-pager, pricing vs AI pricing, OKR vs quarterly planning
+
+- **Key Books Referenced** table in README — Dunford, Ramanujam/Tacke, Cagan, Torres, Doerr
+
+- **LICENSE** (MIT), **CONTRIBUTING.md**, **CLAUDE.md** — Standard open-source files for public distribution
+
+### Changed
+
+- **personal-context.md integrated across 21 files** — 10 key skills, 5 agents, 3 workflows, README, hub. Each adapts guidance depth to the user's stated seniority and preferences.
+
+- **6 older skills refreshed to v1.1+ quality** — pm-swot, pm-board-deck, pm-meeting-notes, pm-executive-update, pm-one-pager, pm-stakeholder-simulator now have: Intent Detection, Pre-Population from Existing Artifacts, Anti-Patterns, and personal-context.md references
+
+- **Hardcoded ERP examples removed from skills** — Replaced with `domain-context.md` references so non-ERP companies get clean output
+
+- **domain-context.md Sales & GTM section** — Populated with example data (previously empty placeholders). Consistent with the product sections that already shipped populated.
+
+- **README overhauled** — Install command updated to marketplace install, setup includes personal context, workflows section notes mid-entry support
+
+### Infrastructure
+
+- `.gitignore` updated — personal-context.md, .pm-toolkit-audit.jsonl, .pm-toolkit-workflow-state.json
+- `personal-context.example.md` ships as template; actual personal-context.md is user-local
+- Version bumped to 1.3.0 in plugin.json and marketplace.json
+
+---
+
 ## [1.2.0] — 2026-03-26
 
 ### Industry Knowledge Enrichment

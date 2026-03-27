@@ -175,51 +175,52 @@ Cloud-native ERP platform for German small and medium businesses. Core modules i
 
 ### Sales Team Structure
 
-- **Sales motion**: [Self-serve / Inside sales / Field sales / Channel-led / Hybrid]
-- **Team size**: [N] AEs, [N] SDRs, [N] SEs
-- **Average deal size**: EUR [X]
-- **Average sales cycle**: [N] days/weeks
-- **Primary CRM**: [CRM name]
-- **Key channels**: [Direct, partner/Steuerberater, marketplace]
+- **Sales motion**: Channel-led + Inside sales hybrid. Steuerberater (tax advisor) referrals are the primary channel; inside sales handles inbound and direct outreach.
+- **Team size**: 8 AEs, 4 SDRs, 2 SEs
+- **Average deal size**: EUR 3.500 ARR (SMB), EUR 15.000 ARR (mid-market with multi-entity)
+- **Average sales cycle**: 4-6 weeks (SMB self-serve), 8-12 weeks (mid-market with Steuerberater involvement)
+- **Primary CRM**: HubSpot
+- **Key channels**: Steuerberater referrals (40%), organic/inbound (30%), direct outreach (20%), partner marketplace (10%)
 
 ### Deal Stages
 
 | Stage | Description | Typical Duration | Key Activities |
 |-------|-------------|-----------------|----------------|
-| Qualification | [description] | [duration] | [activities] |
-| Discovery | [description] | [duration] | [activities] |
-| Demo | [description] | [duration] | [activities] |
-| Proposal | [description] | [duration] | [activities] |
-| Negotiation | [description] | [duration] | [activities] |
-| Closed | [description] | [duration] | [activities] |
+| Qualification | Inbound lead or Steuerberater referral assessed for fit | 1-3 days | ICP check, company size, current solution, pain level |
+| Discovery | Understand current workflow, pain points, compliance needs | 1-2 weeks | Discovery call, DATEV/compliance requirements check |
+| Demo | Show product with customer's actual use case | 1 week | Personalized demo, Steuerberater demo if channel deal |
+| Proposal | Pricing, packaging, implementation plan | 1-2 weeks | Proposal document, ROI calculation, reference call |
+| Negotiation | Contract terms, onboarding timeline, data migration scope | 1-2 weeks | Legal review, data migration assessment, pricing finalization |
+| Closed Won/Lost | Decision made | — | Handoff to CS for onboarding, or loss debrief |
 
 ### ICP (Ideal Customer Profile)
 
 | Dimension | Criteria |
 |-----------|---------|
-| Company size | [employee count or revenue range] |
-| Revenue range | EUR [range] |
-| Industry | [sectors / verticals] |
-| Geography | [regions] |
-| Tech maturity | [description] |
-| Buying trigger | [what causes them to evaluate a solution now] |
-| Disqualifiers | [what makes a prospect NOT a fit] |
+| Company size | 10-250 employees |
+| Revenue range | EUR 1M - 50M |
+| Industry | Manufacturing, professional services, retail, construction (German Mittelstand) |
+| Geography | DACH region (Germany primary, Austria and Switzerland secondary) |
+| Tech maturity | Currently using desktop accounting software or spreadsheets; willing to move to cloud |
+| Buying trigger | Steuerberater recommends cloud solution, current software end-of-life, company growth requiring multi-entity, GoBD audit finding |
+| Disqualifiers | Enterprise (>500 employees, needs SAP-level customization), non-German accounting standards, no Steuerberater relationship |
 
 ### Buyer Personas (distinct from product user personas above)
 
 | Persona | Role | Cares About | Common Objections |
 |---------|------|-------------|-------------------|
-| Economic Buyer | [role, e.g., Geschaeftsfuehrer/CFO] | [priorities] | [typical pushback] |
-| Champion | [role, e.g., Buchhalter/Controller] | [priorities] | [typical pushback] |
-| Blocker | [role, e.g., IT Lead / incumbent vendor advocate] | [priorities] | [typical pushback] |
+| Economic Buyer | Geschaeftsfuehrer/in (CEO/Owner) | Total cost, ROI, business overview, compliance peace of mind | "What does it cost vs. what we have now?", "Can my Steuerberater work with this?", "What happens to our data?" |
+| Champion | Buchhalter/in or Controller/in | Efficiency, accuracy, DATEV integration, month-end close speed | "Does it handle SKR03/SKR04?", "How does DATEV export work?", "Can I do Jahresabschluss with this?" |
+| Blocker | IT-Verantwortlicher (IT lead) or incumbent software vendor advocate | Data security, migration risk, integration with existing systems | "Where is the data hosted?", "What about our existing setup?", "Migration sounds risky" |
 
 ### Win/Loss Patterns
 
-- **Top 3 reasons we win**: [reasons with evidence]
-- **Top 3 reasons we lose**: [reasons with evidence]
-- **Most common competitor in deals**: [competitor name]
-- **Average win rate**: [X]%
-- **Win rate vs top competitor**: [X]%
+- **Top 3 reasons we win**: (1) Seamless DATEV integration — Steuerberater validates the workflow, (2) Cloud-native with real multi-entity support — competitors are cloud-washed desktop tools, (3) GoBD compliance built-in with audit trail — reduces compliance anxiety
+- **Top 3 reasons we lose**: (1) Prospect stays with status quo (spreadsheet + desktop software is "good enough"), (2) Lost to Lexoffice on price for very small businesses (<10 employees), (3) Steuerberater recommends DATEV Unternehmen Online instead (channel conflict)
+- **Most common competitor in deals**: Lexoffice (direct), DATEV Unternehmen Online (channel), Status quo / manual process (inertia)
+- **Average win rate**: 35%
+- **Win rate vs Lexoffice**: 55% (we win on multi-entity and depth)
+- **Win rate vs DATEV UO**: 30% (Steuerberater loyalty is hard to overcome)
 
 ## Language
 

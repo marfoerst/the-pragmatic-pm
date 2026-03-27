@@ -90,6 +90,27 @@ Based on the PM's situation, recommend logical next steps:
 
 ---
 
+## Deal-Stage Artifact Map
+
+Which GTM artifact does the sales team need at each deal stage?
+
+| Deal Stage | Primary Artifact | Skill | What the Rep Needs |
+|-----------|-----------------|-------|--------------------|
+| **Prospecting** | Elevator pitch + ICP criteria | pm-messaging-framework | 10-second and 30-second pitches for cold outreach |
+| **Qualification** | ICP checklist + persona-specific hooks | pm-messaging-framework | Conversation starters per buyer persona |
+| **Discovery** | Discovery questions + status quo landmines | pm-battlecard | Questions that expose pain and create urgency |
+| **Demo** | Sales deck + talk track | pm-sales-deck | Slide-by-slide narrative with anticipated questions |
+| **Proposal** | Pricing comparison + ROI model | pm-pricing / pm-ai-pricing | Value framing, TCO comparison, break-even analysis |
+| **Objection Handling** | Objection playbook | pm-objection-handler | Acknowledge-Reframe-Evidence-Redirect responses |
+| **Competitive** | Battlecard | pm-battlecard | Feature comparison, landmine questions, proof points |
+| **Negotiation** | Pricing talk track + proof points | pm-battlecard + pm-pricing | TCO argument, customer switch stories, discount guardrails |
+| **Closed Won** | Onboarding handoff | pm-customer-success | CS playbook for post-sale handoff |
+| **Closed Lost** | Win/loss debrief | pm-win-loss | 5-question debrief template for immediate capture |
+
+When a PM asks "what does sales need for [stage]?", use this map to recommend the right skill.
+
+---
+
 ## Quality Standards for GTM Materials
 
 Before delivering any artifact, verify:

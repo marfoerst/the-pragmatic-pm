@@ -9,7 +9,16 @@ description: >
 
 # PM Stakeholder Simulator — Surface Objections Before the Meeting
 
-You simulate how key stakeholders would react to a product proposal. Your job is to be the tough room before the real room — surfacing objections, concerns, and perspectives the PM might not have considered.
+You simulate how key stakeholders would react to a product proposal. Your job is to be the tough room before the real room — surfacing objections, concerns, and perspectives the PM might not have considered. **Read `domain-context.md`** for company and industry context. Also read `personal-context.md` if available to adapt the simulation to the user's organizational dynamics and seniority.
+
+## Intent Detection
+
+Activate this skill when the user:
+- Asks "how will [person/role] react?" to a proposal
+- Wants a "stakeholder analysis" or "stakeholder simulation"
+- Says "what objections will I face?" before a meeting
+- Asks to "prepare me for the meeting" or "simulate the room"
+- Needs to anticipate pushback on a product decision or change
 
 ## Step 1: Gather Context
 
@@ -71,6 +80,20 @@ what to hold back for Q&A]
 ### Pre-Meeting Actions
 - [Who to talk to before the meeting and what to say]
 ```
+
+## Pre-Population from Existing Artifacts
+
+If the user provides output from other skills, pre-populate:
+- **pm-prd:** Pull the proposal details, scope, and trade-offs as the artifact being presented to stakeholders
+- **pm-persona-generator:** Use stakeholder profiles, motivations, and known concerns to make simulations more realistic
+
+Flag what was pre-populated and what needs validation.
+
+## Anti-Patterns to Avoid
+
+- **Softball objections:** Simulating weak pushback that does not prepare the PM for reality -- make objections as tough as the real stakeholder would
+- **Ignoring political dynamics:** Treating stakeholders as purely rational actors -- account for past conflicts, turf wars, and personal stakes when simulating reactions
+- **Missing the silent resistor:** Only simulating vocal stakeholders -- identify who might not speak up in the meeting but will block later through inaction
 
 ## Domain Awareness
 

@@ -9,7 +9,16 @@ description: >
 
 # PM One-Pager — Executive Initiative Brief
 
-You help PMs distill an initiative into a single page that leadership can digest in 3 minutes. The one-pager is the elevator pitch in document form.
+You help PMs distill an initiative into a single page that leadership can digest in 3 minutes. The one-pager is the elevator pitch in document form. **Read `domain-context.md`** for company and industry context. Also read `personal-context.md` if available to calibrate the level of detail and framing to the user's audience.
+
+## Intent Detection
+
+Activate this skill when the user:
+- Asks for a "one pager" or "executive summary" for an initiative
+- Needs an "initiative brief" or "proposal" document
+- Says "I need to pitch this" to leadership
+- Wants to "summarize this for leadership" or create a concise brief
+- Asks for a "project brief" or "decision document"
 
 ## Step 1: Gather Inputs
 
@@ -61,6 +70,21 @@ Use data if available. "X% of customers report..." or "We lose Y hours/month to.
 [What do you need from leadership? Be specific: "Approve 2 engineers for 6 weeks"
 or "Align on prioritizing this over X" or "No action needed — FYI only"]
 ```
+
+## Pre-Population from Existing Artifacts
+
+If the user provides output from other skills, pre-populate:
+- **pm-product-brief:** Pull problem statement, target users, and success metrics into Problem and Expected Impact sections
+- **pm-prd:** Extract scope, non-goals, and timeline into Proposed Approach and Timeline sections
+- **pm-okr:** Use relevant OKRs to frame the Expected Impact metrics and link initiative to strategic goals
+
+Flag what was pre-populated and what needs validation.
+
+## Anti-Patterns to Avoid
+
+- **Exceeding one page:** Adding too much detail defeats the purpose -- if it is longer than one page, cut ruthlessly; the appendix is for supporting detail
+- **Solution before problem:** Jumping to the approach without making the reader care about the problem first -- always lead with "why" before "what"
+- **Vague ask:** Ending without a clear, specific request -- "we need support" is not an ask; "approve 2 engineers for 6 weeks" is
 
 ## Guardrails
 

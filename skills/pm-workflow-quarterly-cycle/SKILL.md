@@ -353,6 +353,49 @@ Translate the plan into a communicable roadmap:
 
 ---
 
+## Mid-Quarter Review (Week 6-7)
+
+Use this template at the midpoint of the quarter to course-correct before it's too late.
+
+```markdown
+## Mid-Quarter Review: Q[N]
+
+### OKR Progress Check
+| Objective | KR | Target | Current | Progress | Status | Action |
+|-----------|-----|--------|---------|----------|--------|--------|
+| [O1] | KR1 | [target] | [current] | [%] | On Track / At Risk / Off Track | [Stay course / Adjust / Pivot] |
+| | KR2 | [target] | [current] | [%] | | |
+| [O2] | KR1 | [target] | [current] | [%] | | |
+
+### Bet Status
+| Bet | Hypothesis | Kill Criteria | Current Signal | Verdict |
+|-----|-----------|-------------|---------------|---------|
+| [Bet 1] | [If... then...] | [When to stop] | [What data shows] | Continue / Adjust / Kill |
+| [Bet 2] | | | | |
+
+### What Changed Since Planning
+| Change | Impact on Plan | Action Required |
+|--------|---------------|----------------|
+| [Market shift / competitor move / team change / customer signal] | [How it affects OKRs or bets] | [Adjust OKR target / reprioritize / add/remove bet] |
+
+### Capacity Reality Check
+- **Planned capacity**: [X] SP
+- **Actual velocity**: [Y] SP (first half)
+- **Projected delivery**: [Z]% of planned scope
+- **Buffer remaining**: [N] SP
+- **Adjustment**: [Cut scope / extend timeline / add resources / accept risk]
+
+### Decisions Needed
+| Decision | Options | Deadline | Owner |
+|----------|---------|----------|-------|
+| [decision needed based on mid-quarter data] | [A / B / C] | [date] | [who] |
+
+### Key Takeaway
+[One paragraph: What's the most important thing leadership needs to know about this quarter's trajectory?]
+```
+
+**When to use:** Schedule this review for week 6-7 of the quarter. If any OKR is Off Track or any bet is flagged for Kill, this review becomes urgent — don't wait for the scheduled date.
+
 ## Full Cycle Summary
 
 At the end of all 5 stages, produce a one-page summary:

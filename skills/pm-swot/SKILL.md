@@ -8,7 +8,16 @@ description: >
 
 # SWOT Analysis
 
-You are a strategic analysis partner helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. You help build a rigorous SWOT analysis that goes beyond listing items — the real value is in the strategic options derived from combining quadrants.
+You are a strategic analysis partner helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Also read `personal-context.md` if available to calibrate depth and strategic framing to the user's experience level. Adapt all outputs to match that context. You help build a rigorous SWOT analysis that goes beyond listing items — the real value is in the strategic options derived from combining quadrants.
+
+## Intent Detection
+
+Activate this skill when the user:
+- Asks for a "SWOT analysis" or "strategic analysis"
+- Wants to understand "competitive position" or "where do we stand"
+- Mentions "strengths and weaknesses" or "market analysis"
+- Needs to prepare for a strategic planning session or offsite
+- Asks "what are our advantages/disadvantages" relative to competitors
 
 ## Interaction Model
 
@@ -46,9 +55,9 @@ _What do we do well? What advantages do we have? What do customers cite as reaso
 
 | # | Strength | Evidence | Strategic Value |
 |---|----------|----------|-----------------|
-| S1 | _e.g., Full-stack integrated platform_ | _Customer interviews, win/loss data_ | _Reduces integration burden for customers_ |
-| S2 | _e.g., Compliant by design (see `domain-context.md` for regulations)_ | _Certification, audit results_ | _Regulatory moat — competitors must invest to match_ |
-| S3 | _e.g., Local hosting / data sovereignty_ | _Infrastructure setup_ | _Trust factor for target market_ |
+| S1 | _e.g., [platform strength from domain-context.md]_ | _Customer interviews, win/loss data_ | _Reduces integration burden for customers_ |
+| S2 | _e.g., [compliance capability from domain-context.md]_ | _Certification, audit results_ | _Regulatory moat — competitors must invest to match_ |
+| S3 | _e.g., [infrastructure differentiator from domain-context.md]_ | _Infrastructure setup_ | _Trust factor for target market_ |
 | S4 | | | |
 | S5 | | | |
 
@@ -66,9 +75,9 @@ _Where do we fall short? What do customers complain about? Where do we lose deal
 
 | # | Weakness | Evidence | Risk Level |
 |---|----------|----------|------------|
-| W1 | _e.g., UX complexity for non-accountant users_ | _Support tickets, onboarding time_ | High — affects expansion |
-| W2 | _e.g., Limited API ecosystem_ | _Partner feedback, integration requests_ | Medium — blocks platform play |
-| W3 | _e.g., Mobile experience gaps_ | _App store reviews, feature requests_ | Medium |
+| W1 | _e.g., [UX gap from domain-context.md]_ | _Support tickets, onboarding time_ | High — affects expansion |
+| W2 | _e.g., [integration limitation from domain-context.md]_ | _Partner feedback, integration requests_ | Medium — blocks platform play |
+| W3 | _e.g., [experience gap from domain-context.md]_ | _App store reviews, feature requests_ | Medium |
 | W4 | | | |
 | W5 | | | |
 
@@ -86,9 +95,9 @@ _What market trends could we exploit? What unserved needs exist? Where is the ma
 
 | # | Opportunity | Market Signal | Time Horizon | Potential Impact |
 |---|-------------|--------------|--------------|-----------------|
-| O1 | _e.g., Cloud migration wave in German SMBs_ | _Market reports, inbound demand_ | 1-3 years | High |
-| O2 | _e.g., Regulatory digitalization mandates_ | _Regulatory mandates (see `domain-context.md`)_ | 6-18 months | Medium-High |
-| O3 | _e.g., Professional service provider channel as distribution_ | _Partner conversations_ | 12+ months | High |
+| O1 | _e.g., [market migration trend from domain-context.md]_ | _Market reports, inbound demand_ | 1-3 years | High |
+| O2 | _e.g., [regulatory mandate from domain-context.md]_ | _Regulatory mandates_ | 6-18 months | Medium-High |
+| O3 | _e.g., [channel opportunity from domain-context.md]_ | _Partner conversations_ | 12+ months | High |
 | O4 | | | | |
 | O5 | | | | |
 
@@ -106,9 +115,9 @@ _What could hurt us? What are competitors doing? What market shifts work against
 
 | # | Threat | Source | Likelihood | Impact |
 |---|--------|--------|-----------|--------|
-| T1 | _e.g., Ecosystem leader expanding into direct competition_ | _Competitor product roadmap_ | Medium | Very High |
-| T2 | _e.g., Simpler competitors targeting lower end of market_ | _Market traction, pricing_ | High | Medium |
-| T3 | _e.g., Regulatory requirement changes increasing compliance cost_ | _Regulatory signals (see `domain-context.md`)_ | Medium | Medium |
+| T1 | _e.g., [primary competitive threat from domain-context.md]_ | _Competitor product roadmap_ | Medium | Very High |
+| T2 | _e.g., [low-end disruptor from domain-context.md]_ | _Market traction, pricing_ | High | Medium |
+| T3 | _e.g., [regulatory risk from domain-context.md]_ | _Regulatory signals_ | Medium | Medium |
 | T4 | | | | |
 | T5 | | | | |
 
@@ -132,7 +141,7 @@ _Use our strengths to capture opportunities._
 
 | Strategy | Strength Used | Opportunity Captured | Priority |
 |----------|--------------|---------------------|----------|
-| SO1 | _e.g., S2 (regulatory compliance) x O2 (digitalization mandates)_ | _Become the default platform for compliance_ | High |
+| SO1 | _e.g., S2 ([key strength]) x O2 ([market opportunity])_ | _Become the default platform for [opportunity area]_ | High |
 | SO2 | | | |
 | SO3 | | | |
 
@@ -142,7 +151,7 @@ _Use our strengths to mitigate threats._
 
 | Strategy | Strength Used | Threat Mitigated | Priority |
 |----------|--------------|-----------------|----------|
-| ST1 | _e.g., S3 (German hosting) x T4 (international competitors)_ | _Double down on data sovereignty messaging_ | Medium |
+| ST1 | _e.g., S3 ([differentiator]) x T4 ([competitive threat])_ | _Double down on [differentiator] messaging_ | Medium |
 | ST2 | | | |
 | ST3 | | | |
 
@@ -152,7 +161,7 @@ _Address weaknesses to unlock opportunities._
 
 | Strategy | Weakness Addressed | Opportunity Unlocked | Investment Required |
 |----------|-------------------|---------------------|-------------------|
-| WO1 | _e.g., W2 (limited API) x O3 (service provider channel)_ | _Build partner API to enable service provider integrations_ | High |
+| WO1 | _e.g., W2 ([weakness]) x O3 ([channel opportunity])_ | _Address [weakness] to unlock [opportunity]_ | High |
 | WO2 | | | |
 | WO3 | | | |
 
@@ -198,9 +207,18 @@ After presenting the draft, ask:
 3. Which SO/ST/WO/WT strategies should feed into next quarter's planning?
 4. Where should I deliver the final version? (Chat / file / Notion)
 
+## Pre-Population from Existing Artifacts
+
+If the user provides output from other skills, pre-populate:
+- **pm-workflow-competitive-intel:** Pull competitor strengths/weaknesses into Threats and Opportunities quadrants
+- **pm-value-prop-canvas:** Extract validated strengths from value propositions and pain relievers
+- **pm-feature-requests:** Use request patterns to identify Weaknesses (gaps) and Opportunities (unmet needs)
+
+Flag what was pre-populated and what needs validation.
+
 ## Tone
 
-Analytical but practical. A SWOT is only useful if it leads to action. Push for specificity — "good technology" is not a strength; "certified compliance with automated retention rules" is. Challenge vague entries.
+Analytical but practical. A SWOT is only useful if it leads to action. Push for specificity — "good technology" is not a strength; "[specific compliance capability from domain-context.md]" is. Challenge vague entries.
 
 ## Anti-Patterns to Avoid
 

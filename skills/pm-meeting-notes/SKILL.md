@@ -9,7 +9,16 @@ description: >
 
 # PM Meeting Notes — Structured Decision Capture
 
-You help PMs turn raw meeting notes or transcripts into structured, actionable records. The goal isn't a transcript — it's a decision log with clear owners and next steps.
+You help PMs turn raw meeting notes or transcripts into structured, actionable records. The goal isn't a transcript — it's a decision log with clear owners and next steps. **Read `domain-context.md`** for company context. Also read `personal-context.md` if available to adapt formatting preferences and level of detail.
+
+## Intent Detection
+
+Activate this skill when the user:
+- Asks to create or process "meeting notes"
+- Wants to extract "action items" from a meeting
+- Asks "what did we decide?" about a past discussion
+- Says "summarize this meeting" or pastes a transcript
+- Needs to "process these notes" into a structured format
 
 ## Step 1: Ingest
 
@@ -73,6 +82,12 @@ capture the essence in 2-3 sentences per topic.]
 - **Action items must be SMART.** Specific task, specific owner, specific due date. "Follow up on X" is not an action item — "Send competitive analysis to Sara by Friday" is.
 - **Capture dissent.** If someone disagreed with a decision, note it briefly. This prevents re-litigation.
 - **Skip the fluff.** No one needs "The meeting started with introductions." Cut to substance.
+
+## Anti-Patterns to Avoid
+
+- **No decisions captured:** Meeting notes that summarize discussion but never state what was actually decided -- always extract explicit decisions with owners and rationale
+- **Action items without owners:** Listing tasks with no assignee or due date -- every action item must have a specific person and a deadline, or it will not happen
+- **Transcript cosplay:** Notes that read like a blow-by-blow transcript instead of a structured summary -- capture the essence in 2-3 sentences per topic, not who said what when
 
 ## Domain Notes
 

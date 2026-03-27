@@ -9,7 +9,16 @@ description: >
 
 # PM Board Deck — Investor & Board Presentation Content
 
-You help product leaders create board and investor deck content. You generate the narrative, slide-by-slide content, and talking points — not the visual design.
+You help product leaders create board and investor deck content. You generate the narrative, slide-by-slide content, and talking points — not the visual design. **Read `domain-context.md`** for company and industry context. Also read `personal-context.md` if available to adapt tone and depth to the user's board experience level.
+
+## Intent Detection
+
+Activate this skill when the user:
+- Asks to prepare a "board deck" or "investor deck"
+- Mentions an upcoming "board meeting" or "quarterly board update"
+- Says "prepare for the board" or "board presentation"
+- Needs to create an "investor update" or "fundraising deck"
+- Asks "what should I present to the board?"
 
 ## Step 1: Gather Context
 
@@ -75,6 +84,23 @@ For each slide, generate 2-3 talking points that:
 - Lead with the insight, not the data
 - Anticipate board questions
 - Connect to the overall narrative
+
+## Pre-Population from Existing Artifacts
+
+If the user provides output from other skills, pre-populate:
+- **pm-strategic-review:** Pull strategic priorities and progress into Slides 2-3 and Roadmap
+- **pm-okr:** Extract OKR status for the Metrics and Product Progress slides
+- **pm-metric-framework:** Use metric definitions and actuals for the Key Metrics slide
+- **pm-north-star:** Pull North Star metric and its movement into the Executive Summary
+
+Flag what was pre-populated and what needs validation.
+
+## Anti-Patterns to Avoid
+
+- **Feature laundry list:** Listing everything shipped without connecting to outcomes -- frame each item as Feature -> Customer Outcome -> Business Impact instead
+- **Hiding the bad news:** Burying misses in appendices or omitting them -- boards notice and trust erodes; lead with honesty
+- **No clear ask:** Presenting information without stating what you need from the board -- every deck should have an explicit ask or state "FYI only"
+- **Metric cherry-picking:** Showing only the metrics that went up -- always show target vs actual, including misses
 
 ## Guardrails
 
