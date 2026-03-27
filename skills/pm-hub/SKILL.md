@@ -46,7 +46,8 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-opportunity-tree` | "opportunity tree", "Teresa Torres", "continuous discovery" | Opportunity Solution Tree framework |
 | `/pm-devils-advocate` | "challenge this", "what if we're wrong?", "pre-mortem" | Structured challenge of product decisions |
 | `/pm-build-vs-buy` | "build vs buy", "make or buy", "partner" | Build/buy/partner decision framework |
-| `/pm-risk-register` | "risks", "risk register", "what could go wrong?" | Product risk identification and mitigation |
+| `/pm-risk-register` | "risks", "risk register", "what could go wrong?", "migration risks" | Product risk identification and mitigation (includes migration mode) |
+| `/pm-migration-planner` | "migration", "platform migration", "data migration", "product consolidation", "feature parity", "migration strategy", "legacy sunset", "100-day plan" | SaaS migration planning: strategy selection, feature parity analysis, go/no-go gates, customer comms, legacy sunset |
 
 ### Communication
 | Skill | Trigger | What It Does |
@@ -57,6 +58,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-product-brief` | "product brief", "one-pager", "pitch" | Amazon-style working-backwards brief |
 | `/pm-one-pager` | "one pager", "executive summary", "initiative brief" | Executive one-pager for proposals |
 | `/pm-board-deck` | "board deck", "investor deck", "board meeting" | Board/investor deck content |
+| `/pm-pe-migration-report` | "PE report", "migration board update", "ARR migration status", "synergy report" | PE board migration progress dashboard |
 | `/pm-meeting-notes` | "meeting notes", "action items", "decisions" | Structured PM meeting notes |
 
 ### Go-to-Market
@@ -86,6 +88,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-workflow-competitive-intel` | "competitive analysis pack" | SWOT -> Market Sizing -> Competitive Profile -> Positioning |
 | `/pm-workflow-quarterly-cycle` | "run the quarterly cycle" | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
 | `/pm-workflow-sales-enablement` | "sales enablement pack", "enable the sales team" | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
+| `/pm-workflow-migration` | "migration workflow", "plan a migration end to end", "PE migration" | Migration PRD -> Migration Planner -> Risk Register -> Stakeholder Sim -> Comms + PE Report |
 
 ## Routing Logic
 

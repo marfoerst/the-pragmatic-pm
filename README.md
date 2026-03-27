@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 43 PM skills + 5 agents + 4 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 45 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -67,7 +67,8 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-opportunity-tree` | Teresa Torres Opportunity Solution Tree |
 | `pm-devils-advocate` | Challenge product assumptions |
 | `pm-build-vs-buy` | Build/buy/partner decision framework |
-| `pm-risk-register` | Product risk identification and mitigation |
+| `pm-risk-register` | Product risk identification and mitigation (includes migration mode) |
+| `pm-migration-planner` | SaaS migration planning: strategy, feature parity, go/no-go gates, data migration, legacy sunset |
 
 ### Communication
 | Skill | What It Does |
@@ -78,6 +79,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-product-brief` | Amazon-style working-backwards brief |
 | `pm-one-pager` | Executive one-pager for proposals |
 | `pm-board-deck` | Board/investor deck content |
+| `pm-pe-migration-report` | PE board migration progress dashboard (ARR, waves, synergies) |
 | `pm-meeting-notes` | Structured PM meeting notes |
 
 ### Go-to-Market
@@ -110,6 +112,7 @@ Workflows chain multiple skills into guided, multi-stage processes. Each stage p
 | `pm-workflow-competitive-intel` | SWOT -> Market Sizing -> Competitive Profile -> One-Pager |
 | `pm-workflow-quarterly-cycle` | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
 | `pm-workflow-sales-enablement` | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
+| `pm-workflow-migration` | Migration PRD -> Migration Planner -> Risk Register -> Stakeholder Simulation -> Comms + PE Report |
 
 ## Agents
 

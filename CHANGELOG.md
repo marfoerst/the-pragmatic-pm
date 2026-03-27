@@ -4,6 +4,38 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.4.0] — 2026-03-27
+
+### SaaS Migration & PE Integration
+
+Added comprehensive migration planning capabilities for PE-backed SaaS companies. Covers platform rewrites, data migrations, product consolidations, vendor switches, and legacy sunsetting. Feature parity analysis is the central artifact — the document that determines whether migration is possible.
+
+**45 skills + 5 agents + 5 workflows**
+
+### Added
+
+- **`pm-migration-planner`** (613 lines) — The most comprehensive skill in the toolkit. 8-phase migration planning with 5 migration types (Platform, Data, Product Consolidation, Vendor/API, Compliance). Includes: strategy selection framework (Big Bang / Strangler Fig / Parallel Run / Cohort-Based / Feature Flag), feature parity matrix with customer-weighted gap analysis, data migration plan with 3 validation gates, 5-gate go/no-go framework with named decision-makers, 8-touch customer communication playbook, post-migration validation checklist, and legacy sunset plan.
+
+- **`pm-pe-migration-report`** — PE board migration progress dashboard. One-page format PE operating partners can digest in 5 minutes: ARR scorecard (migrated/remaining/at-risk/lost), wave status, synergy realization tracker, cost vs budget, top 5 risks, post-migration customer health.
+
+- **`pm-workflow-migration`** — 5-stage migration workflow: Migration PRD → Migration Planner → Risk Register → Stakeholder Simulation → Comms + PE Report. Multi-session with mid-entry support. Stages 1-3 produce the 100-day plan; Stages 4-5 repeat per wave.
+
+- **PE/Acquisition Context** section in `domain-context.md` — PE relationship, acquired companies table, target platform, migration constraints.
+
+### Changed
+
+- **`pm-risk-register`** — Added migration risk mode with 7 migration-specific categories: Data Integrity, Feature Parity, Customer Impact, Rollback, Timeline, Capacity, Integration.
+
+- **`pm-customer-success`** — Added Stage G: Migration Support with health indicators (prep completion, support tickets, first login, workflow completion, data reconciliation, CSAT), intervention triggers, and CSM script templates.
+
+- **`pm-stakeholder-simulator`** — Added 4 PE-specific stakeholder archetypes: PE Operating Partner, Acquired Company GM, Acquired Company PM, Acquired Company's Largest Customer.
+
+- **`pm-hub`** — Added pm-migration-planner to Strategy, pm-pe-migration-report to Communication, pm-workflow-migration to Workflows.
+
+- **`pm-ops-facilitator`** — Added migration routing.
+
+---
+
 ## [1.3.0] — 2026-03-27
 
 ### Quality & Personalization Update

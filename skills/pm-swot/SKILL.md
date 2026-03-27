@@ -171,7 +171,7 @@ _Address weaknesses to avoid threats becoming critical._
 
 | Strategy | Weakness | Threat | Urgency |
 |----------|----------|--------|---------|
-| WT1 | _e.g., W1 (UX complexity) x T2 (simpler competitors)_ | _Simplify onboarding or risk losing low-end of market_ | High |
+| WT1 | _e.g., W1 ([weakness]) x T2 ([threat])_ | _Address [weakness] or risk losing [market segment]_ | High |
 | WT2 | | | |
 | WT3 | | | |
 

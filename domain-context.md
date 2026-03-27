@@ -222,6 +222,37 @@ Cloud-native ERP platform for German small and medium businesses. Core modules i
 - **Win rate vs Lexoffice**: 55% (we win on multi-entity and depth)
 - **Win rate vs DATEV UO**: 30% (Steuerberater loyalty is hard to overcome)
 
+## PE / Acquisition Context
+
+> **Optional section.** Fill this in if your company is PE-backed or involved in M&A.
+> Used by migration skills (pm-migration-planner, pm-pe-migration-report, pm-workflow-migration).
+
+### PE Relationship
+
+- **PE Sponsor**: [Firm name, operating partner name]
+- **Investment thesis**: [e.g., "Buy and build consolidation in German SMB ERP", "Platform modernization play"]
+- **Board reporting cadence**: [Monthly / Quarterly / Ad-hoc]
+- **100-day plan status**: [In progress / Complete / N/A]
+
+### Acquired Companies (if applicable)
+
+| Company | Acquired Date | Product | Customers | ARR | Migration Status |
+|---------|-------------|---------|-----------|-----|-----------------|
+| [Company A] | [date] | [product name] | [N] | EUR [X] | [Not started / Planning / In progress / Complete] |
+| [Company B] | [date] | [product name] | [N] | EUR [X] | [status] |
+
+### Target Platform
+
+- **Designated survivor**: [Which platform is the target for consolidation]
+- **Key advantages over acquired products**: [Why this platform was chosen]
+- **Known parity gaps**: [Major features in acquired products not yet in target]
+
+### Migration Constraints
+
+- **Contractual obligations**: [e.g., "Company A customers have 12-month feature guarantee through 2026-12"]
+- **Regulatory requirements**: [e.g., "Data must remain in EU, GoBD-compliant archive of legacy data required for 10 years"]
+- **Timeline pressure**: [e.g., "PE expects platform consolidation by Q4 2027"]
+
 ## Language
 
 - **Default output language**: English

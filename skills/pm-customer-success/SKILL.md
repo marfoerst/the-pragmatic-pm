@@ -220,6 +220,41 @@ _"As a new customer, I need to be productive within [X] days so that I can repla
 
 ---
 
+## Stage G: Migration Support
+
+_For managing existing customers through an involuntary platform migration or major system change. This is NOT onboarding (the customer is not new) and NOT churn prevention (the customer is not at risk yet). It is a distinct lifecycle event where an existing customer must be shepherded through a change they did not ask for._
+
+### Migration Health Indicators
+
+| Indicator | Type | Green | Yellow | Red |
+|-----------|------|-------|--------|-----|
+| Migration prep actions completed | Leading | All done | Partial | Not started (T-14) |
+| Support tickets (migration-related) | Leading | < 2 per customer | 2-5 | > 5 |
+| First login to new system | Leading | Within 48 hours | Within 1 week | Not logged in after 1 week |
+| Critical workflow completed in new system | Lagging | Within 1 week | Within 2 weeks | Not completed after 2 weeks |
+| Data reconciliation confirmed by customer | Lagging | Confirmed accurate | Minor issues | Major discrepancies |
+| CSAT migration survey | Lagging | > 3.5/5 | 2.5-3.5 | < 2.5 |
+
+### Intervention Triggers & Actions
+
+| Trigger | Action | Owner | Timeline |
+|---------|--------|-------|----------|
+| Customer hasn't started prep actions (T-30) | Proactive call: "We noticed you haven't started. Can we help?" | CSM | Same day |
+| 3+ migration support tickets | Escalation: dedicated migration support session | CSM + Support Lead | Within 24h |
+| No login 72h post-cutover | Urgent outreach: "Is everything okay? Let's walk through together." | CSM | Same day |
+| NPS dropped >20 points during migration quarter | Executive outreach + recovery plan | CS Director + PM | Within 1 week |
+| Customer mentions competitor evaluation | Red alert: executive sponsor call + retention offer | CS Director + Sales | Within 48h |
+
+### CSM Migration Script Templates
+
+**Pre-migration call:** "Hi [Name], I'm reaching out because we're moving to [new platform] on [date]. I want to make sure your team is prepared and comfortable. Can I walk you through what's changing, what stays the same, and what you need to do?"
+
+**Day-of-migration check-in:** "Hi [Name], the migration happened [today/yesterday]. I wanted to personally check — is everything working as expected? Any issues at all, even small ones?"
+
+**Post-migration follow-up (T+7):** "Hi [Name], it's been a week since the migration. How is the team adjusting? Any workflows that feel different or anything we should look at together?"
+
+---
+
 ## Output Delivery
 
 Ask: **Where should I deliver this?**

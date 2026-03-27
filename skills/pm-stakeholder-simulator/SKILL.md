@@ -55,6 +55,17 @@ If the user doesn't specify stakeholders, simulate these archetypes:
 | **Finance** | ROI, cost, timeline to value |
 | **Compliance / Legal** | Regulatory risk, data privacy, audit implications |
 
+### PE / Acquisition Stakeholder Archetypes
+
+_Use these when simulating reactions to migration plans, product consolidation decisions, or post-acquisition integration._
+
+| Archetype | Role | Primary Concern | Likely Objection | How to Address |
+|-----------|------|----------------|-----------------|----------------|
+| **PE Operating Partner** | Board member, operating advisor | IRR, synergy realization timeline, ARR protection | "This is taking too long. When do we see the synergies?" | Present migration as value creation, not just cost. Show synergy realization milestones with $ impact. |
+| **Acquired Company GM** | Former CEO/GM of acquired company | Job security, team preservation, product legacy | "Our customers chose US, not the target platform. This will cause churn." | Acknowledge their product's strengths. Show feature parity plan. Give them ownership of migration quality for their customers. |
+| **Acquired Company PM** | PM from acquired company | Role redundancy, customer relationships, domain expertise | "The target platform doesn't handle [edge case] that our customers depend on." | Value their domain knowledge. Assign them as SME for parity analysis. Their expertise prevents gaps. |
+| **Acquired Company's Largest Customer** | Strategic account, high ARR | Disruption to operations, contractual guarantees, feature availability | "Our contract guarantees [feature/SLA]. When will the new platform match this?" | Review contract obligations first. Present parity timeline for their specific use cases. Offer dedicated migration support. |
+
 ## Step 3: Generate Preparation Guide
 
 ```
