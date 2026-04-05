@@ -28,8 +28,10 @@ else
 fi
 
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-LOG_FILE="$CLAUDE_PROJECT_DIR/.pm-toolkit-audit.jsonl"
+LOG_DIR="${XDG_STATE_HOME:-$HOME/.claude}/pm-toolkit"
+LOG_FILE="$LOG_DIR/audit.jsonl"
 
+mkdir -p "$LOG_DIR"
 echo "{\"timestamp\":\"$TIMESTAMP\",\"skill\":\"$SKILL_NAME\",\"status\":\"$STATUS\"}" >> "$LOG_FILE"
 
 exit 0

@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/context-reinject.sh\""
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/context-reinject.sh\""
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/quality-gate.sh\""
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/quality-gate.sh\""
           }
         ]
       }
@@ -27,11 +27,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/usage-logger.sh\""
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/usage-logger.sh\""
           },
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/workflow-tracker.sh\""
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/workflow-tracker.sh\""
           }
         ]
       }
@@ -42,7 +42,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/hooks/usage-logger.sh\""
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/usage-logger.sh\""
           }
         ]
       }

@@ -4,6 +4,16 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.4.1] — 2026-04-05
+
+### Fixed
+
+- **Hook script resolution** — `hooks/hooks.json` referenced scripts via `$CLAUDE_PROJECT_DIR`, which expanded to the user's current project rather than the plugin install directory. All five hook commands (`SessionStart`, `Stop`, `PostToolUse` ×2, `PostToolUseFailure`) now use `${CLAUDE_PLUGIN_ROOT}`, so hooks resolve correctly in every project. Previously every Claude Code session in an unrelated project produced non-blocking "No such file or directory" errors for all plugin hooks.
+
+- **Usage logger path** — `hooks/usage-logger.sh` wrote `.pm-toolkit-audit.jsonl` into each user's project directory. The audit log now lives at `${XDG_STATE_HOME:-$HOME/.claude}/pm-toolkit/audit.jsonl` (created automatically), keeping user repos clean. Workflow tracker state remains per-project by design; README notes adding `.pm-toolkit-workflow-state.json` to `.gitignore` if undesired.
+
+---
+
 ## [1.4.0] — 2026-03-27
 
 ### SaaS Migration & PE Integration

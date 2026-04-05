@@ -232,10 +232,10 @@ The plugin includes 4 hooks that run automatically:
 |------|-------|-------------|
 | **Context Reinjection** | `SessionStart` (after compaction) | Re-injects `domain-context.md` and `personal-context.md` into context when long conversations compress |
 | **Quality Gate** | `Stop` | Validates PM deliverables follow the 3 design principles (problem clarity, leading+lagging metrics, scope discipline) |
-| **Usage Logger** | `PostToolUse` / `PostToolUseFailure` | Logs every PM skill execution to `.pm-toolkit-audit.jsonl` for usage analytics |
-| **Workflow Tracker** | `PostToolUse` | Tracks multi-step workflow progress to `.pm-toolkit-workflow-state.json` so workflows can resume across sessions |
+| **Usage Logger** | `PostToolUse` / `PostToolUseFailure` | Logs every PM skill execution to `~/.claude/pm-toolkit/audit.jsonl` for usage analytics |
+| **Workflow Tracker** | `PostToolUse` | Tracks multi-step workflow progress to `.pm-toolkit-workflow-state.json` in the current project so workflows can resume across sessions |
 
-Hook scripts live in `hooks/` and are configured via `hooks/hooks.json`.
+Hook scripts live in `hooks/` and are configured via `hooks/hooks.json`. The workflow tracker writes per-project state — if you don't want it committed, add `.pm-toolkit-workflow-state.json` to your project's `.gitignore`.
 
 ## Skill Disambiguation
 
