@@ -16,6 +16,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 ### Foundation
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
+| `/pm-setup` | "setup", "getting started", "first time", "onboard me", "configure the toolkit", "fill out domain context" | Interactive first-run setup that fills in `domain-context.md` and `personal-context.md` |
 | `/pm-prd` | "write a PRD", "product requirements", "spec", "feature spec", "requirements doc" | Standalone PRD generation (4 modes: Full, Lightweight, V2, Migration) |
 | `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards |
 | `/pm-pricing` | "pricing", "plans", "tiers", "monetization", "Van Westendorp", "Gabor-Granger" | SaaS pricing analysis and optimization |
@@ -103,6 +104,7 @@ When a user comes to you with a PM request:
 
 | User Says | Route To | Why |
 |-----------|---------|-----|
+| "Just installed", "first time", or context files still show shipped ERP example | `/pm-setup` | Fills in `domain-context.md` and `personal-context.md` before any other skill runs |
 | "Write a PRD" (has discovery/context) | `/pm-prd` | Standalone PRD generation — they already know the problem |
 | "Write a PRD from scratch" (no context) | `/pm-workflow-problem-to-prd` | Full workflow — starts with JTBD discovery |
 | "Write a product brief" | `/pm-product-brief` | Working-backwards narrative — different from a PRD |

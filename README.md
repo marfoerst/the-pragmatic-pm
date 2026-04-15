@@ -13,6 +13,9 @@ A Claude Code plugin with 45 PM skills + 5 agents + 5 workflows + 4 hooks design
 
 ## Setup
 
+**Fastest path:** run `/pm-setup` — an interactive skill that walks you through both files and writes them for you.
+
+Manual path:
 1. **Company context** — Open `domain-context.md` and replace the example content with your company's details (product, personas, compliance, metrics, competitive context, sales & GTM structure)
 2. **Personal context** _(optional)_ — Open `personal-context.md` and fill in your role, seniority, strengths, growth areas, and communication preferences. Skills adapt their depth and tone to your experience level.
 3. Start using any skill — they all read your context automatically
@@ -23,6 +26,7 @@ New to the toolkit? Start here:
 
 | Step | Skill | What You'll Do | Time |
 |------|-------|---------------|------|
+| 0 | `/pm-setup` | Fill in `domain-context.md` and `personal-context.md` so every skill adapts to your company and role | 5-15 min |
 | 1 | `/pm-hub` | See all skills, get routed to the right one | 2 min |
 | 2 | `/pm-jtbd` | Understand the customer problem (extract job statements) | 30 min |
 | 3 | `/pm-prd` (Mode B) | Write a lightweight feature spec | 20 min |
@@ -37,6 +41,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | Skill | What It Does |
 |-------|-------------|
 | `pm-hub` | Master router — lists skills, routes by intent |
+| `pm-setup` | Interactive first-run setup that fills in `domain-context.md` and `personal-context.md` |
 | `pm-prd` | Standalone PRD generation (Full, Lightweight, V2, Migration modes) |
 | `pm-review` | Quality gate — checks problem clarity, metrics, scope |
 | `pm-pricing` | SaaS pricing analysis and optimization (Monetizing Innovation methodology) |
