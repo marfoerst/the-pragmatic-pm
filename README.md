@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 45 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 46 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 

@@ -5,14 +5,14 @@
     "name": "marfoerst"
   },
   "metadata": {
-    "description": "PM leadership toolkit: 43 skills + 5 agents + 4 workflows for product teams",
+    "description": "PM leadership toolkit: 46 skills + 5 agents + 5 workflows for product teams",
     "version": "1.5.0"
   },
   "plugins": [
     {
       "name": "pm-toolkit",
       "source": "./",
-      "description": "PM leadership toolkit with 43 skills, 5 orchestrator agents, and 4 multi-stage workflows. Covers PRD generation, OKR lifecycle, pricing strategy, AI pricing, competitive intelligence, sales enablement, quarterly planning, and more. Domain-agnostic via domain-context.md.",
+      "description": "PM leadership toolkit with 46 skills, 5 orchestrator agents, and 5 multi-stage workflows. Covers PRD generation, OKR lifecycle, pricing strategy, AI pricing, competitive intelligence, sales enablement, quarterly planning, migration planning, and more. Domain-agnostic via domain-context.md.",
       "version": "1.5.0",
       "author": {
         "name": "Martin Foerster"
