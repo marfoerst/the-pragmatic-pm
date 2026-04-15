@@ -4,6 +4,23 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.5.0] — 2026-04-15
+
+### Onboarding
+
+Closed the gap where every skill read `domain-context.md` and `personal-context.md` but nothing helped the user fill them in. A new user previously had to hand-edit both templates before any skill produced useful output.
+
+### Added
+
+- **`pm-setup`** — Interactive first-run setup that walks the user through both context files and writes them. Detects state (Fresh install with shipped ERP example / Partial / Complete), offers Quick (~5 min), Standard (~15 min), or Deep (~30 min) paths, interviews in grouped batches matching each section of the existing templates (Company, Team, Product, Personas, Compliance, Industry Calendar, Metrics, Ecosystem, Sales & GTM, PE/Acquisition, Language; then Role, Background, Organization, Communication, Current Focus, Skill Self-Assessment, What To Avoid), shows a diff preview before writing, reminds the user to add `personal-context.md` to `.gitignore`, and recommends 2-3 starter skills based on the user's stated needs. Explicit anti-patterns: never invent context, never overwrite without confirmation, never change section headings (downstream skills rely on them).
+
+### Changed
+
+- **`pm-hub`** — Added `pm-setup` to the Foundation table and a routing row so first-time users (or users reporting that outputs still reference "Cloud ERP" / "DATEV" / "Buchhalter") are routed to `/pm-setup`.
+- **`README.md`** — Setup section now leads with `/pm-setup`; added as step 0 in Getting Started; listed in the Foundation skills table.
+
+---
+
 ## [1.4.1] — 2026-04-05
 
 ### Fixed
