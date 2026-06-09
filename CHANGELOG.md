@@ -4,6 +4,24 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.7.0] — 2026-06-09
+
+### Document Ingestion for Due Diligence
+
+`pm-due-diligence` now reads the target's documents directly — the way real DD works, where the target hands over a data room full of decks, brochures, feature matrices, and pricing sheets.
+
+### Changed
+
+- **`pm-due-diligence`** — Added a first-class **Document Ingestion** step (new Step 2):
+  - Reads a **local folder or file paths** (PDFs, decks, spreadsheets, exports) directly instead of requiring pasted snippets.
+  - **Scope-filtered extraction** — pulls only functional-scope and pricing signal; deliberately skips financial/legal/HR documents and lists what was skipped and why.
+  - **Source inventory** added to the output (each document, its type, provenance, and contribution) with volume triage for large data rooms.
+  - **Provenance upgrade** — facts from the target's own documents are tagged `[confirmed]`, raising the confidence factor so a document-backed screen can reach a "Pursue" verdict (web-only screens stay capped at "Dig Deeper").
+  - **Conflict flagging** — discrepancies between documents, the website, or PM notes are surfaced rather than silently resolved.
+  - New anti-patterns for scope leakage (no financial/legal docs) and silent conflict resolution.
+
+---
+
 ## [1.6.0] — 2026-06-09
 
 ### New Skill: Product & Commercial Due Diligence

@@ -7,8 +7,9 @@ description: >
   deal snapshot, functional fit map (overlap / complementary / gap vs. your
   product), pricing compatibility and monetization upside, red flags, a weighted
   score, and a Pursue / Pass / Dig Deeper verdict with a deep-DD validation list.
-  Hybrid input: works from what you provide plus web research, tagging every claim
-  by provenance. Use when someone says "due diligence", "DD", "product DD",
+  Hybrid input: reads the target's documents (data-room files, decks, pricing
+  sheets, brochures from a local folder or file paths) plus web research, tagging
+  every claim by provenance. Use when someone says "due diligence", "DD", "product DD",
   "commercial DD", "evaluate an acquisition target", "should we acquire", "assess
   this company", "target screen", "acquisition screen", or "is this target worth
   pursuing".
@@ -64,12 +65,25 @@ Ask these before anything else:
 
 1. **Who is the target?** Company name and website URL (and any other links: pricing page, G2/Capterra, product docs).
 2. **What's the deal thesis, if you have one?** Why are we looking at them — consolidate their customer base onto our platform, acquire a capability we lack, enter an adjacent segment, take out a competitor? (It's fine to say "not sure yet" — the screen will infer one.)
-3. **What do you already know?** Paste anything you have: feature lists, demo notes, pricing screenshots, data-room snippets, analyst notes.
+3. **What documents or material do you have?** Point me at a folder or file paths (data-room exports, pitch decks, product brochures, feature matrices, pricing sheets, PDFs, spreadsheets), and/or paste notes. Targets usually come with a lot of documentation — the more you give me, the more confident the verdict can be.
 4. **Time budget?** Rapid (work mostly from the URL) or thorough (you have material and want a fuller screen). The output shape is the same; depth scales to available evidence.
 
-### Step 2 — Research Pass (Hybrid)
+### Step 2 — Document Ingestion
 
-Fill gaps with web research. Pull from the target's site, pricing page, product/docs pages, and third-party review sites (G2, Capterra, Trustpilot) and positioning sources:
+Acquisition targets usually come with substantial documentation. If the PM points you at a folder or files, read them directly — don't make them paste.
+
+1. **Take the path(s).** Accept a folder path or a list of files (PDF, slides, spreadsheets, docs, exports) and read them with your file tools.
+2. **Triage for relevance.** You only care about functional scope and pricing/packaging. Skim-classify each document and prioritize product/feature and pricing/commercial material. **Deliberately skip financial, legal, and HR documents — they are out of scope here.** List what you skipped and why, so nothing looks overlooked.
+3. **Extract signal, not everything.** From the relevant docs, pull: capabilities/modules and their depth, target segment, positioning, pricing model/tiers/value metric/price points, and notable customers.
+4. **Build a source inventory.** Record each document reviewed, its type, and what it contributed (or why it was skipped). This goes into the output.
+5. **Upgrade provenance.** Facts taken from the target's own documents are `[confirmed]` — authoritative. This raises the confidence factor (see Scoring), which is what lets a document-backed screen reach a "Pursue" verdict instead of being capped at "Dig Deeper."
+6. **Flag conflicts.** When a document contradicts the website, another document, or the PM's notes (e.g., a pricing sheet disagrees with the public pricing page), surface the discrepancy explicitly — do not silently pick one.
+
+If no documents are provided, skip to the research pass.
+
+### Step 3 — Research Pass (Hybrid)
+
+Fill remaining gaps with web research. Pull from the target's site, pricing page, product/docs pages, and third-party review sites (G2, Capterra, Trustpilot) and positioning sources:
 - Functional footprint (modules/features and apparent depth)
 - Pricing model, tiers, value metric, entry price, add-ons
 - Target segment, positioning, notable customers
@@ -77,15 +91,15 @@ Fill gaps with web research. Pull from the target's site, pricing page, product/
 
 **Tag every fact by provenance** (see below). Do not present researched or assumed facts as confirmed.
 
-### Step 3 — Confirm & Fill Gaps
+### Step 4 — Confirm & Fill Gaps
 
-Surface only what research could not settle, and ask the PM to confirm or correct. Keep this short — the point is speed.
+Surface only what documents and research could not settle, and ask the PM to confirm or correct. Keep this short — the point is speed.
 
-### Step 4 — Generate the Screen
+### Step 5 — Generate the Screen
 
 Produce the one-page screen using the template below. Run the quality checks (including the confidence gate) before presenting.
 
-### Step 5 — Verdict & Handoff
+### Step 6 — Verdict & Handoff
 
 Deliver the verdict, then recommend the next step:
 - **Pursue / Dig Deeper + significant overlap** → `pm-migration-planner` (Mode C feature parity).
@@ -98,7 +112,7 @@ Deliver the verdict, then recommend the next step:
 
 Apply one to every non-obvious claim in the screen:
 
-- `[confirmed]` — provided by the PM or from the target's own authoritative source.
+- `[confirmed]` — from the PM, the target's own documents, or another authoritative source.
 - `[researched]` — found via third-party/public research; reasonably reliable but unverified.
 - `[assumption — verify]` — inferred or unknown; must be validated in deep DD.
 
@@ -118,6 +132,11 @@ Every `[assumption — verify]` automatically rolls up into the "Validate in Dee
 | **Analyst** | [PM Name] |
 | **Deal thesis (hypothesis)** | [Consolidation / Capability / Segment expansion / Competitor takeout] |
 | **Source quality** | High / Medium / Low — [one line on how much is confirmed vs. public/inferred] |
+
+## Sources Reviewed
+| Source | Type | Provenance | Contribution |
+|--------|------|-----------|--------------|
+| [file / URL] | Deck / Pricing sheet / Brochure / Website / Review site | [confirmed] / [researched] | [key facts it provided — or "skipped: financial/legal, out of scope"] |
 
 ## A. Deal Snapshot
 [3-4 sentences: what they do, who they sell to, size/traction signals, market
@@ -200,7 +219,8 @@ customers, or theirs to ours)? Quantify directionally where possible.]
 - **< 2.5 → Pass**
 
 **Confidence gate (the guardrail — overrides the threshold):**
-- If **Confidence factor is Low**, the verdict is **capped at "Dig Deeper"** regardless of score. You cannot earn "Pursue" on unconfirmed data — say what must be confirmed first.
+- The confidence factor reflects how much of the score rests on **confirmed** data. Facts from the target's own documents are confirmed and raise it; a web-only screen with little confirmed data is typically Low confidence.
+- If **Confidence factor is Low**, the verdict is **capped at "Dig Deeper"** regardless of score. You cannot earn "Pursue" on unconfirmed data — say what must be confirmed first (and what documents would settle it).
 - A single **deal-killer red flag** (a non-negotiable capability or compliance gap for our market) caps the verdict at **Dig Deeper** until validated, or forces **Pass** if confirmed and unfixable.
 
 Weights and dimensions are defaults — invite the PM to adjust them to the deal thesis (e.g., weight Functional fit higher for a capability acquisition, Pricing compatibility + Customer-base fit higher for a consolidation play).
@@ -228,6 +248,8 @@ Runs automatically when `domain-context.md` is available:
 - **Don't mistake public pricing for real ACV.** List prices, discounts, and actual realized ACV diverge — tag pricing claims and flag ACV as a deep-DD item.
 - **Don't ignore migration cost.** A cheap target with incompatible pricing and a price-sensitive base can be expensive to integrate. Reflect that in Migration feasibility and Pricing compatibility.
 - **Don't skip the red flags to reach a tidy number.** A clean weighted score with an unaddressed deal-killer is misleading.
+- **Don't pull financial or legal documents into scope** just because they're in the data room. Extract only product and pricing signal, and state what you skipped and why.
+- **Don't silently resolve document conflicts.** If a pricing sheet and the website disagree, surface both and flag it for verification rather than quietly choosing one.
 
 ---
 
