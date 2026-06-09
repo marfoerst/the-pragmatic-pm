@@ -4,6 +4,26 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.5.0] — 2026-06-09
+
+### Outcome-Centric PRD Rewrite
+
+`pm-prd` was reframed from an engineering-handoff spec into a customer- and outcome-centric requirements document. The PRD now defines the problem, the customer, and the desired outcome — then stops at the boundary of "how." The PM owns the *what* and *why*; engineering and design own the *how*.
+
+### Changed
+
+- **`pm-prd`** — Major rewrite:
+  - **New governing principle + "The Line We Don't Cross"** — an explicit ownership table (PM owns outcome/capabilities/metrics; team owns architecture, APIs, retries, tools, UI) plus a "write capabilities, not implementations" examples table.
+  - **Reordered spine so the outcome leads** — Problem & Desired Outcome (split into Customer Outcome + Business Outcome) → Outcome Hypothesis → Success Metrics → solution detail.
+  - **New Outcome Hypothesis section** — frames the solution as a bet ("we believe… we'll know we're wrong if…").
+  - **Success Metrics moved above the solution + Decision Rules** — every metric now carries a scale/iterate/stop rule; measured-with-no-consequence is rejected.
+  - **"Solution / Functional Requirements" replaced by "Capabilities the Customer Needs"** — capabilities expressed as "the customer must be able to…", with a customer-observable "Done when" column and a "Serves outcome" traceability column.
+  - **"Non-Functional Requirements" replaced by "Quality Expectations & Guardrails"** — quality stated as the customer feels it (engineering sets thresholds), with guardrails pulled from domain guardrail metrics. No more prescribed P95/P99 targets or named tools.
+  - **Explicit Outcome Review milestone** — launch ≠ success; the timeline now includes a post-launch checkpoint that applies the decision rules.
+  - **New quality checks** — "no technical prescription" (rewrites how-dictating sentences) and "output → outcome traceability" (flags orphan capabilities as gold-plating).
+
+---
+
 ## [1.4.1] — 2026-04-05
 
 ### Fixed

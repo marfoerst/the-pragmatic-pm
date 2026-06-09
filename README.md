@@ -37,7 +37,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | Skill | What It Does |
 |-------|-------------|
 | `pm-hub` | Master router — lists skills, routes by intent |
-| `pm-prd` | Standalone PRD generation (Full, Lightweight, V2, Migration modes) |
+| `pm-prd` | Standalone PRD generation — outcome/customer-centric (Full, Lightweight, V2, Migration modes) |
 | `pm-review` | Quality gate — checks problem clarity, metrics, scope |
 | `pm-pricing` | SaaS pricing analysis and optimization (Monetizing Innovation methodology) |
 | `pm-ai-pricing` | AI feature pricing, packaging, and monetization strategy |
@@ -243,7 +243,7 @@ Some skills sound similar but serve different purposes:
 
 | If you need... | Use this | Not this |
 |----------------|---------|----------|
-| A full requirements doc for engineering | `pm-prd` | pm-product-brief (that's a 1-page working-backwards narrative) |
+| An outcome-centric requirements doc (what/why, not how) | `pm-prd` | pm-product-brief (that's a 1-page working-backwards narrative) |
 | A 1-page pitch for leadership approval | `pm-one-pager` | pm-product-brief (that's for product team alignment) |
 | To set OKRs for your squad | `pm-okr` | pm-workflow-quarterly-cycle (that's the full 5-stage quarterly planning ceremony) |
 | A pricing strategy for your core product | `pm-pricing` | pm-ai-pricing (that's specifically for AI features) |
