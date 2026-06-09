@@ -7,7 +7,7 @@ This is a Claude Code plugin called **The Pragmatic PM Toolkit**. It contains PM
 ```
 .claude-plugin/     — Plugin manifest (plugin.json + marketplace.json)
 agents/             — 5 orchestrator agents (markdown)
-skills/             — 45 skills + 5 workflows (each in its own directory as SKILL.md)
+skills/             — 46 skills + 5 workflows (each in its own directory as SKILL.md)
 hooks/              — 4 automation hooks (JS scripts + hooks.json)
 domain-context.md   — Company/product/persona context (customized per user)
 personal-context.md — User's role, seniority, preferences (personal, may be gitignored)

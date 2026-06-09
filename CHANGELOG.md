@@ -4,6 +4,22 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.6.0] — 2026-06-09
+
+### New Skill: Product & Commercial Due Diligence
+
+Added `pm-due-diligence` — a fast pre-deal screen for evaluating a potential acquisition target's **functional scope and pricing**, ending in a Pursue / Pass / Dig Deeper verdict. It runs upstream of `pm-build-vs-buy` and `pm-migration-planner` and explicitly excludes financial, technical, and legal DD (naming those as separate workstreams).
+
+**46 skills + 5 agents + 5 workflows**
+
+### Added
+
+- **`pm-due-diligence`** — Product & commercial DD screen. Single adaptive mode optimized for speed. Hybrid input (PM-provided material + web research) with provenance tagging (`[confirmed]` / `[researched]` / `[assumption — verify]`). One-page output: deal snapshot, functional fit map (Overlap / Complementary / Gap vs. our product, with inferred deal thesis), pricing fit (compatibility/migration risk + monetization upside), red flags (deal-killers vs. validate-later), a weighted scoring matrix, and a verdict with an auto-compiled "Validate in Deep DD" list. Includes a **confidence gate** that caps the verdict at "Dig Deeper" when too much rests on unconfirmed data, and a deal-killer rule for non-negotiable capability/compliance gaps. Domain-aware: maps fit against our modules, seeds red flags from compliance frameworks, scores ICP fit, and frames the thesis in PE/consolidation terms.
+
+- **`pm-hub`** — Registered `pm-due-diligence` under Strategy.
+
+---
+
 ## [1.5.0] — 2026-06-09
 
 ### Outcome-Centric PRD Rewrite
