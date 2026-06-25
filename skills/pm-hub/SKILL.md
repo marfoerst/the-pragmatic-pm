@@ -47,6 +47,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-devils-advocate` | "challenge this", "what if we're wrong?", "pre-mortem" | Structured challenge of product decisions |
 | `/pm-build-vs-buy` | "build vs buy", "make or buy", "partner" | Build/buy/partner decision framework |
 | `/pm-risk-register` | "risks", "risk register", "what could go wrong?", "migration risks" | Product risk identification and mitigation (includes migration mode) |
+| `/pm-cohort-planner` | "cohort migration", "migrate a user group", "what does this cohort need", "functional coverage", "day in the life", "migrate cohort fully", "cohort readiness" | Cohort migration-readiness: the complete functional scope a user cohort needs to work fully in the new product, with coverage-risk flags — feeds pm-migration-planner |
 | `/pm-migration-planner` | "migration", "platform migration", "data migration", "product consolidation", "feature parity", "migration strategy", "legacy sunset", "100-day plan" | SaaS migration planning: strategy selection, feature parity analysis, go/no-go gates, customer comms, legacy sunset |
 | `/pm-due-diligence` | "due diligence", "DD", "product DD", "commercial DD", "evaluate an acquisition target", "should we acquire", "target screen" | Fast product & commercial DD screen (functional scope + pricing) → Pursue / Pass / Dig Deeper verdict |
 
