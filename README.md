@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 46 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 47 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -68,6 +68,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-devils-advocate` | Challenge product assumptions |
 | `pm-build-vs-buy` | Build/buy/partner decision framework |
 | `pm-risk-register` | Product risk identification and mitigation (includes migration mode) |
+| `pm-cohort-planner` | Cohort migration-readiness: complete functional scope a user cohort needs to work fully in the new product, with coverage-risk flags |
 | `pm-migration-planner` | SaaS migration planning: strategy, feature parity, go/no-go gates, data migration, legacy sunset |
 | `pm-due-diligence` | Fast product & commercial DD screen for an acquisition target (functional scope + pricing) → Pursue / Pass / Dig Deeper |
 

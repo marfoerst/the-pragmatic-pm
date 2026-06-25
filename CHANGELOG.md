@@ -4,6 +4,30 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.8.0] — 2026-06-25
+
+### New Skill: Cohort Migration-Readiness
+
+`pm-cohort-planner` — a discovery skill for **cohort-based migration**. For one customer cohort (e.g. Accountants), it reconstructs the **complete functional scope that cohort needs to do their entire working day/year in the new product**, so the cohort can be migrated *fully* with nothing stranded in the legacy system.
+
+### Added
+
+- **`pm-cohort-planner`** (new skill):
+  - **Frequency-banded job map** — jobs organized by functional area × cadence (Daily / Weekly / Monthly / Quarterly / Annual / Ad-hoc-Exception). The cadence lens forces the whole working *year* into view, surfacing the infrequent-but-critical jobs (year-end close, audit export) where cohort migrations usually fail.
+  - **Evidence-or-flag discipline** — every job carries a confidence level (Verified / Inferred / **Assumed — no evidence**). Absence of evidence is reported as a coverage risk, never silently filled.
+  - **Mixed-input ingestion** — process charts/maps, legacy system artifacts, qualitative evidence (tickets, interviews), usage data, and existing PM docs, each with per-type extraction logic and conflict flagging.
+  - **Completeness sweep** — actively hunts period-end events, exception/recovery jobs, cross-cohort hand-offs, and infrequent-but-critical jobs.
+  - **Coverage-risk register + migration-readiness verdict** — Ready to plan / Evidence gaps must close first / Not enough signal, with explicit blockers.
+  - **Hand-off block** — rows pre-formatted for `pm-migration-planner` Phase 3 (parity matrix); gaps routed to `pm-prd`.
+  - Sits upstream of `pm-migration-planner`'s Cohort-Based strategy; reciprocal cross-links added.
+
+### Changed
+
+- **`pm-migration-planner`** — added a Related Skills pointer to `pm-cohort-planner` as the upstream per-cohort scoping step.
+- Skill count updated to **47** across `README.md`, `plugin.json`, and `marketplace.json`.
+
+---
+
 ## [1.7.0] — 2026-06-09
 
 ### Document Ingestion for Due Diligence
