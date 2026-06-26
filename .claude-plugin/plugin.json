@@ -1,7 +1,7 @@
 {
   "name": "pm-toolkit",
-  "version": "1.8.0",
-  "description": "PM leadership toolkit: 47 skills + 5 agents + 5 workflows + 4 hooks for product teams. Enforces problem clarity, leading+lagging metrics, and scope discipline. Domain-agnostic — customize via domain-context.md for your company, industry, and compliance requirements.",
+  "version": "1.9.0",
+  "description": "PM leadership toolkit: 48 skills + 5 agents + 5 workflows + 4 hooks for product teams. Enforces problem clarity, leading+lagging metrics, and scope discipline. Domain-agnostic — customize via domain-context.md for your company, industry, and compliance requirements.",
   "keywords": [
     "product-management",
     "b2b-saas",
@@ -19,7 +19,8 @@
     "migration",
     "pe-migration",
     "feature-parity",
-    "cohort-migration"
+    "cohort-migration",
+    "productboard"
   ],
   "author": {
     "name": "Martin Foerster",

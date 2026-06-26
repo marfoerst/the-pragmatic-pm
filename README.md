@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 47 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 48 PM skills + 5 agents + 5 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -55,6 +55,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-funnel-analyzer` | Conversion funnel diagnosis |
 | `pm-ab-test` | A/B test design with proper methodology |
 | `pm-feedback-categorizer` | Categorize and prioritize user feedback |
+| `pm-productboard-insights` | Distill customer demands from a transcript into Insights and push to Productboard via MCP |
 
 ### Strategy
 | Skill | What It Does |

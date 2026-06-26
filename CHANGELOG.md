@@ -4,6 +4,20 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.9.0] — 2026-06-26
+
+### New Skill: Customer Insights → Productboard
+
+Added `pm-productboard-insights` — distills customer demands from a transcript into atomic, verbatim, attributed Insights and files them in Productboard as Notes, closing the loop between customer conversations and the product backlog.
+
+**48 skills + 5 agents + 5 workflows**
+
+### Added
+
+- **`pm-productboard-insights`** — Turns a transcript (sales call, discovery interview, support session, user test) into **one Insight per customer demand** and pushes each to Productboard as a Note via the **Notes API** (`POST https://api.productboard.com/v2/notes`, Bearer `PRODUCTBOARD_API_TOKEN`). Six phases: token preflight + access check, input clarification, signal-classified extraction (pain / request / desire / workaround / objection / praise / context), Note structuring mapped to the `/v2/notes` schema with idempotency via `metadata.source.recordId`, a mandatory review gate before any write, and a push step with explicit 401/422/429 handling. Defaults to review-then-push since Productboard is shared, outward-facing state. The official Productboard MCP (spec-centric) is used only to link insights to features — it cannot create notes. Registered in `pm-hub` (Discovery & Data) and `README.md`.
+
+---
+
 ## [1.8.0] — 2026-06-25
 
 ### New Skill: Cohort Migration-Readiness

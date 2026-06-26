@@ -34,6 +34,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-funnel-analyzer` | "funnel", "conversion", "drop-off" | Conversion funnel diagnosis |
 | `/pm-ab-test` | "A/B test", "experiment", "hypothesis" | Design A/B tests with proper methodology |
 | `/pm-feedback-categorizer` | "feedback", "user feedback", "NPS comments" | Categorize and prioritize user feedback |
+| `/pm-productboard-insights` | "Productboard", "push insights to Productboard", "transcript to insights", "log this call in Productboard" | Distill customer demands from a transcript into atomic Insights and push them to Productboard via MCP |
 
 ### Strategy
 | Skill | Trigger | What It Does |
