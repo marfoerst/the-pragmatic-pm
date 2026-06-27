@@ -92,6 +92,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-workflow-quarterly-cycle` | "run the quarterly cycle" | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
 | `/pm-workflow-sales-enablement` | "sales enablement pack", "enable the sales team" | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
 | `/pm-workflow-migration` | "migration workflow", "plan a migration end to end", "PE migration" | Migration PRD -> Migration Planner -> Risk Register -> Stakeholder Sim -> Comms + PE Report |
+| `/pm-workflow-problem-to-stories` | "problem to stories", "PRD to epics", "epics and stories", "problem to backlog", "prototype to backlog", "decompose a PRD", "sprint-ready backlog" | Problem + Prototype -> JTBD -> Initiative PRD -> Epic Carving -> Sequencing -> User Stories + ACs |
 
 ## Routing Logic
 
@@ -108,6 +109,7 @@ When a user comes to you with a PM request:
 |-----------|---------|-----|
 | "Write a PRD" (has discovery/context) | `/pm-prd` | Standalone PRD generation — they already know the problem |
 | "Write a PRD from scratch" (no context) | `/pm-workflow-problem-to-prd` | Full workflow — starts with JTBD discovery |
+| "PRD to epics + stories" or "full backlog" | `/pm-workflow-problem-to-stories` | Extends problem-to-PRD all the way to sprint-ready stories |
 | "Write a product brief" | `/pm-product-brief` | Working-backwards narrative — different from a PRD |
 | "Write a one-pager" | `/pm-one-pager` | Executive proposal — different from a PRD |
 | "Set OKRs" (standalone) | `/pm-okr` | Standalone OKR coaching |
