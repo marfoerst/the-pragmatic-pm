@@ -4,6 +4,20 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.9.1] — 2026-07-09
+
+### New Workflow: Problem → Prototype → PRD → Epics → User Stories
+
+Added `pm-workflow-problem-to-stories` — a multi-skill chain that takes a user problem (with optional prototype/mockup) and produces a delivery-ready backlog: sequenced Epics with Lightweight PRDs (Epic-as-Spec) and INVEST-gated User Stories with acceptance criteria. Extends `pm-workflow-problem-to-prd` with Epic carving, Epic sequencing, and Story decomposition stages.
+
+**48 skills + 5 agents + 6 workflows**
+
+### Fixed
+
+- Version and count metadata corrected across `plugin.json`, `marketplace.json`, `README.md`, and `CLAUDE.md` — the workflow count now reflects the 6th workflow (`pm-workflow-problem-to-stories`), which had shipped under the 1.9.0 label and therefore never triggered a plugin cache refresh. Bumped to 1.9.1 to force re-sync.
+
+---
+
 ## [1.9.0] — 2026-06-26
 
 ### New Skill: Customer Insights → Productboard
