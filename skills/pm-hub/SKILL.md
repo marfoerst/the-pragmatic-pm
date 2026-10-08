@@ -17,6 +17,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | Skill | Trigger | What It Does |
 |-------|---------|-------------|
 | `/pm-prd` | "write a PRD", "product requirements", "spec", "feature spec", "requirements doc" | Standalone PRD generation (4 modes: Full, Lightweight, V2, Migration) |
+| `/pm-prototype-to-epics` | "prototype to epics", "epics from prototype", "Claude Design to epics", "derive epics from HTML", "break down this mockup" | Parse an HTML prototype (e.g. Claude Design export) into a screen/flow inventory, gaps, and traceable Epics |
 | `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards |
 | `/pm-pricing` | "pricing", "plans", "tiers", "monetization", "Van Westendorp", "Gabor-Granger" | SaaS pricing analysis and optimization |
 | `/pm-ai-pricing` | "AI pricing", "AI add-on", "AI credits", "per-agent pricing", "copilot pricing", "inference costs" | AI feature pricing, packaging, and monetization strategy |
@@ -110,6 +111,7 @@ When a user comes to you with a PM request:
 | "Write a PRD" (has discovery/context) | `/pm-prd` | Standalone PRD generation — they already know the problem |
 | "Write a PRD from scratch" (no context) | `/pm-workflow-problem-to-prd` | Full workflow — starts with JTBD discovery |
 | "PRD to epics + stories" or "full backlog" | `/pm-workflow-problem-to-stories` | Extends problem-to-PRD all the way to sprint-ready stories |
+| "Epics from this prototype" (has an HTML/Claude Design file) | `/pm-prototype-to-epics` | Starts from the prototype, not the problem; hands off to problem-to-stories Stage 4 |
 | "Write a product brief" | `/pm-product-brief` | Working-backwards narrative — different from a PRD |
 | "Write a one-pager" | `/pm-one-pager` | Executive proposal — different from a PRD |
 | "Set OKRs" (standalone) | `/pm-okr` | Standalone OKR coaching |

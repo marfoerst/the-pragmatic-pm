@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 48 PM skills + 5 agents + 6 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 49 PM skills + 5 agents + 6 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -38,6 +38,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 |-------|-------------|
 | `pm-hub` | Master router — lists skills, routes by intent |
 | `pm-prd` | Standalone PRD generation — outcome/customer-centric (Full, Lightweight, V2, Migration modes) |
+| `pm-prototype-to-epics` | Derive traceable Epics from an HTML prototype (e.g. Claude Design export) — screen/flow inventory, implied gaps, Epic carving |
 | `pm-review` | Quality gate — checks problem clarity, metrics, scope |
 | `pm-pricing` | SaaS pricing analysis and optimization (Monetizing Innovation methodology) |
 | `pm-ai-pricing` | AI feature pricing, packaging, and monetization strategy |

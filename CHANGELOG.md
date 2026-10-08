@@ -4,6 +4,20 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.10.0] — 2026-10-08
+
+### New Skill: Prototype → Epics
+
+Added `pm-prototype-to-epics` — derives a carved, traceable Epic list directly from an HTML prototype, tuned for Claude Design exports (single-file HTML or handoff bundle).
+
+**49 skills + 5 agents + 6 workflows**
+
+### Added
+
+- **`pm-prototype-to-epics`** — Four phases: prototype ingest (size-aware reading, Claude Design signal table that separates real scope from variant/tweak panels, artboard alternatives, and mock data), clarifying questions (problem, commitment level, existing functionality, logic fidelity, constraints, destination), Screen & Flow Inventory plus an Implied Scope & Gaps list (empty/error states, permissions, persistence, integrations, compliance, migration), and Epic carving by workflow — never by screen — with outcome hypotheses, leading + lagging indicators, and a screen-to-Epic traceability matrix. Includes unpacking instructions for Claude Design bundled pages (`__bundler/manifest` + `__bundler/template`, prototype logic in the `text/x-dc` script), rules for tweak panels (role toggles = demo device, error toggles = required states) and hardcoded feature flags, and per-Epic **Business rules** when the PM confirms the prototype logic is the spec. Validated on a real Claude Design export. Artifact 3 matches the Epic List format of `pm-workflow-problem-to-stories`, so the output continues at Stage 4. Registered in `pm-hub` (Foundation + routing) and `README.md`; added as a mid-entry path in `pm-workflow-problem-to-stories`.
+
+---
+
 ## [1.9.1] — 2026-07-09
 
 ### New Workflow: Problem → Prototype → PRD → Epics → User Stories

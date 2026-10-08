@@ -51,6 +51,7 @@ statements PRD         + outcome    Epic          + ACs          review
 | JTBD + Persona                      | Stage 2       |
 | An Initiative PRD                   | Stage 3       |
 | Epics already carved                | Stage 4       |
+| An HTML prototype (e.g. Claude Design) | Run `pm-prototype-to-epics`, then Stage 4 |
 | Epics sequenced, need stories       | Stage 5       |
 | A full backlog needing review       | Stage 6       |
 
