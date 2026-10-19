@@ -55,6 +55,15 @@ Use data if available. "X% of customers report..." or "We lose Y hours/month to.
 | [Leading indicator] | Leading | X | Y | 2-4 weeks post-launch |
 | [Lagging indicator] | Lagging | X | Y | 1-3 months post-launch |
 
+**The money story** (for any initiative that asks for budget or headcount):
+| Revenue lever | Arithmetic | Annual effect | Who can validate |
+|---------------|-----------|---------------|------------------|
+| [e.g., new ARR, expansion, churn avoided, cost-to-serve] | [accounts × deal size × rate × realisation factor — every term shown] | [currency per `domain-context.md`] | [Finance / Sales lead / CS lead] |
+
+[Pick only the 1-3 levers that genuinely apply, using deal sizes and metrics from
+`domain-context.md`. Show every multiplication. Apply a realisation factor instead of
+counting gross effects. If an input is unknown, write `[INPUT NEEDED]` — never a plausible guess.]
+
 ## Timeline
 | Phase | What | When |
 |-------|------|------|
@@ -85,6 +94,7 @@ Flag what was pre-populated and what needs validation.
 - **Exceeding one page:** Adding too much detail defeats the purpose -- if it is longer than one page, cut ruthlessly; the appendix is for supporting detail
 - **Solution before problem:** Jumping to the approach without making the reader care about the problem first -- always lead with "why" before "what"
 - **Vague ask:** Ending without a clear, specific request -- "we need support" is not an ask; "approve 2 engineers for 6 weeks" is
+- **Black-box impact numbers:** an ARR figure with no visible arithmetic or validator -- leadership will discount it or ask in the meeting; show the math and name who can confirm it
 
 ## Guardrails
 

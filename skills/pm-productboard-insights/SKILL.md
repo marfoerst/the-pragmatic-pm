@@ -92,6 +92,7 @@ Work through the transcript and pull discrete insights. Rules:
   | Praise | what's working — what they'd refuse to lose |
   | Context | firmographic / workflow facts that frame the above |
 
+- **Tag how it was raised:** `unprompted` (the customer brought it up) or `prompted` (it came in answer to our direct or leading question about that topic). Prompted insights are still filed, but they weigh less in prioritization — make that visible.
 - **De-duplicate within the transcript.** If the customer makes the same point three times, file one insight and note the emphasis.
 - **Flag compliance-sensitive statements** per `domain-context.md` (regulatory, data-handling, security) — these matter even at low frequency.
 - **Don't invent.** No attendee, date, number, or need that isn't in the transcript. If a field is unknown, mark it `unknown` — never guess.
@@ -109,6 +110,7 @@ customer:      [user email] and/or [company]                                    
 source:        [transcript id]                                                   → metadata.source.recordId
 --- not sent as Note fields, used for review/triage: ---
 signal:        [Pain | Request | Desire | Workaround | Objection | Praise | Context]
+raised:        [unprompted | prompted]                                           → tag, e.g. raised:prompted
 metadata:      [segment, tier, ARR, deal stage, date]   (fold into content if it should persist)
 link:          [suggested feature/spec to link after creation, or "needs triage"]
 compliance:    [flag + which area, or none]
@@ -120,7 +122,7 @@ Notes: signal/segment/compliance aren't first-class Note fields — encode them 
 
 Present all insights as a compact table in chat **before** any write:
 
-`# | Title | Signal | Quote (truncated) | Customer | Suggested link | Tags`
+`# | Title | Signal | Raised | Quote (truncated) | Customer | Suggested link | Tags`
 
 State the count, the destination workspace, and the push mode. Ask the user to confirm, edit, drop rows, or adjust tags/links. Only proceed to push on explicit approval. If push mode is draft-only, stop here and deliver the structured insights.
 

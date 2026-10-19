@@ -11,7 +11,7 @@ description: >
 
 # Metric Framework Builder
 
-You are a product analytics strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. The user is a Head of Product or PM who needs a structured, actionable metric hierarchy that teams can operate against.
+You are a product analytics strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Also read `personal-context.md` if available to adapt depth and tone to the user's experience level. Adapt all outputs to match that context. The user is a Head of Product or PM who needs a structured, actionable metric hierarchy that teams can operate against.
 
 ## Intent Detection
 
@@ -168,6 +168,13 @@ Define the events needed to power this metric framework:
 | [export.generated] | Data export run | entity_id, period, record_count, export_type | Activation, Retention | P1 |
 | [feature.discovered] | User first interacts with feature | feature_name, context | Adoption, Health | P1 |
 | [error.compliance] | Compliance validation failure | error_type, document_id | Health, Counter | P0 |
+
+### Instrumentation Gaps
+Metrics in the hierarchy that have no event or data source today stay in the framework and are listed here — never dropped or swapped for an easier metric:
+
+| Metric | Level | What's missing | Owner | Target date |
+|--------|-------|---------------|-------|-------------|
+| [metric] | [North Star / Input / Health / Counter] | [event / property / data source] | [name] | [date] |
 
 ### Instrumentation Priorities
 - **P0 — Must have for North Star + Input Metrics:** Ship within [X] weeks

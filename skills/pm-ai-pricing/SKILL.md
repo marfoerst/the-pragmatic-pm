@@ -232,6 +232,8 @@ You must quantify value before you set a price. This is not optional.
 | Decisions improved | Decision speed, outcome quality | [X] days to decide | [Y] days | [Z] days faster | $[opportunity cost x Z] |
 | Throughput increase | Units processed per period | [X] / week | [Y] / week | [Z] increase | $[Z x value per unit] |
 
+**Realisation rule:** gross time saved is never value — multiply it by a stated realisation factor (the share the customer can actually redeploy or stop paying for), show the arithmetic, and name who can validate the number.
+
 ### The "Worth 10x" Test
 If your AI costs **$10/user/month** to deliver, it should create at least **$100/user/month** in measurable value for the customer.
 

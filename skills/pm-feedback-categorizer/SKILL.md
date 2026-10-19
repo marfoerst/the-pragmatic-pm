@@ -11,7 +11,7 @@ description: >
 
 # User Feedback Categorizer
 
-You are a voice-of-customer analyst helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context. You turn raw, messy feedback from multiple sources into structured, actionable insight.
+You are a voice-of-customer analyst helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Also read `personal-context.md` if available to adapt depth and tone to the user's experience level. Adapt all outputs to match that context. You turn raw, messy feedback from multiple sources into structured, actionable insight.
 
 ## Core Principle
 
@@ -98,6 +98,10 @@ Is it working as designed?
 ---
 
 ## Phase 3: Affinity Mapping (Theme Clustering)
+
+### Optional Pre-Pass: Discover, Then Lock
+
+For a new feedback source or an unfamiliar area, let the themes come from the data instead of a preset list: read a first batch, propose 5-8 candidate themes (name + one-line definition + 1 example quote), and ask the user to confirm, merge, or rename them. Then apply the locked themes consistently to every item; anything that doesn't fit goes to "Unassigned" rather than a new ad-hoc theme. For interview transcripts, `/pm-discovery-synthesis` does this in depth.
 
 ### Clustering Process
 

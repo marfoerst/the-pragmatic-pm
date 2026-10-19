@@ -4,7 +4,7 @@ description: >
   Discovery orchestrator agent. Guides PMs through structured product discovery:
   define the problem space, gather evidence, synthesize findings, and recommend next steps.
   Routes to pm-jtbd, pm-persona-generator, pm-journey-map, pm-feedback-categorizer,
-  pm-feature-requests skills. Maintains project memory across sessions.
+  pm-feature-requests, pm-discovery-synthesis skills. Maintains project memory across sessions.
   Use when someone says "discovery", "research project", "explore a problem", "understand customers",
   "investigate opportunity", "problem space", "customer research".
 tools: Read, Grep, Glob, WebSearch, WebFetch
@@ -79,6 +79,7 @@ Based on the problem and evidence gaps, recommend and orchestrate:
 | Don't understand the experience | **pm-journey-map** | Journey map with pain points and opportunities |
 | Have unstructured feedback | **pm-feedback-categorizer** | Categorized themes with frequency and severity |
 | Have feature requests to evaluate | **pm-feature-requests** | Prioritized, contextualized request analysis |
+| Have several interview transcripts to compare | **pm-discovery-synthesis** | Locked-taxonomy, evidence-weighted findings across calls |
 
 ### Evidence Gathering Plan
 
@@ -115,7 +116,7 @@ For each piece of evidence, evaluate:
 
 ### Pattern Recognition
 
-After gathering evidence, synthesize across all sources:
+After gathering evidence, synthesize across all sources. If the evidence includes 3+ interview transcripts, run **pm-discovery-synthesis** first and use its cross-call brief as the interview input here.
 
 ```markdown
 ## Discovery Synthesis: [Problem Area]

@@ -3,7 +3,7 @@ name: pm-data-analyst
 description: >
   Data analysis orchestrator agent. Helps PMs think quantitatively — define metrics,
   analyze funnels, design experiments, and build dashboards. Routes to pm-metric-framework,
-  pm-funnel-analyzer, pm-ab-test, pm-dashboard-designer skills. Can query databases if
+  pm-funnel-analyzer, pm-ab-test, pm-dashboard-designer, pm-retention-analysis skills. Can query databases if
   Supabase tools are available.
   Use when someone says "data analysis", "metrics", "funnel", "conversion", "experiment",
   "A/B test", "dashboard", "numbers", "quantitative", "analytics", "measure".
@@ -48,6 +48,7 @@ Based on answers, route to the appropriate workflow:
 | "Why are users dropping off?" | **pm-funnel-analyzer** | Funnel analysis with drop-off diagnosis and recommendations |
 | "Should we test this?" | **pm-ab-test** | Experiment design with hypothesis, sample size, duration |
 | "I need a dashboard" | **pm-dashboard-designer** | Dashboard spec with metrics, layout, and data sources |
+| "Read our retention curve / cohort table" | **pm-retention-analysis** | Curve shape, floor, same-age cohort comparison with immature cells masked, hypotheses |
 | "Run a query / analyze data" | **Direct analysis** | Query results, statistical analysis, visualization |
 
 ---
@@ -80,6 +81,8 @@ For any analysis, always report:
 ### Common Analysis Patterns
 
 #### Pattern 1: Cohort Analysis
+
+For a full diagnosis of retention curves and cohort tables, route to **pm-retention-analysis**. Either way, mask cells whose period isn't over yet.
 ```markdown
 ## Cohort Analysis: [Metric] by [Cohort Dimension]
 

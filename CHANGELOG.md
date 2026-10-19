@@ -4,6 +4,38 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.12.0] — 2026-10-19
+
+### Discovery Depth, Evidence Weighting, and AI Reimagination
+
+Four new skills and targeted upgrades to thirteen existing ones. The common thread: categories come from the data and are locked before they are applied, unprompted and observed evidence outweighs prompted agreement, gaps are shown rather than dropped, and value claims show their arithmetic. Everything stays at the level of *what*, never *how* — anything bound for engineering points to the Engineering-Ready Specification in `pm-prd`. Not yet run against real inputs.
+
+**53 skills + 5 agents + 6 workflows**
+
+### Added
+
+- **`pm-discovery-synthesis`** (Discovery & Data) — Many transcripts into comparable findings: open discovery with surprises and weak signals, a PM-confirmed **taxonomy lock** (hard gate), one coded row per atomic insight (struggle vs. workaround, raised by customer vs. by us, said vs. inferred, figures, verbatim quote or "none"), and a cross-call brief with counts like "7/10 calls, 5 unprompted". Prompted-only themes are labelled weak. Optional challenge pass via `pm-devils-advocate`. Routed from `pm-discovery-lead`.
+- **`pm-retention-analysis`** (Discovery & Data) — Retention-curve and cohort-table diagnosis: grain (user vs. account) and activity definition first, curve shape and floor, same-age cohort comparison, anomalous-cohort flags, and **masking of cells whose period isn't over**. Ends in rival hypotheses plus the data to pull. Routed from `pm-data-analyst`; disambiguated from `pm-cohort-planner` (migration) in the hub and README.
+- **`pm-ai-reimagination`** (Strategy) — One customer job, stage by stage: current state, then each stage labelled **AI does it / AI assists / step disappears / stays human**, weighing regulation, data, trust, and a feasibility flag for engineering. Ends in a reimagined flow and the biggest gap as the opportunity. Describes the customer's experience, never the model or architecture.
+- **`pm-roadmap-audit`** (Strategy) — Item-by-item roadmap audit: AI lens (reusing the four labels), evidence audit with Strong / Thin / None ratings, a cull step (what concretely happens if we skip it, is it sales or support noise, how stale is it) ending in keep / deprioritise / investigate with a one-line stakeholder rationale, and an optional bigger bet with a money story and validation plan.
+
+### Changed
+
+- **`pm-product-brief`** — Now reads `domain-context.md` and `personal-context.md` in its opening and has an Anti-Patterns section. New **Outcome Ladder** (behaviour change → consistent adoption → business result, leading and lagging, with specificity rules), a **Weakest Assumptions** close with one quick test each, an optional **Coach mode** where the PM writes and Claude critiques, and an optional **Prototype Scope** block ("probe, not spec") that can feed `pm-prototype-to-epics` and routes engineering handoff to `pm-prd`.
+- **`pm-opportunity-tree`** — Reads `personal-context.md`. New Quick vs. **Guided mode** with a scope check (one initiative vs. portfolio), a solution-in-disguise detector, an explicit branching axis (segment or job step), a sub-opportunity check, evidence weighting in the Evidence column, a **divergence step** (the PM's ideas first, then deliberately different generic angles such as AI-first, remove the step, adjacent industry, analogy, inversion), thin-branch flags for fewer than 3 ideas, and backlog/OKR mapping that flags orphans.
+- **`pm-jtbd`** — New **Mode D: Discovery interview guide** with a hard goal gate, one guide per segment, goals and measures before pain, past-tense episodes and actual spend, the PM's hunch held to the end (late agreement tagged weak), a cap of 7 main questions, and a note template that matches `pm-discovery-synthesis`. Mode B gains an Evidence Weight column. New Anti-Patterns section.
+- **`pm-dashboard-designer`** — Reads `personal-context.md`; new **metric-confirm gate** before any layout; untracked metrics kept as instrumentation gaps; labelled placeholder-data mode; new **Template E: Feature Adoption** (three metric layers, health line, cohort view, user-level feature retention curve, funnel with size-the-prize, qualitative themes, AI health block, this week's actions). New Iterate step and Anti-Patterns section.
+- **`pm-value-prop-canvas`** — New optional **Value Brief** for sales and PMM with quantified drivers, a stated realisation factor, visible arithmetic, and a named validator. Gross time saved is never counted as value.
+- **`pm-ai-pricing`** — Phase 5 gains the same realisation rule.
+- **`pm-gtm-launch`** — New Section **2b Internal Readiness FAQ** by function, with an AI block (quality bar, data handling, explainability, failure modes, liability), filled in a second pass from the brief and scaled by tier.
+- **`pm-devils-advocate`** — New **Challenging a Research Synthesis** path: rival explanations, pain vs. preference vs. contented workaround, counter-evidence quoted with equal weight, and the one data point that would most raise confidence. New Anti-Patterns section.
+- **`pm-one-pager`** — Expected Impact gains a **money story**: revenue levers from `domain-context.md`, every term of the arithmetic shown, and who can validate each number.
+- **`pm-productboard-insights`** — Insights are tagged **unprompted / prompted**.
+- **Cross-cutting, one to three lines each:** discover-then-lock pre-pass in `pm-feedback-categorizer` and a theme lock in `pm-feature-requests`; an evidence-weighting pitfall in `pm-review` Dimension 2; Coach options in `pm-okr` and `pm-north-star` (which also points to `pm-retention-analysis`); an Instrumentation Gaps table in `pm-metric-framework`; a realistic-impact anti-pattern in `pm-board-deck`; an optional AI lens in `pm-journey-map` and an optional "Where AI changes the job" problem-framing block in `pm-prd`. Iterate steps in the edited skills now name their own 1-2 weakest parts and ask for real data there. Edited skills that lacked the `personal-context.md` read now have it.
+- **Routing** — `pm-hub` registers the four skills and adds disambiguations (retention vs. cohort migration, synthesis vs. single-call capture and VoC, roadmap audit vs. quarterly planning). `pm-discovery-lead` routes to `pm-discovery-synthesis`; `pm-data-analyst` routes to `pm-retention-analysis`. README tables updated, including the previously missing `pm-workflow-problem-to-stories` row; hook count corrected to 1 in README and `plugin.json`.
+
+---
+
 ## [1.11.1] — 2026-10-19
 
 ### Engineering-Ready Specifications — fixes from a first QA run

@@ -7,11 +7,12 @@ description: >
   Use when someone says "launch plan", "go-to-market", "GTM", "launch playbook",
   "launch checklist", "feature launch", "product launch", "release planning",
   "launch readiness", or "launch brief".
+  Also use for "internal FAQ", "readiness FAQ", or "is the team ready to sell this".
 ---
 
 # PM GTM Launch — Go-to-Market Launch Playbook
 
-You are a go-to-market strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Adapt all outputs to match that context.
+You are a go-to-market strategist helping a product leadership team. **Read `domain-context.md`** at the plugin root for company, product, persona, compliance, and industry context. Also read `personal-context.md` if available to adapt depth and format to the user. Adapt all outputs to match that context.
 
 ## Intent Detection
 
@@ -60,6 +61,8 @@ Before generating the playbook, check `domain-context.md` for:
 ### Phase 3 — Generate Launch Playbook
 
 Scale the output to the launch tier. P2 gets Sections 1-2 and Section 4 only. P1 gets all sections except the full risk register. P0 gets everything.
+
+**Internal Readiness FAQ (2b) — second pass.** Generate the playbook first, then fill the FAQ in a second pass from the product brief, PRD, or pricing decision if the PM has one (`/pm-product-brief`, `/pm-prd`, `/pm-pricing`, `/pm-ai-pricing`). Leave unanswerable rows blank with an owner rather than guessing — a blank row is a readiness gap the launch owner can chase.
 
 ```
 # GTM Launch Playbook: [Feature Name]
@@ -129,6 +132,36 @@ Scale the output to the launch tier. P2 gets Sections 1-2 and Section 4 only. P1
 - [ ] Data privacy impact assessment completed
 - [ ] Terms of service updated (if needed)
 - [ ] Partner/ecosystem notifications sent (if integration changes)
+
+---
+
+## 2b. Internal Readiness FAQ
+
+Answers every customer-facing team needs before launch day. One owner per answer;
+"TBD" is allowed only with a due date.
+
+| Function | Question | Answer | Owner |
+|----------|----------|--------|-------|
+| PMM | Who is this for — and explicitly not for? (ICP, exclusions) | | |
+| PMM | What's the one-line positioning, and what alternative does it replace? | | |
+| PMM / Sales | What does it cost, in which plans, and what's included? | | |
+| Sales | Which deals should mention it now, and which shouldn't? | | |
+| Sales | Top 3 objections and the answer to each | | |
+| Enablement | What does a rep need to demo it in 5 minutes? | | |
+| Services | What does implementation involve — effort, prerequisites, who does it? | | |
+| CS | Which existing accounts benefit most, and what's the expected adoption path? | | |
+| CS | What do we tell customers who ask for something it doesn't do? | | |
+| Support | Known limitations, top expected questions, escalation path | | |
+
+**AI features — add this block:**
+
+| Topic | Question | Answer | Owner |
+|-------|----------|--------|-------|
+| Quality bar | How was quality evaluated, against what bar, and what's the known accuracy or acceptance level? | | |
+| Data handling | What customer data does it use, where is it processed, is it used for training? (see `domain-context.md` compliance) | | |
+| Explainability | Can a user see why it produced a given output? What do we say if they ask? | | |
+| Failure modes | What does it get wrong, how does the user notice, and how do they recover? | | |
+| Liability | Who is responsible for decisions made with its output — and what do the terms say? | | |
 
 ---
 
@@ -243,6 +276,7 @@ entire timeline and communication plan. Stale launch plans cause more damage tha
 |---------|-----------|-------------------|----------------|
 | 1. Launch Overview | Full | Full | Full |
 | 2. Checklist by Function | All functions | Product, Sales, CS, Support | Product, Support only |
+| 2b. Internal Readiness FAQ | All rows (+ AI block if applicable) | PMM, Sales, CS, Support rows (+ AI block) | Support row only (+ AI block if the feature uses AI) |
 | 3. Enablement Timeline | Full T-4 to T+2 weeks | T-2 to T+1 week | T-1 to T+3 days |
 | 4. Communication Plan | All channels | Email, blog, in-app, sales | In-app + release notes only |
 | 5. Success Metrics | Full with counter metrics | 3-4 key metrics | 1-2 adoption metrics |
@@ -313,6 +347,7 @@ Check `domain-context.md` for language preferences and formatting conventions. L
 3. **Treating every launch as P0.** Launch fatigue is real. Reserve the full motion for features that genuinely change the value proposition.
 4. **Skipping the post-launch review.** The review is where you learn. Ship-and-forget is not a strategy.
 5. **Communication without a clear CTA.** Every customer message should answer: "What should I do now?"
+6. **Launching an AI feature without answers on data and failure modes.** If sales can't say what happens to customer data or what the feature gets wrong, the first security questionnaire stalls the deal.
 
 ## Output Destination
 

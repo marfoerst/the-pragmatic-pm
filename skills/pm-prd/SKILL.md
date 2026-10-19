@@ -449,6 +449,11 @@ for this problem statement. Before this PRD moves to "In Review", the PM must
 supply at least one of: customer interview quotes, support ticket data, usage
 analytics, or competitive analysis.
 
+### Where AI Changes the Job (optional)
+[Only if relevant: which steps of the customer's job AI could do, assist, remove,
+or must leave to the human — as problem framing, not a solution. Pull from
+`/pm-ai-reimagination` if it was run. No model or architecture choices here.]
+
 ### Customer Outcome
 [The change for the customer — the job they can now do better, the behavior or
 result that improves. Stated from their side, e.g., "closes the month in under

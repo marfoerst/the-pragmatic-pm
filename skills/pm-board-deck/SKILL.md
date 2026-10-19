@@ -101,6 +101,7 @@ Flag what was pre-populated and what needs validation.
 - **Hiding the bad news:** Burying misses in appendices or omitting them -- boards notice and trust erodes; lead with honesty
 - **No clear ask:** Presenting information without stating what you need from the board -- every deck should have an explicit ask or state "FYI only"
 - **Metric cherry-picking:** Showing only the metrics that went up -- always show target vs actual, including misses
+- **Unrealistic impact claims:** Forward-looking value or ARR effects without visible arithmetic -- show the calculation, apply a realisation factor instead of gross effects, and name who validated the number
 
 ## Guardrails
 

@@ -36,6 +36,8 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-ab-test` | "A/B test", "experiment", "hypothesis" | Design A/B tests with proper methodology |
 | `/pm-feedback-categorizer` | "feedback", "user feedback", "NPS comments" | Categorize and prioritize user feedback |
 | `/pm-productboard-insights` | "Productboard", "push insights to Productboard", "transcript to insights", "log this call in Productboard" | Distill customer demands from a transcript into atomic Insights and push them to Productboard via MCP |
+| `/pm-discovery-synthesis` | "synthesize these interviews", "compare transcripts", "research synthesis", "patterns across calls" | Cross-transcript synthesis: discover -> lock taxonomy -> coded, evidence-weighted findings |
+| `/pm-retention-analysis` | "retention curve", "cohort table", "read my retention", "does retention flatten", "retention floor" | Retention-curve and cohort-table diagnosis: shape, floor, cohort comparison, immature cells |
 
 ### Strategy
 | Skill | Trigger | What It Does |
@@ -52,6 +54,8 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 | `/pm-cohort-planner` | "cohort migration", "migrate a user group", "what does this cohort need", "functional coverage", "day in the life", "migrate cohort fully", "cohort readiness" | Cohort migration-readiness: the complete functional scope a user cohort needs to work fully in the new product, with coverage-risk flags — feeds pm-migration-planner |
 | `/pm-migration-planner` | "migration", "platform migration", "data migration", "product consolidation", "feature parity", "migration strategy", "legacy sunset", "100-day plan" | SaaS migration planning: strategy selection, feature parity analysis, go/no-go gates, customer comms, legacy sunset |
 | `/pm-due-diligence` | "due diligence", "DD", "product DD", "commercial DD", "evaluate an acquisition target", "should we acquire", "target screen" | Fast product & commercial DD screen (functional scope + pricing) → Pursue / Pass / Dig Deeper verdict |
+| `/pm-ai-reimagination` | "reimagine this workflow with AI", "where can AI help", "which steps could AI do", "AI-first workflow" | Map a customer job stage-by-stage and reimagine it with AI (AI does it / AI assists / step disappears / stays human) |
+| `/pm-roadmap-audit` | "audit our roadmap", "what should we cut", "cull the backlog", "is our roadmap evidence-based", "bigger bet" | Evidence audit + cull of a roadmap, AI lens, and the missing bigger bet |
 
 ### Communication
 | Skill | Trigger | What It Does |
@@ -119,6 +123,9 @@ When a user comes to you with a PM request:
 | "Quarterly planning" | `/pm-workflow-quarterly-cycle` | Full quarterly cycle including OKRs |
 | "Battlecard" or "sales materials" | `/pm-battlecard` or `/pm-gtm-launch` | Go-to-Market skills — for sales team consumption |
 | "Full sales enablement" | `/pm-workflow-sales-enablement` | Complete enablement workflow |
+| "Cohort analysis" / "how do our cohorts retain?" | `/pm-retention-analysis` | Retention over time — curve shape, floor, cohort comparison. Not `/pm-cohort-planner`, which scopes what a customer cohort needs for a *migration* |
+| "Synthesize these interviews" (several transcripts) | `/pm-discovery-synthesis` | Locked-taxonomy comparison across calls. One call into Productboard -> `/pm-productboard-insights`; bulk NPS/tickets -> `/pm-feedback-categorizer` |
+| "Review our roadmap" (existing items) | `/pm-roadmap-audit` | Audits and culls what's already planned. Planning the next quarter from scratch -> `/pm-quarterly-planning` |
 
 **Engineering handoff:** anything that goes to engineering (PRD, Epic, Story) should be refine-complete per the Engineering-Ready Specification in `/pm-prd`. Briefs and one-pagers are decision documents, not engineering specs — route to `/pm-prd` when the user wants to hand work to engineering.
 

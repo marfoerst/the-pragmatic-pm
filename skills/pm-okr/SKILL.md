@@ -49,6 +49,8 @@ Ask the user which mode they need. Present these options:
 
 If the user's intent is ambiguous, ask: "Are you creating new OKRs, improving existing ones, reviewing progress, scoring results, or mapping alignment?"
 
+**Coach option (Modes A and B):** if the PM wants to build the skill rather than get a draft, offer Coach mode — you ask one question at a time, the PM writes each objective and KR, and you critique against the quality checklist before moving on. You don't write OKRs for them unless asked.
+
 ---
 
 ## Mode A: Define — Create New OKRs From Scratch

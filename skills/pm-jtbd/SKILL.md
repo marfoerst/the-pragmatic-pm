@@ -6,6 +6,9 @@ description: >
   or prioritize outcomes by importance vs satisfaction.
   Use when someone says "JTBD", "jobs to be done", "interview script", "customer jobs",
   "outcome-driven", "what are customers trying to do", "job statements".
+  A fourth mode builds a goal-gated discovery interview guide — also use for
+  "interview guide", "discovery interview questions", "customer interview plan",
+  or "what should I ask customers".
 ---
 
 # Jobs-to-be-Done Framework
@@ -26,6 +29,7 @@ Ask these questions before doing anything:
    - (A) Write an interview script for JTBD discovery
    - (B) Extract job statements from interview transcripts or notes
    - (C) Prioritize outcomes using importance vs satisfaction scoring
+   - (D) Build a discovery interview guide for an open research question (not a switch story)
 
 2. **What's the domain?** What area of your product or customer workflow are we exploring? (Refer to `domain-context.md` for your product's core domains)
 
@@ -42,6 +46,8 @@ Wait for answers before proceeding.
 ### What You Produce
 
 A structured interview guide (45-60 min) following the "Switch" interview technique (Moesta/Christensen).
+
+Use Mode A when the person has recently switched, bought, or abandoned a solution. For open discovery ("we don't yet know what hurts"), use Mode D.
 
 ### Interview Structure
 
@@ -145,9 +151,13 @@ Refer to the **JTBD Examples** section in `domain-context.md` for calibration ex
 
 Deliver as a structured table:
 
-| # | Job Statement | Type | Job Step | Performer | Evidence Source |
-|---|--------------|------|----------|-----------|----------------|
-| 1 | When... I want to... so I can... | Functional | Step name | Persona | "Quote from transcript" |
+| # | Job Statement | Type | Job Step | Performer | Evidence Source | Evidence Weight |
+|---|--------------|------|----------|-----------|----------------|-----------------|
+| 1 | When... I want to... so I can... | Functional | Step name | Persona | "Quote from transcript" | Strong / Moderate / Weak |
+
+**Evidence Weight rules:** a job raised unprompted, described as a past episode, or visible in what the person actually does (workarounds, money or time spent) is **Strong**. A job the interviewer suggested and the person agreed with, or one stated only as a future wish ("I would…"), is **Weak**. If counter-evidence exists in the same material — someone who has the situation but doesn't struggle — quote it next to the job, not below it.
+
+For many transcripts at once, run `/pm-discovery-synthesis` first and extract jobs from its locked, coded findings.
 
 ---
 
@@ -215,6 +225,59 @@ Lagging indicators to track:
 
 ---
 
+## Mode D: Discovery Interview Guide
+
+### What You Produce
+
+One interview guide per segment (30-45 min), built to learn about the customer's world without pitching the product. It follows the principles in Rob Fitzpatrick's *The Mom Test* (talk about their life, not your idea; ask about specifics in the past, not opinions about the future) and Teresa Torres's story-based interviewing from *Continuous Discovery Habits*. All question text is written fresh for each guide from the PM's goals.
+
+### Step D1: Goal Gate (hard stop)
+
+Do not write a single question until the PM has answered all four:
+
+1. **Which decision will this research inform?** (e.g., "whether to invest in X next quarter", "which segment to target first")
+2. **What can a conversation actually settle?** List 3-5 learning questions. Anything that needs usage data, pricing tests, or a prototype goes in a "not for interviews" list instead.
+3. **Who exactly are we talking to?** Segment, role, and any screener criteria (see personas in `domain-context.md`). Two segments = two guides.
+4. **What do we already know vs. only suspect?** Known items get a short check question; suspected items get open exploration.
+
+**Push back on vague goals.** "Learn about our customers" or "validate the idea" is not a goal — ask what would change in the roadmap depending on the answer. **Never invent goals** on the PM's behalf; if they can't name a decision, say the interviews aren't ready to schedule yet.
+
+### Step D2: Build the Guide
+
+Use this order. It moves from the person's world to the PM's hypothesis, never the other way round.
+
+| Block | Purpose | Time |
+|-------|---------|------|
+| 1. Their role and what they're measured on | Learn their goals and pressures before any pain — pain only makes sense against what they're trying to achieve | 5 min |
+| 2. The last real occurrence | One recent, specific episode of the job, told in the past tense, step by step | 10-15 min |
+| 3. What it costs today | Time, people, tools, external services, and money they *actually* spend now — the strongest signal of a real problem | 5-10 min |
+| 4. Workarounds and trade-offs | What they've tried, what they gave up, what they'd refuse to lose | 5 min |
+| 5. Hypothesis check | Only now, the PM's hunch — stated neutrally, inviting disagreement | 5 min |
+| 6. Close | Who else they'd suggest talking to, permission to follow up | 2 min |
+
+**Question rules:**
+- **At most 7 main questions.** Go deeper with probes ("What happened next?", "How did you decide?", "Can you show me?"), not with more main questions.
+- **Past tense, specific episodes.** Replace every "would you…" with "last time you…, what did you do?"
+- **No product, no pitch.** Our product isn't named before Block 5.
+- **Known items get tested, not rediscovered.** If prior research already shows X, ask a question that could *disconfirm* X.
+- **Domain probes:** add relevant probes from the Interview Probes section of `domain-context.md`.
+
+**Late-agreement rule:** anything the interviewee agrees with only after the hypothesis is stated in Block 5 is tagged **weak signal** in the notes. It still counts — just less than what they raised themselves.
+
+### Step D3: Note Template
+
+Give the interviewer a note sheet whose columns match `/pm-discovery-synthesis`, so notes from all calls can be compared directly:
+
+| Call | Who (role) | Category | Struggle or workaround | Quote | Raised by customer / by us | Said or inferred | Figures | Feeling |
+|------|-----------|----------|------------------------|-------|-----------------------------|------------------|---------|---------|
+| [ID] | [role] | [leave blank until the taxonomy is locked] | Struggle / Workaround | "[exact words]" or "none" | Customer / Us | Said / Inferred | [any numbers, costs, durations] | [frustrated, resigned, relieved…] |
+
+### Output Format
+
+Deliver per segment: the goal-gate answers at the top, the guide with exact question text and probes per block, interviewer notes (what to listen for), the "not for interviews" list, and the note template.
+
+---
+
 ## Quality Checks
 
 Before delivering any output, verify:
@@ -226,6 +289,15 @@ Before delivering any output, verify:
 - [ ] Evidence traces back to real data, not assumptions
 - [ ] Domain-specific compliance and regulatory context is flagged where relevant (see `domain-context.md`)
 - [ ] Both leading and lagging indicators are included in recommendations
+- [ ] Mode D: the goal gate is answered by the PM, not filled in by you
+
+## Anti-Patterns to Avoid
+
+- **Pitch disguised as an interview:** describing the planned feature and asking "would you use this?" Agreement here predicts nothing.
+- **Future-tense questions:** "Would you pay for…" invites politeness. Ask what they did and spent last time.
+- **One guide for every segment:** different roles have different jobs; a shared guide serves none of them well.
+- **Counting prompted agreement as demand:** a "yes" after we suggested the answer is weak signal, not validation.
+- **Rediscovering what you already know:** if research already shows it, test it — don't spend a third of the call on it again.
 
 ## Tone
 

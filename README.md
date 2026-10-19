@@ -1,6 +1,6 @@
 # Ultimate PM Toolkit
 
-A Claude Code plugin with 49 PM skills + 5 agents + 6 workflows + 4 hooks designed for product leadership at B2B SaaS companies.
+A Claude Code plugin with 53 PM skills + 5 agents + 6 workflows + 1 hook designed for product leadership at B2B SaaS companies.
 
 **Domain-agnostic** — customize `domain-context.md` once for your company, product, personas, compliance requirements, and industry. Every skill adapts automatically.
 
@@ -57,6 +57,8 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-ab-test` | A/B test design with proper methodology |
 | `pm-feedback-categorizer` | Categorize and prioritize user feedback |
 | `pm-productboard-insights` | Distill customer demands from a transcript into Insights and push to Productboard via MCP |
+| `pm-discovery-synthesis` | Cross-transcript synthesis: discover → lock taxonomy → coded, evidence-weighted findings |
+| `pm-retention-analysis` | Retention-curve and cohort-table diagnosis: shape, floor, cohort comparison, immature cells |
 
 ### Strategy
 | Skill | What It Does |
@@ -73,6 +75,8 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-cohort-planner` | Cohort migration-readiness: complete functional scope a user cohort needs to work fully in the new product, with coverage-risk flags |
 | `pm-migration-planner` | SaaS migration planning: strategy, feature parity, go/no-go gates, data migration, legacy sunset |
 | `pm-due-diligence` | Fast product & commercial DD screen for an acquisition target (functional scope + pricing) → Pursue / Pass / Dig Deeper |
+| `pm-ai-reimagination` | Map a customer job stage-by-stage and reimagine it with AI (automate / assist / remove / keep human) |
+| `pm-roadmap-audit` | Evidence audit + cull of a roadmap, AI lens, and the missing bigger bet |
 
 ### Communication
 | Skill | What It Does |
@@ -117,6 +121,7 @@ Workflows chain multiple skills into guided, multi-stage processes. Each stage p
 | `pm-workflow-quarterly-cycle` | Strategic Review -> North Star -> OKRs -> Planning -> Roadmap |
 | `pm-workflow-sales-enablement` | Messaging -> Battlecards -> Objection Playbook -> GTM Launch |
 | `pm-workflow-migration` | Migration PRD -> Migration Planner -> Risk Register -> Stakeholder Simulation -> Comms + PE Report |
+| `pm-workflow-problem-to-stories` | Problem + Prototype -> JTBD -> Initiative PRD -> Epic Carving -> Sequencing -> User Stories + ACs |
 
 ## Agents
 
@@ -249,6 +254,8 @@ Some skills sound similar but serve different purposes:
 | To set OKRs for your squad | `pm-okr` | pm-workflow-quarterly-cycle (that's the full 5-stage quarterly planning ceremony) |
 | A pricing strategy for your core product | `pm-pricing` | pm-ai-pricing (that's specifically for AI features) |
 | A competitive cheat sheet for sales | `pm-battlecard` | pm-workflow-competitive-intel (that's a strategic analysis for product leadership) |
+| To read retention curves or cohort tables | `pm-retention-analysis` | pm-cohort-planner (that scopes what a customer cohort needs for a migration) |
+| To synthesize several interview transcripts | `pm-discovery-synthesis` | pm-feedback-categorizer (that's for high-volume VoC like NPS comments and tickets) |
 
 ## Author
 

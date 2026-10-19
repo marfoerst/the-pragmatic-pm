@@ -71,6 +71,7 @@ Check for:
 - Metrics without baselines (you can't improve what you haven't measured)
 - Only lagging indicators (you won't know if it's working until it's too late)
 - Metrics that the team can't actually influence
+- Evidence weighted wrongly: prompted agreement or future-tense intent ("customers said they would use it") presented as proof — unprompted, observed, past behaviour carries more weight, and counter-evidence should be stated, not omitted
 
 ---
 
