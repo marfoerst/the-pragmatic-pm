@@ -219,13 +219,15 @@ Present Artifact 3. Ask:
 
 Using Artifacts 1-3, invoke **pm-prd** in Mode A (Full PRD) to generate the complete requirements document. Pass the prior artifacts as input context:
 
-- **Artifact 1 (Job Statements)** → Pre-populates the Problem Statement and Customer Story sections
+- **Artifact 1 (Job Statements)** → Pre-populates the Problem & Desired Outcome and Customer Story sections
 - **Artifact 2 (Target Persona)** → Pre-populates the Target Persona section
-- **Artifact 3 (Opportunity Tree)** → Pre-populates the Solution section with the recommended opportunity and solution
+- **Artifact 3 (Opportunity Tree)** → Pre-populates the Outcome Hypothesis and Capabilities the Customer Needs — as customer capabilities, not as the solution design (the recommended solution is input for the team, not a spec)
 
-The pm-prd skill will generate **Artifact 4: Product Requirements Document** with all required sections: header metadata, problem statement, customer story, target persona, goals/non-goals, solution with user flows, functional requirements with acceptance criteria, non-functional requirements, success metrics (leading + lagging), dependencies, risks, timeline, and open questions.
+Before generating, pm-prd runs its **Step 4: Resolve Behavioural Decisions** — the highest-impact decisions one at a time, 2-4 options with user-perspective trade-offs, the rest as one confirm-or-correct table of proposed defaults (question budget, fast path) — so engineering doesn't have to ask later. Each decision is recorded as Confirmed, Assumed, or Open.
 
-The skill's built-in quality checks will run automatically before presenting the draft — validating problem clarity, metric quality, scope discipline, and compliance awareness.
+The pm-prd skill will generate **Artifact 4: Product Requirements Document** with the Mode A sections: header metadata, problem & desired outcome, outcome hypothesis, success metrics & decision rules (leading + lagging), goals and non-goals (out of scope), customer story, target persona, capabilities with user stories & expected behaviors and success criteria, business rules & decisions, data requirements (business-level), edge cases & error conditions, quality expectations & guardrails, constraints & dependencies, risks, timeline incl. outcome review, open questions (tagged "Blocks engineering"), and the **Engineering Handoff Block** — the eight-element structure from pm-prd's **Engineering-Ready Specification**, plus its supporting sections (Definitions where needed, Regulatory & Information Security, Abort Criteria, Rollout & Follow-ups, Notes for engineering if the input had technical notes) and a marker line generated from the real readiness state.
+
+The skill's built-in quality checks will run automatically before presenting the draft — validating problem clarity, metric quality, scope discipline, content-based compliance awareness (the Compliance trigger sweep), the Self-consistency check, and which capabilities are refine-complete.
 
 ### Checkpoint 4
 Present Artifact 4. Ask:
@@ -254,7 +256,16 @@ Present Artifact 4. Ask:
 | Scope clarity (goals + non-goals) | [score] | [notes] |
 | Risk coverage | [score] | [notes] |
 | Compliance / ERP considerations | [score] | [notes] |
+| Engineering readiness (per capability, against pm-prd Engineering-Ready Specification) | [score] | [questions engineering would still ask] |
+| Self-consistency (pm-prd Self-consistency check) | [score] | [contradictions fixed / flagged] |
 | Overall readiness | [score] | [notes] |
+
+### Engineering Readiness per Capability
+| Capability | Priority | Decisions (Confirmed / Assumed / Open) | Verdict | Blocked by — owner, due |
+|------------|----------|----------------------------------------|---------|-------------------------|
+| C-001 | Must | [n / n / n] | Ready / Blocked | [— / OQ-n / BR-n Assumed — owner, date] |
+
+**Can hand over now:** [capabilities] · **Waiting on:** [capabilities — blocker — owner, due]
 
 ### Issues Found
 | # | Severity | Issue | Recommendation |
@@ -263,6 +274,7 @@ Present Artifact 4. Ask:
 
 ### Verdict
 [READY FOR REVIEW / NEEDS REVISION / NEEDS MORE DISCOVERY]
+Engineering handoff (derived from the per-capability verdicts): [Ready to hand over / Partial handover / Not ready for engineering]
 
 ### Recommended Next Steps
 1. [step]

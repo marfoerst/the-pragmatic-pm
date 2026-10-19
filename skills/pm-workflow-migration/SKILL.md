@@ -44,7 +44,7 @@ scope                gates, and           categories           PE archetypes    
 **Estimated time**: 3-5 hours (interactive, with pauses between stages)
 
 **Why this sequence**:
-1. **PRD first** — defines what is being migrated, the technical scope, and the engineering approach. Everything downstream depends on knowing the "what" and "how."
+1. **PRD first** — defines what is being migrated, the outcome it must achieve, and what must stay true for customers. Engineering's technical approach responds to it. Everything downstream depends on knowing the "what" — and on engineering's "how" once they've designed it.
 2. **Migration Planner second** — translates the PRD into an execution strategy: waves, parity analysis, readiness gates, data migration plan, and sunset timeline. This is the operational backbone.
 3. **Risk Register third** — now that you know the plan, identify what can go wrong. Migration-specific risk categories (data integrity, feature parity, rollback, etc.) replace generic categories.
 4. **Stakeholder Simulation fourth** — simulate how PE operating partners, acquired company leadership, and key customers will react to the plan and its risks. Surface objections before the real meetings.
@@ -98,18 +98,22 @@ Wait for answers. Then proceed to Stage 1.
 
 ### Process
 
-Produce an engineering-facing migration specification covering:
-- Migration scope and technical approach
-- Source and target system architecture
-- Data migration strategy (schema mapping, transformation rules, validation)
-- API and integration compatibility plan
-- Rollback strategy and point-of-no-return definition
-- Performance and scalability requirements for the target system
-- Security and compliance requirements during and after migration
+Produce an engineering-facing migration specification with pm-prd Mode D. It states the outcome the migration must achieve and must preserve — the migration architecture and mechanics are engineering's to design. It covers:
+- Migration scope: which customers, workflows, and information move
+- Required outcome state and what must stay true throughout (no data loss, no workflow interruption)
+- Business-level data requirements: which information must arrive complete, what must reconcile, retention obligations
+- Integration outcomes customers and partners rely on (what must keep working, not how)
+- Rollback triggers, rollback requirement, and point of no return
+- Quality expectations and compliance requirements during and after migration
+- Expected behaviors, edge cases (e.g., customer mid-task at cutover), and error conditions
+- The Engineering Handoff Block, so the spec is refine-complete per pm-prd's **Engineering-Ready Specification**
+
+Technical approach, source/target architecture, schema mapping, and transformation rules are produced by engineering in response to this spec — link their design doc as an input to Stage 2 rather than writing it into the PRD.
 
 ### Checkpoint 1
 Present Artifact 1. Ask:
-- "Does this technical scope capture everything that needs to migrate?"
+- "Does this scope capture everything that needs to migrate?"
+- "Would engineering's refinement still need to ask anything (open decisions, missing edge cases)?"
 - "Are there integration dependencies I missed?"
 - "Is the rollback strategy realistic — has the team validated it?"
 

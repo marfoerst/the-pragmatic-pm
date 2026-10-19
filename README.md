@@ -39,7 +39,7 @@ Once comfortable, explore the full catalog below or run a multi-stage workflow.
 | `pm-hub` | Master router — lists skills, routes by intent |
 | `pm-prd` | Standalone PRD generation — outcome/customer-centric (Full, Lightweight, V2, Migration modes) |
 | `pm-prototype-to-epics` | Derive traceable Epics from an HTML prototype (e.g. Claude Design export) — screen/flow inventory, implied gaps, Epic carving |
-| `pm-review` | Quality gate — checks problem clarity, metrics, scope |
+| `pm-review` | Quality gate — checks problem clarity, metrics, scope, and engineering readiness |
 | `pm-pricing` | SaaS pricing analysis and optimization (Monetizing Innovation methodology) |
 | `pm-ai-pricing` | AI feature pricing, packaging, and monetization strategy |
 | `pm-north-star` | Define North Star metric + input metric tree |
@@ -230,16 +230,13 @@ This toolkit builds on established product management and pricing methodologies:
 
 ## Hooks
 
-The plugin includes 4 hooks that run automatically:
+The plugin includes 1 hook that runs automatically:
 
 | Hook | Event | What It Does |
 |------|-------|-------------|
-| **Context Reinjection** | `SessionStart` (after compaction) | Re-injects `domain-context.md` and `personal-context.md` into context when long conversations compress |
-| **Quality Gate** | `Stop` | Validates PM deliverables follow the 3 design principles (problem clarity, leading+lagging metrics, scope discipline) |
-| **Usage Logger** | `PostToolUse` / `PostToolUseFailure` | Logs every PM skill execution to `~/.claude/pm-toolkit/audit.jsonl` for usage analytics |
-| **Workflow Tracker** | `PostToolUse` | Tracks multi-step workflow progress to `.pm-toolkit-workflow-state.json` in the current project so workflows can resume across sessions |
+| **Context Reinjection** | `SessionStart` (after compaction) | Re-injects `domain-context.md` into context when long conversations compress |
 
-Hook scripts live in `hooks/` and are configured via `hooks/hooks.json`. The workflow tracker writes per-project state — if you don't want it committed, add `.pm-toolkit-workflow-state.json` to your project's `.gitignore`.
+The hook script lives in `hooks/` and is configured via `hooks/hooks.json`.
 
 ## Skill Disambiguation
 

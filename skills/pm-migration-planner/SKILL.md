@@ -594,7 +594,7 @@ Not every migration needs every section at full depth. Scale the output:
 ## Related Skills
 
 - `/pm-cohort-planner` -- Upstream of this skill. For Cohort-Based migrations, run it first per cohort to establish the complete functional scope each cohort needs in the new product. Its hand-off block feeds the Phase 3 parity matrix.
-- `/pm-prd` Mode D -- Generate the engineering spec for migration/compliance work.
+- `/pm-prd` Mode D -- Generate the engineering spec for migration/compliance work, refine-complete per its Engineering-Ready Specification.
 - `/pm-risk-register` migration mode -- Identify and score migration-specific risks.
 - `/pm-customer-success` Stage G -- Customer success playbook for migration lifecycle.
 - `/pm-pe-migration-report` -- Board-level reporting on migration progress and status.

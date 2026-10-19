@@ -40,6 +40,7 @@ Ask for the prototype if not provided: a local `.html` file path, a folder (hand
 2. **If it is a Claude Design bundled page** (`<title>Bundled Page</title>`, `__bundler/manifest` script tags), unpack it first — see the next section.
 3. **If it is a bundle/folder**, list the files and start with the entry HTML, then any README or handoff notes — they often state the designer's intent and open questions.
 4. **If the markup is unreadable** (heavy minification, everything rendered at runtime), open it in the browser (claude-in-chrome, if available) and click through each flow, or ask the PM for screenshots of every screen.
+5. **Technical notes in the bundle** (README/handoff notes, code comments, an accompanying ticket's "Technical notes"): don't drop them. Apply `pm-prd` → **Incoming technical notes** — mine the business rules they hide into the Epic's Business rules, carry the rest into the Epic's "Notes for engineering (not requirements — PM did not validate)".
 
 ### Claude Design bundles — unpack first
 
@@ -173,16 +174,28 @@ Carve using four lenses, in this order:
 
 #### E1: [Epic Name]
 - **What it is**: [One sentence — the user capability delivered]
-- **What it is NOT**: [One sentence — explicit scope boundary]
+- **What it is NOT / Out of scope**: [explicit scope boundaries — incl. screens/flows parked in Artifact 4 and gaps assigned elsewhere, each with "deferred to: E[x] / separate feature / not planned"]
 - **Prototype evidence**: Flows [F1], Screens [S1, S3]
 - **Gaps absorbed**: [G1, G3]
-- **Business rules (spec)**: [only if logic = spec — concrete rules from the prototype code: formulas, thresholds, state transitions, locks, validations, defaults]
+- **User stories**: [one line per flow step that matters — "As a [persona], I want [capability] so that [benefit]"]
+- **Expected behaviors**: [Given/When/Then, customer-observable — from the traced flow and the shown states, e.g. "When [action on S3], then [result the user sees]"]
+- **Definitions**: [domain terms whose meaning changes behaviour, defined once — or omit]
+- **Business rules (spec)**: [only if logic = spec — concrete rules from the prototype code: formulas, thresholds, state transitions, locks, validations, defaults. Role checks from G2 become "who may see/do what" rules. Each with status: Confirmed / Assumed (source: prototype) / Open — OQ-n]
+- **Data requirements (business-level)**: [the Artifact 1 entities this Epic creates, reads, or changes — attributes in business terms, relationships (cardinality, ownership), constraints, retention. Not the mock values, not a schema]
+- **Edge cases**: [in-scope G1 empty/loading/stale states + concurrency, limits, missing permission → expected behavior]
+- **Error conditions**: [in-scope G1 error states and validation messages from the prototype → what the user sees / can do]
+- **Success criteria**: [checkbox list, pass/fail at delivery — e.g. "- [ ] A user can complete F1 without leaving S1–S4"]
 - **Indicators**: Leading — [early behavior signal, e.g. % of users completing F1 in week 1] · Lagging — [business outcome, e.g. support tickets on X drop by Y%]
-- **Compliance flag**: [requirements from domain-context.md, or none]
+- **Compliance flag / Regulatory & information security**: [requirements from domain-context.md + content triggers from `pm-prd`'s Compliance trigger sweep (personal data, legal obligations, security, accessibility, audit trail); "Compliance trigger not covered by domain-context — owner must confirm: …" where nothing matches; or none]
+- **Abort criteria**: [pre-build stop conditions; post-launch see the outcome hypothesis — or none]
+- **Rollout & follow-ups**: [help/docs · release notes · manual QA + test data · migration of existing records · follow-up actions — yes/no + owner]
+- **Notes for engineering (not requirements — PM did not validate)**: [carried-over technical notes, or omit]
 - **Rough size**: [S = 1–2 sprints / M = 2–4 sprints / L = 4–6 sprints] — confidence: [High/Med/Low]
 - **Dependencies**: [other Epics, or none]
-- **Open questions**: [what the prototype leaves undefined for this Epic]
+- **Open questions**: [what the prototype leaves undefined for this Epic — each tagged "Blocks engineering: yes/no", owner, due]
 ```
+
+These fields map one-to-one onto the **Engineering-Ready Specification** in `pm-prd` (Overview = What it is + outcome hypothesis). Where the prototype leaves a behavioural decision open (a duration, limit, permission, failure behavior), resolve it with the PM before handoff within `pm-prd` Step 4's **question budget**: the highest-impact decisions **one at a time**, 2–4 concrete options with the user-perspective trade-off and your recommendation; the rest as one confirm-or-correct table of proposed defaults (Assumed until confirmed; fast path offered). Only what the PM genuinely cannot decide yet stays an open question.
 
 ### Artifact 4: Traceability Matrix
 
@@ -217,7 +230,9 @@ Offer the next step based on the destination answer from Phase 1:
 | Write a PRD around the Epics | `pm-prd` (Lightweight mode), using Artifacts 1–3 as input |
 | Stress-test scope | `pm-review` or `pm-devils-advocate` on Artifact 3 |
 | Track risks from the gap list | `pm-risk-register` with Artifact 2 as input |
-| Push to a tracker | Format Epics for the target tool; confirm before creating anything in a shared system |
+| Push to a tracker | Write each Epic as the **Engineering Handoff Block** from `pm-prd` (Engineering-Ready Specification) so engineering's refinement pass finds its own structure already filled; confirm before creating anything in a shared system |
+
+**Before any Epic leaves this skill for engineering**, run `pm-prd`'s **Self-consistency check** and judge each Epic (and its capabilities) against the refine-complete definition in `pm-prd` → Engineering-Ready Specification: all eight elements present, decisions Confirmed (no Assumed on Must), no "Blocks engineering: yes" questions, success criteria pass/fail, data requirements business-level only. Generate each Epic's marker line from that result (`pm-prd` → Handoff marker line): ready to hand over, partial handover (which capabilities are ready, which wait on whom), or draft — never a hard-coded "refine-complete".
 
 Default delivery: Artifacts 1–4 in chat, then ask whether to save as a file.
 
@@ -238,7 +253,14 @@ Default delivery: Artifacts 1–4 in chat, then ask whether to save as a file.
 | Pixel-perfect assumption | Treating spacing/copy as fixed requirements | Confirm fidelity in Phase 1, question 4 |
 | Rules lost in translation | Logic confirmed as spec, but Epics only say "calculate budget" | Copy the concrete formula/threshold from the code into Business rules |
 | Demo toggle as feature | Epic for "switch user role" because the tweaks panel had one | Role tweaks are demo devices — capture the role *rules* as a permissions gap instead |
+| Decision deferred to engineering | Epic open questions full of durations, limits, roles the PM could decide | Resolve with the PM one structured question at a time before handoff |
+| Gaps that never reach the Epic | G1 states listed in Artifact 2 but missing from the Epic's Edge cases / Error conditions | Carry every in-scope gap into the owning Epic's fields |
+| Schema masquerading as data requirement | Data requirements copy field names/types from the mock data | Restate entities as information, relationships, constraints, retention |
+| Untestable success criterion | "Dashboard works", "flow is intuitive" | Pass/fail checkbox naming an observable result |
+| Missing out-of-scope | "What it is NOT" empty or vague | List parked screens/gaps with where they are deferred to |
+| Technical notes dropped | README/handoff notes or code comments ignored, and a business rule with them | Mine the rule into Business rules (Assumed, source: prototype); carry the rest into "Notes for engineering" |
+| Prototype rules presented as settled | Thresholds copied from the code marked as decided without PM confirmation | Status Assumed until the PM confirms |
 
 ## Language
 
-Respond in the language the user writes in. Keep Artifact headings and IDs (S1, F1, G1, E1) consistent so they can be referenced across workflows.
+Respond in the language the user writes in. Keep Artifact headings and IDs (S1, F1, G1, E1) consistent so they can be referenced across workflows. When an Epic is written as an Engineering Handoff Block for a tracker, follow `pm-prd`'s language rule (ticket language, headings included, Heading mapping).

@@ -1,12 +1,11 @@
 {
   "name": "pm-toolkit",
-  "version": "1.10.0",
+  "version": "1.11.1",
   "description": "PM leadership toolkit: 49 skills + 5 agents + 6 workflows + 4 hooks for product teams. Enforces problem clarity, leading+lagging metrics, and scope discipline. Domain-agnostic — customize via domain-context.md for your company, industry, and compliance requirements.",
   "keywords": [
     "product-management",
     "b2b-saas",
     "pm-leadership",
-    "quality-gate",
     "prd",
     "okr",
     "discovery",

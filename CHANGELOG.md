@@ -4,6 +4,48 @@ All notable changes to the PM Toolkit plugin are documented here.
 
 ---
 
+## [1.11.1] — 2026-10-19
+
+### Engineering-Ready Specifications — fixes from a first QA run
+
+Fixes to the unreleased 1.11.0 standard. Found by running `pm-prd` / `pm-workflow-problem-to-stories` on **3 real Jira tickets** (a German time-tracking story, a German 2FA story, an English AI-feedback story) and then having a separate agent **simulate** engineering's refine skill on the output. That was a simulation, not real engineers; the revised skills have not been re-run yet. Still strictly *what*, never *how*.
+
+**49 skills + 5 agents + 6 workflows**
+
+### Fixed
+
+- **`pm-prd`** — The Handoff Block no longer claims "refine-complete" on every draft. New **Decision status: Confirmed / Assumed / Open** (only Confirmed rows say "no need to re-ask"). **Definition: refine-complete** is now judged per capability, and a new **Handoff marker line** is generated from the real state (ready to hand over / partial handover / draft). New **Incoming technical notes** rule: business rules hidden in a ticket's technical notes are mined into the spec, the rest is carried over into "Notes for engineering (not requirements — PM did not validate)", and the handoff must not silently contradict the original description, which engineering appends to. Step 4 gains a **question budget**: at most ~5 high-impact questions one at a time, everything else in one confirm-or-correct table of Assumed defaults, plus a fast path. Mode B's size is restated honestly (2-3 pages, or split) and it gets a compact, table-based form. New **Supporting sections**: Definitions, Regulatory & Information Security, Abort Criteria (linked to the "wrong if" kill criteria, not duplicated), Rollout & Follow-ups. New content-based **Compliance trigger sweep** that works even when `domain-context.md` is generic: uncovered triggers are flagged for an owner, and legal facts from the ticket are marked "stated in ticket, unverified". New **Self-consistency check**: scope vs. capabilities, repeated numbers, unmapped edge cases, unreferenced Open/Assumed decisions, consistent terms, measurable Done-when. The **Language** rule now writes the spec in the ticket's language, headings included, with an English→German **Heading mapping**. Section Requirements, quality checks, and the Completeness Checklist are updated, and the checklist now sits before the Handoff Block so the block stays last.
+- **`pm-review`** — Dimension 5 now gives a Ready/Blocked verdict per item, and the score is derived from those verdicts. Yellow is now **partial handover** ("can hand over now / waiting on" with owners) instead of an all-or-nothing Red. New checks: decision status, carried-over technical notes, supporting sections, self-consistency, honest marker line, and language. Dimension 4 adds the content-based compliance sweep and the rule that legal facts must not be presented as verified.
+- **`pm-workflow-problem-to-stories`** — Per-story Ready/Blocked status. The Stage 5 decision step uses the question budget and fast path, and technical notes in the input are handled by the pm-prd rule. The Epic spec carries Definitions, decision status, and the supporting sections. The tracker export generates its marker from the real state. The Stage 6 matrix gives per-item verdicts and a derived PARTIALLY READY verdict. New anti-patterns.
+- **`pm-workflow-problem-to-prd`** — Stage 4 reflects the question budget, the supporting sections, and the sweep and consistency checks. The Stage 5 review adds per-capability readiness and a derived handoff verdict.
+- **`pm-prototype-to-epics`** — Technical notes in bundles are mined rather than dropped. Prototype rules start as Assumed. The Epic template gains the supporting sections. The Phase 4 check is per Epic, with a generated marker. New anti-patterns.
+
+### Removed
+
+- **Hooks** — Removed `quality-gate.sh`, `usage-logger.sh`, and `workflow-tracker.sh`. The quality gate never ran its checks (it parsed the JSONL transcript as a JSON array, so it always exited silently) and its keyword rules conflicted with the engineering-ready standard, which `pm-review` now covers. The usage log and workflow state file were written but never read by any skill. `context-reinject.sh` stays.
+
+---
+
+## [1.11.0] — 2026-10-19
+
+### Engineering-Ready Specifications
+
+PM artefacts (PRDs, Epics, Stories) now leave the toolkit **refine-complete**: they already carry everything engineering's refinement pass writes into a ticket, so that pass finds nothing to add. Still strictly *what*, never *how* — the outcome-centric stance from 1.6.0 is unchanged.
+
+**49 skills + 5 agents + 6 workflows**
+
+### Changed
+
+- **`pm-prd`** — New canonical section **Engineering-Ready Specification**: the eight elements engineering needs (Overview, User Stories, Expected Behaviors, Success Criteria, Data Requirements, Edge Cases, Error Conditions, Out of Scope), a refine-complete definition, a "Data requirements: WHAT, never HOW" table, and a Jira/Linear-ready **Engineering Handoff Block** (append-friendly marker, `refined` label convention). New interaction step **Step 4: Resolve Behavioural Decisions** — one question at a time, 2-4 options with user-perspective trade-offs, instead of leaving decisions for engineering. New template sections: User Stories & Expected Behaviors (per capability, with checkbox success criteria), Business Rules & Decisions (incl. roles & permissions), Data Requirements (business-level), Edge Cases & Error Conditions (all modes; replaces Mode A's "When things go wrong"). Non-Goals now double as Out of Scope with a "Deferred to" column; Open Questions carry a "Blocks engineering" tag. Mode B's capabilities section *is* the Handoff Block, so it stays short. "The Line We Don't Cross" now separates PM-owned business data requirements from engineering-owned schema/storage design. Section Requirements by Mode, quality checks (decision deferred to engineering, untestable success criterion, happy path only, schema masquerading as data requirement, missing out-of-scope, error without recovery, untagged open question), and Completeness Checklist updated.
+- **`pm-workflow-problem-to-stories`** — Every story handed to Jira/Linear must be refine-complete; just-in-time now applies only to far-future stories, which stay in "Stories Not Yet Refined" and are explicitly not handed over. New sprint-ready-set step, decision-resolution step, engineering-ready story template (behaviors, success criteria, data requirements, edge cases, error conditions, out of scope), Ready-for-Engineering definition of done, Jira/Linear Export Format, an Engineering-Readiness Check in the Stage 6 review, and new anti-patterns. Compliance AC example reworded to stay outcome-level.
+- **`pm-prototype-to-epics`** — Epic template carries user stories, expected behaviors, business-level data requirements (from the Artifact 1 entities), edge cases and error conditions (from in-scope G1/G2 gaps), extended out-of-scope, and checkbox success criteria; open behavioural decisions are resolved with the PM before handoff; Phase 4 tracker handoff uses the Engineering Handoff Block and a refine-complete check. New anti-patterns.
+- **`pm-review`** — New **Dimension 5: Engineering Readiness** for PRDs, Epics, and Stories, plus an Engineering handoff verdict and the exact questions engineering's refinement would ask.
+- **`pm-workflow-problem-to-prd`** — Stage 4 now lists pm-prd's current sections (the old solution/NFR wording was stale), runs the decision step, and the Stage 5 review scores engineering readiness.
+- **`pm-workflow-migration`** — Stage 1 no longer asks the PRD for architecture or schema mapping; it produces an outcome-level Mode D spec that is refine-complete, and engineering's design responds to it.
+- **`pm-migration-planner`**, **`pm-hub`**, `README.md` — pointers to the Engineering-Ready Specification and the new review gate.
+
+---
+
 ## [1.10.0] — 2026-10-08
 
 ### New Skill: Prototype → Epics

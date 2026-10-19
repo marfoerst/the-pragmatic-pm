@@ -18,7 +18,7 @@ You are the central entry point for the PM Toolkit. **Read `domain-context.md`**
 |-------|---------|-------------|
 | `/pm-prd` | "write a PRD", "product requirements", "spec", "feature spec", "requirements doc" | Standalone PRD generation (4 modes: Full, Lightweight, V2, Migration) |
 | `/pm-prototype-to-epics` | "prototype to epics", "epics from prototype", "Claude Design to epics", "derive epics from HTML", "break down this mockup" | Parse an HTML prototype (e.g. Claude Design export) into a screen/flow inventory, gaps, and traceable Epics |
-| `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards |
+| `/pm-review` | "review this", "check my PRD", "is this ready?" | Quality gate — checks any PM artifact against HoP standards; engineering-readiness gate for PRDs, Epics, Stories |
 | `/pm-pricing` | "pricing", "plans", "tiers", "monetization", "Van Westendorp", "Gabor-Granger" | SaaS pricing analysis and optimization |
 | `/pm-ai-pricing` | "AI pricing", "AI add-on", "AI credits", "per-agent pricing", "copilot pricing", "inference costs" | AI feature pricing, packaging, and monetization strategy |
 | `/pm-north-star` | "north star", "key metric", "what should we measure?" | Define and validate the North Star metric |
@@ -112,12 +112,15 @@ When a user comes to you with a PM request:
 | "Write a PRD from scratch" (no context) | `/pm-workflow-problem-to-prd` | Full workflow — starts with JTBD discovery |
 | "PRD to epics + stories" or "full backlog" | `/pm-workflow-problem-to-stories` | Extends problem-to-PRD all the way to sprint-ready stories |
 | "Epics from this prototype" (has an HTML/Claude Design file) | `/pm-prototype-to-epics` | Starts from the prototype, not the problem; hands off to problem-to-stories Stage 4 |
+| "Is this ready for engineering?" / "will dev need to refine this?" | `/pm-review` | Engineering Readiness gate — checks PRDs, Epics, Stories against the Engineering-Ready Specification in `/pm-prd` and lists the questions engineering would ask |
 | "Write a product brief" | `/pm-product-brief` | Working-backwards narrative — different from a PRD |
 | "Write a one-pager" | `/pm-one-pager` | Executive proposal — different from a PRD |
 | "Set OKRs" (standalone) | `/pm-okr` | Standalone OKR coaching |
 | "Quarterly planning" | `/pm-workflow-quarterly-cycle` | Full quarterly cycle including OKRs |
 | "Battlecard" or "sales materials" | `/pm-battlecard` or `/pm-gtm-launch` | Go-to-Market skills — for sales team consumption |
 | "Full sales enablement" | `/pm-workflow-sales-enablement` | Complete enablement workflow |
+
+**Engineering handoff:** anything that goes to engineering (PRD, Epic, Story) should be refine-complete per the Engineering-Ready Specification in `/pm-prd`. Briefs and one-pagers are decision documents, not engineering specs — route to `/pm-prd` when the user wants to hand work to engineering.
 
 If the request doesn't match any skill, handle it directly as a general PM question.
 
